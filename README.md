@@ -1,2 +1,2 @@
 # mlsg-website-groupe2
-# By: Julian - Kevin - Enez - Sebastian
+# By: Julian - Kevin - Enez - Sebastien
