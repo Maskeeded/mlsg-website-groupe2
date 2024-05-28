@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="vendor/leaflet/css/leaflet.css"/>
+  
   <!--
 
 TemplateMo 582 Tale SEO Agency
@@ -301,10 +303,6 @@ https://templatemo.com/tm-582-tale-seo-agency
             <div class="row">
               <div class="col-lg-4">
                 <div id="map">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12469.776493332698!2d-80.14036379941481!3d25.907788681148624!2m3!1f357.26927939317244!2f20.870722720054623!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x88d9add4b4ac788f%3A0xe77469d09480fcdb!2sSunny%20Isles%20Beach!5e1!3m2!1sen!2sth!4v1642869952544!5m2!1sen!2sth"
-                    width="100%" height="670px" frameborder="0" style="border:0; border-radius: 23px;"
-                    allowfullscreen=""></iframe>
                 </div>
               </div>
               <div class="col-lg-8">
@@ -312,39 +310,47 @@ https://templatemo.com/tm-582-tale-seo-agency
                   <div class="row">
                     <div class="col-lg-12">
                       <div class="section-heading">
-                        <h2><em>Contact Us</em> &amp; Get In <span>Touch</span></h2>
+                        <h2><em class="text-primary fw-bolder">Contactez-nous</em> &amp; Entrez en <span class="text-secondary">Contact</span></h2>
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                        <input class="text-secondary" type="text" name="firstname" id="firstname" placeholder="Votre prénom..." autocomplete="on" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="surname" name="surname" id="surname" placeholder="Your Surname..."
-                          autocomplete="on" required>
+                        <input class="text-secondary"  type="text" name="lastname" id="lastname" placeholder="Votre nom de famille..." autocomplete="on" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..."
-                          required="">
+                        <input class="text-secondary"  type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Votre email..." required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on">
+                        <input class="text-secondary"  type="text" name="titre" id="titre" placeholder="Sujet..." autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input class="text-secondary"  type="text" name="phone" id="phone" placeholder="Numéro de téléphonne..." pattern="^[0-9\s\./]*$" autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input class="text-secondary"  type="text" name="postal" id="postal" placeholder="Code postal..." pattern="^[0-9]{4}$" autocomplete="on" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                        <textarea class="text-secondary"  name="message" id="message" placeholder="Votre message..." required></textarea>
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>
+                        <button type="submit" id="form-submit" class="btn btn-info">Envoyer mon message</button>
                       </fieldset>
                     </div>
                   </div>
@@ -354,20 +360,20 @@ https://templatemo.com/tm-582-tale-seo-agency
                     <div class="col-lg-4">
                       <div class="info-item">
                         <i class="fa fa-phone"></i>
-                        <h4><a href="#">010-020-0340</a></h4>
+                        <h4><a href="#" class="fw-bold">Tel: 02 542 63 21</a></h4>
+                        <h4><a href="#" class="fw-bold">GSM: 0476/68.07.93 </a></h4>
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="info-item">
                         <i class="fa fa-envelope"></i>
-                        <h4><a href="#">info@company.com</a></h4>
-                        <h4><a href="#">hello@company.com</a></h4>
+                        <h4><a href="#" class="fw-bold">contact@mlsg.be</a></h4>
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="info-item">
                         <i class="fa fa-map-marker"></i>
-                        <h4><a href="#">Sunny Isles Beach, FL 33160, United States</a></h4>
+                        <h4><a href="#" class="fw-bold">Chaussée de Waterloo 255 (2e étage), 1060 Saint-Gilles</a></h4>
                       </div>
                     </div>
                   </div>
@@ -377,6 +383,17 @@ https://templatemo.com/tm-582-tale-seo-agency
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="container my-5 partenaria-container">
+    <div class="row">
+      <div class="col-2"><a target="_blank" href="https://stgilles.brussels/"><img src="assets/images/partenaires/saint-gilles-logo.png" alt="Saint Gilles"></a></div>
+      <div class="col-2"><a target="_blank" href="https://www.actiris.brussels/fr/citoyens/"><img src="assets/images/partenaires/actiris.png" alt="Actiris"></a></div>
+      <div class="col-2"><a target="_blank" href="https://be.brussels/fr"><img src="assets/images/partenaires/be.brussels.jpg" alt="Be brussels"></a></div>
+      <div class="col-2"><a target="_blank" href="https://www.bruxellesformation.brussels/"><img src="assets/images/partenaires/bruxelles-formation.jpg" alt="Bruxelles Formation"></a></div>
+      <div class="col-2"><a target="_blank" href="https://ccf.brussels/"><img src="assets/images/partenaires/bruxelles-franco.jpg" alt="Francophones Bruxelles"></a></div>
+      <div class="col-2"><a target="_blank" href="https://fse.be/"><img src="assets/images/partenaires/fse.jpg" alt="FSE"></a></div>
     </div>
   </div>
 
@@ -403,8 +420,8 @@ https://templatemo.com/tm-582-tale-seo-agency
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
-
-
+  <script src="vendor/leaflet/js/leaflet.js"></script>
+  <script src="assets/js/map.js"></script>
 </body>
 
 </html>
