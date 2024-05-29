@@ -1,0 +1,24 @@
+
+
+
+/*** Service ***/
+.service .nav-link{
+    color: rgb(var(--bs-primary-rgb));
+}
+
+.service .nav .nav-link {
+    transition: .5s;
+}
+
+.service .nav .nav-link.active {
+    border-color: rgb(var(--bs-secondary-rgb)) !important;
+    background: rgb(var(--bs-primary-rgb));
+}
+
+.service .nav .nav-link.active h5 {
+    color: #FFFFFF !important;
+}
+
+.service .nav .nav-link.active h5 i {
+    color: #FFFFFF !important;
+}
