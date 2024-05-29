@@ -170,8 +170,8 @@ body {
 
 #text-center-service {
   text-align: center;
-
 }
+
 
 .main-button a {
   font-size: 16px; /* Increased font size */
@@ -983,12 +983,14 @@ Services Style
 }
 
 .services .service-item {
+  border: 3px solid #f3d7ff;
   border-radius: 23px;
   padding: 30px;
   background-color: #fff;
   margin-bottom: 80px;
   transition: all .4s;
-  /* overflow-wrap: break-word; */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .services .service-item h4 {
@@ -997,6 +999,41 @@ Services Style
   margin-top: 20px;
   line-height: 30px;
   transition: all .4s;
+}
+
+/* Services responsivness */
+@media screen and (max-width: 600px) {
+
+  .services::before {
+    content: none;
+  }
+
+  .services .service-item {
+    border: 5px solid #f3d7ff;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .services {
+    background-color: rgba(0, 0, 0, 0.1); 
+  }
+  #second-text-service {
+    color: #000000; 
+    font-size: 18px; 
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.6); 
+    padding: 5px; 
+    text-shadow: none; 
+  }
+}
+
+
+/* CSS for screens smaller than 600px (typical mobile size) */
+@media (max-width: 600px) {
+  .services {
+    background-color: initial; 
+  }
 }
 
 .services .service-item:hover {
