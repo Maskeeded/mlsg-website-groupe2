@@ -1149,11 +1149,14 @@ Projects Style
   font-size: 24px;
   display: inline-block;
   color: #fff;
-  background-color: #5b03e4;
+  background-color: rgb(var(--bs-info-rgb));
+  box-shadow: 0 8px 16px 0 rgba(var(--bs-secondary-rgb), 0.2), 0 6px 20px 0 rgba(var(--bs-secondary-rgb), 0.19); /* On hover: cool box-shadow */
+
   border-radius: 50%;
   opacity: 1;
   transition: all .3s;
 }
+
 
 .owl-carousel .owl-nav button.owl-next, 
 .owl-carousel .owl-nav button.owl-prev {
