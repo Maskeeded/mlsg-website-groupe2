@@ -165,45 +165,51 @@ body {
 }
 
 .main-button a {
-  font-size: 14px;
+  font-size: 16px; /* Increased font size */
   color: #fff;
-  background-color: #5b03e4;
-  padding: 12px 30px;
+  background-color: rgb(126, 44, 92);
+  padding: 15px 35px; /* Increased padding */
   display: inline-block;
-  border-radius: 25px;
+  border-radius: 50px; /* Increased border-radius for a pill-like shape */
   font-weight: 400;
-  text-transform: capitalize;
-  letter-spacing: 0.5px;
+  text-transform: uppercase; /* Changed text transform to uppercase */
+  letter-spacing: 1px; /* Increased letter spacing */
   transition: all .3s;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Added box-shadow for depth */
 }
 
 .main-button a:hover {
-  background-color: #5b03e4;
+  background-color: rgb(155, 61, 116);
   color: #fff;
   opacity: 0.8;
+  transform: scale(1.1); /* Increased scale effect on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increased box-shadow on hover */
 }
 
 .second-button a {
-  font-size: 14px;
+  font-size: 16px; /* Increased font size */
   color: #fff;
-  background-color: #c03afe;
-  padding: 12px 30px;
+  background-color: rgb(227, 0, 86);
+  padding: 15px 35px; /* Increased padding */
   display: inline-block;
-  border-radius: 25px;
+  border-radius: 50px; /* Increased border-radius for a pill-like shape */
   font-weight: 400;
-  text-transform: capitalize;
-  letter-spacing: 0.5px;
+  text-transform: uppercase; /* Changed text transform to uppercase */
+  letter-spacing: 1px; /* Increased letter spacing */
   transition: all .3s;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Added box-shadow for depth */
 }
 
 .second-button a:hover {
-  background-color: #c03afe;
+  background-color: rgb(246, 37, 117);
   color: #fff;
   opacity: 0.8;
+  transform: scale(1.1); /* Increased scale effect on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increased box-shadow on hover */
 }
 
 .section {
@@ -881,7 +887,7 @@ Banner Style
 
 .main-banner h6 {
   font-size: 20px;
-  color: #5b03e4;
+  color: rgb(0, 168, 159);
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -903,11 +909,11 @@ Banner Style
 
 .main-banner h4 em {
   font-style: normal;
-  color: #5b03e4;
+  color: rgb(126, 44, 92);
 }
 
 .main-banner h4 span {
-  color: #c03afe;
+  color: rgb(227, 0, 86);
 }
 
 .main-banner p {
