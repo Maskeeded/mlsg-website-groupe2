@@ -133,7 +133,7 @@
 	});
 
 
-	$('.owl-features').owlCarousel({
+	/*$('.owl-features').owlCarousel({
 		center: true,
       items:2,
       loop:true,
@@ -147,7 +147,7 @@
 			items:4
 		}
       }
-	});
+	});*/
 
 	
 
