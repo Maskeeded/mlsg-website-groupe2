@@ -193,7 +193,6 @@ body {
 
   background-color: rgb(var(--bs-info-hover-rgb));
   color: #fff;
-  opacity: 0.8;
   transform: scale(1.1); /* Increased scale effect on hover */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increased box-shadow on hover */
 }
