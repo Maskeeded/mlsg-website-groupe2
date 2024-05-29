@@ -167,7 +167,7 @@ body {
 .main-button a {
   font-size: 16px; /* Increased font size */
   color: #fff;
-  background-color: rgb(126, 44, 92);
+  background-color: rgb(var(--bs-info-rgb));
   padding: 15px 35px; /* Increased padding */
   display: inline-block;
   border-radius: 50px; /* Increased border-radius for a pill-like shape */
@@ -181,7 +181,8 @@ body {
 }
 
 .main-button a:hover {
-  background-color: rgb(155, 61, 116);
+
+  background-color: rgb(var(--bs-info-hover-rgb));
   color: #fff;
   opacity: 0.8;
   transform: scale(1.1); /* Increased scale effect on hover */
@@ -229,6 +230,7 @@ body {
   background: rgb(85,0,227);
   background: linear-gradient(90deg, rgba(85,0,227,1) 0%, rgba(198,61,255,1) 100%);
 }
+
 
 .section-heading h2 {
   color: #2a2a2a;
