@@ -1135,9 +1135,10 @@ Projects Style
 .projects .owl-nav {
   position: absolute;
   max-width: 1320px;
-  top: -126px;
+  top: 50%;
   right: 16%;
   text-align: right;
+  z-index: 1000; /* Add this */
 }
 
 .projects .owl-nav .owl-prev span,
@@ -1150,8 +1151,13 @@ Projects Style
   color: #fff;
   background-color: #5b03e4;
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 1;
   transition: all .3s;
+}
+
+.owl-carousel .owl-nav button.owl-next, 
+.owl-carousel .owl-nav button.owl-prev {
+  display: inline-block !important;
 }
 
 .projects .owl-nav .owl-next span {
@@ -2052,6 +2058,8 @@ body {
     padding: 30px;
   }
 }
+
+
 
 @media (max-width: 1000px) {
   .happy-clients .naccs .menu div {

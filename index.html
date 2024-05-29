@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="assets/css/templatemo-tale-seo-agency.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
 
   
   <!--
@@ -247,8 +250,8 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
           <div class="project-item">
             <img src="assets/images/projects-01.jpg" alt="">
             <div class="text-content">
@@ -260,7 +263,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="item">
           <div class="project-item">
             <img src="assets/images/projects-02.jpg" alt="">
             <div class="text-content">
@@ -272,7 +275,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="item">
           <div class="project-item">
             <img src="assets/images/projects-03.jpg" alt="">
             <div class="text-content">
@@ -287,6 +290,8 @@
       </div>
     </div>
   </div>
+
+  
 
     <!-- ****  end Actualites **** -->
 
@@ -381,6 +386,34 @@
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    navText: ["<span class='fa fa-chevron-left'></span>", "<span class='fa fa-chevron-right'></span>"], // Use Font Awesome icons for navigation buttons
+    autoplay: true,
+    autoplayTimeout: 3000, // 3 seconds
+    autoplaySpeed: 2000, // Same as autoplayTimeout for constant speed
+    autoplayHoverPause: true, // Pause on hover
+    smartSpeed: 500, // Transition speed (500ms)
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+});
+  </script>
 </body>
 
 </html>
