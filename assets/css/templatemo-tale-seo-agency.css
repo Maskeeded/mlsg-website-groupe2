@@ -201,7 +201,7 @@ body {
 .second-button a {
   font-size: 16px; /* Increased font size */
   color: #fff;
-  background-color: rgb(227, 0, 86);
+  background-color: rgb(var(--bs-secondary-rgb));
   padding: 15px 35px; /* Increased padding */
   display: inline-block;
   border-radius: 50px; /* Increased border-radius for a pill-like shape */
@@ -251,12 +251,12 @@ body {
 }
 
 .section-heading h2 em {
-  color: rgb(126, 44, 92);
+  color: rgb(var(--bs-primary-rgb));
   font-style: normal;
 }
 
 .section-heading h2 span {
-  color: rgb(227, 0, 86);
+  color: rgb(var(--bs-secondary-rgb));
 }
 
 /* 
@@ -898,7 +898,7 @@ Banner Style
 
 .main-banner h6 {
   font-size: 20px;
-  color: rgb(0, 168, 159);
+  color: rgb(var(--bs-info-rgb));
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -920,11 +920,11 @@ Banner Style
 
 .main-banner h4 em {
   font-style: normal;
-  color: rgb(126, 44, 92);
+  color: rgb(var(--bs-primary-rgb));
 }
 
 .main-banner h4 span {
-  color: rgb(227, 0, 86);
+  color: rgb(var(--bs-secondary-rgb));
 }
 
 .main-banner p {
