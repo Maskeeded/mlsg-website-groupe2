@@ -1,0 +1,46 @@
+
+
+
+/*** Service ***/
+.container-service::before{
+    content: url(../images/banner-left.png);
+    top: -1px;
+    left: 0;
+    position: absolute;
+    width: 194px;
+    height: 655px;
+    z-index: -1;
+}
+
+.container-service::after{
+    content: url(../images/contact-left.jpg);
+    bottom: -150px;
+    right: 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+    width: 103px;
+    height: 464px;
+    z-index: -1;
+}
+
+.service .nav-link{
+    color: rgb(var(--bs-primary-rgb));
+}
+
+.service .nav .nav-link {
+    transition: .5s;
+}
+
+.service .nav .nav-link.active {
+    border-color: rgb(var(--bs-secondary-rgb)) !important;
+    background: rgb(var(--bs-primary-rgb));
+}
+
+.service .nav .nav-link.active h5 {
+    color: #FFFFFF !important;
+}
+
+.service .nav .nav-link.active h5 i {
+    color: #FFFFFF !important;
+}
