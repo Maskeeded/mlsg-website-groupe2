@@ -41,7 +41,9 @@ reset
   --bs-placeholder-opacity: 0.7;
 }
 
-::placeholder {
+
+::placeholder,
+.form-control::placeholder{
   color: rgba(var(--bs-secondary-rgb), var(--bs-placeholder-opacity));
 }
 
@@ -199,6 +201,14 @@ img {
   overflow: hidden;
 }
 
+footer .arrow-link-img{
+  width: 20px;
+}
+
+footer .social-links img{
+  width: 35px;
+}
+
 /* 
 ---------------------------------------------
 Global Styles
@@ -220,50 +230,67 @@ body {
 }
 
 .templatemo-feature {
-  max-width: 66px;
-  border-radius: 50%;
+	max-width: 86px;
+  border-radius: 0%;
+  display: block;
+  margin:auto;
+}
+
+#text-center-service {
+  text-align: center;
+
 }
 
 .main-button a {
-  font-size: 14px;
+  font-size: 16px; /* Increased font size */
   color: #fff;
-  background-color: #5b03e4;
-  padding: 12px 30px;
+  background-color: rgb(var(--bs-info-rgb));
+  padding: 15px 35px; /* Increased padding */
   display: inline-block;
-  border-radius: 25px;
+  border-radius: 50px; /* Increased border-radius for a pill-like shape */
   font-weight: 400;
-  text-transform: capitalize;
-  letter-spacing: 0.5px;
-  transition: all 0.3s;
+
+  text-transform: uppercase; /* Changed text transform to uppercase */
+  letter-spacing: 1px; /* Increased letter spacing */
+  transition: all .3s;
+
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Added box-shadow for depth */
 }
 
 .main-button a:hover {
-  background-color: #5b03e4;
+
+  background-color: rgb(var(--bs-info-hover-rgb));
   color: #fff;
-  opacity: 0.8;
+  transform: scale(1.1); /* Increased scale effect on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increased box-shadow on hover */
 }
 
 .second-button a {
-  font-size: 14px;
+  font-size: 16px; /* Increased font size */
   color: #fff;
-  background-color: #c03afe;
-  padding: 12px 30px;
+  background-color: rgb(var(--bs-secondary-rgb));
+  padding: 15px 35px; /* Increased padding */
   display: inline-block;
-  border-radius: 25px;
+  border-radius: 50px; /* Increased border-radius for a pill-like shape */
   font-weight: 400;
-  text-transform: capitalize;
-  letter-spacing: 0.5px;
-  transition: all 0.3s;
+
+  text-transform: uppercase; /* Changed text transform to uppercase */
+  letter-spacing: 1px; /* Increased letter spacing */
+  transition: all .3s;
+
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Added box-shadow for depth */
 }
 
 .second-button a:hover {
-  background-color: #c03afe;
+  background-color: rgb(246, 37, 117);
   color: #fff;
   opacity: 0.8;
+  transform: scale(1.1); /* Increased scale effect on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increased box-shadow on hover */
 }
 
 .section {
@@ -287,6 +314,7 @@ body {
   );
 }
 
+
 .section-heading h2 {
   color: #2a2a2a;
   font-size: 30px;
@@ -297,12 +325,12 @@ body {
 }
 
 .section-heading h2 em {
-  color: #5b03e4;
+  color: rgb(var(--bs-primary-rgb));
   font-style: normal;
 }
 
 .section-heading h2 span {
-  color: #c03afe;
+  color: rgb(var(--bs-secondary-rgb));
 }
 
 /* 
@@ -947,7 +975,7 @@ Banner Style
 
 .main-banner h6 {
   font-size: 20px;
-  color: #5b03e4;
+  color: rgb(var(--bs-info-rgb));
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -969,11 +997,11 @@ Banner Style
 
 .main-banner h4 em {
   font-style: normal;
-  color: #5b03e4;
+  color: rgb(var(--bs-primary-rgb));
 }
 
 .main-banner h4 span {
-  color: #c03afe;
+  color: rgb(var(--bs-secondary-rgb));
 }
 
 .main-banner p {
@@ -1012,7 +1040,7 @@ Services Style
 
 .services::before {
   content: url(../images/services-left.jpg);
-  top: 120px;
+  top:  -60px;
   left: 0;
   position: absolute;
   width: 844px;
@@ -1033,12 +1061,12 @@ Services Style
 }
 
 .services .service-item {
-  border: 1px solid #f3d7ff;
   border-radius: 23px;
   padding: 30px;
   background-color: #fff;
-  margin-bottom: 30px;
-  transition: all 0.4s;
+  margin-bottom: 80px;
+  transition: all .4s;
+  /* overflow-wrap: break-word; */
 }
 
 .services .service-item h4 {
@@ -1054,8 +1082,81 @@ Services Style
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
-.services .service-item:hover h4 {
-  color: #5b03e4;
+
+.services .first-service:hover h4 {
+  color: rgb(var(--bs-info-rgb));
+}
+
+.services .second-service:hover h4 {
+  color: rgb(var(--bs-primary-rgb));
+}
+
+.services .third-service:hover h4 {
+  color: rgb(var(--bs-secondary-rgb));
+}
+
+
+.projects {
+  background-color: #f4f4f4; /* Light grey background */
+  padding: 50px 0; /* Vertical padding */
+}
+
+.section-heading {
+  text-align: center; /* Center the heading */
+  margin-bottom: 50px; /* Add some space below the heading */
+}
+
+.section-heading h2 {
+  color: #333; /* Dark text color */
+}
+
+.section-heading p {
+  color: #666; /* Lighter text color */
+}
+
+.project-item {
+  border: 1px solid #ddd; /* Light border */
+  margin-bottom: 30px; /* Add some space below each item */
+  padding: 20px; /* Padding inside each item */
+  
+}
+
+.project-item img {
+  width: 100%; /* Make the image take up the full width */
+  height: auto; /* Keep the image aspect ratio */
+  margin-bottom: 15px; /* Add some space below the image */
+}
+
+.text-content {
+  text-align: center; /* Center the text */
+}
+
+.text-content h4 {
+  color: #333; /* Dark text color */
+  margin-bottom: 10px; /* Add some space below the title */
+}
+
+.text-content p {
+  color: #666; /* Lighter text color */
+  margin-bottom: 15px; /* Add some space below the date */
+}
+
+.primary-button {
+  text-align: center; /* Center the button */
+}
+
+.primary-button a {
+  background-color: rgb(var(--bs-info-rgb)); /* Background color from bs-secondary-rgb */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Padding inside the button */
+  text-decoration: none; /* Remove the underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Add transition for background color */
+}
+
+.primary-button a:hover {
+  background-color: rgb(var(--bs-info-hover-rgb)); /* Background color from bs-info-rgb on hover */
+  opacity: var(--bs-placeholder-opacity);
 }
 
 /* 
@@ -1112,9 +1213,10 @@ Projects Style
 .projects .owl-nav {
   position: absolute;
   max-width: 1320px;
-  top: -126px;
+  top: 50%;
   right: 16%;
   text-align: right;
+  z-index: 1000; /* Add this */
 }
 
 .projects .owl-nav .owl-prev span,
@@ -1125,10 +1227,20 @@ Projects Style
   font-size: 24px;
   display: inline-block;
   color: #fff;
-  background-color: #5b03e4;
+  background-color: rgb(var(--bs-info-rgb));
+  box-shadow: 0 8px 16px 0 rgba(var(--bs-secondary-rgb), 0.2), 0 6px 20px 0 rgba(var(--bs-secondary-rgb), 0.19); /* On hover: cool box-shadow */
+
   border-radius: 50%;
-  opacity: 0.5;
-  transition: all 0.3s;
+
+  opacity: 1;
+  transition: all .3s;
+
+}
+
+
+.owl-carousel .owl-nav button.owl-next, 
+.owl-carousel .owl-nav button.owl-prev {
+  display: inline-block !important;
 }
 
 .projects .owl-nav .owl-next span {
@@ -1362,28 +1474,7 @@ Contact Style
 }
 
 /* 
----------------------------------------------
-Footer Style
---------------------------------------------- 
-*/
 
-footer p {
-  text-align: center;
-  padding: 30px 0px;
-  color: #2a2a2a;
-  font-weight: 500;
-}
-
-footer p a {
-  color: #2a2a2a;
-  transition: all 0.3s;
-}
-
-footer p a:hover {
-  color: #5b03e4;
-}
-
-/* 
 ---------------------------------------------
 Page Heading Style
 --------------------------------------------- 
@@ -2054,6 +2145,8 @@ body {
     padding: 30px;
   }
 }
+
+
 
 @media (max-width: 1000px) {
   .happy-clients .naccs .menu div {

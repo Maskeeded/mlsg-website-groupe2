@@ -133,21 +133,28 @@
 	});
 
 
-	$('.owl-features').owlCarousel({
-		center: true,
-      items:2,
-      loop:true,
-      nav: true,
-      margin:30,
-      responsive:{
-        992:{
-            items:3
-        },
-		1200:{
-			items:4
+	$(".owl-carousel").owlCarousel({
+		loop: true,
+		margin: 10,
+		nav: true,
+		navText: ["<span class='fa fa-chevron-left'></span>", "<span class='fa fa-chevron-right'></span>"], // Use Font Awesome icons for navigation buttons
+		autoplay: true,
+		autoplayTimeout: 2000, // 3 seconds
+		autoplaySpeed: 1000, // Same as autoplayTimeout for constant speed
+		autoplayHoverPause: true, // Pause on hover
+		smartSpeed: 500, // Transition speed (500ms)
+		responsive: {
+		  0: {
+			items: 1
+		  },
+		  600: {
+			items: 3
+		  },
+		  1000: {
+			items: 3
+		  }
 		}
-      }
-	});
+	  });
 
 	
 
