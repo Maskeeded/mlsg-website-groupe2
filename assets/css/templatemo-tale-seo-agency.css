@@ -162,49 +162,64 @@ body {
 }
 
 .templatemo-feature {
-	max-width: 66px; border-radius: 50%;
+	max-width: 86px;
+  border-radius: 0%;
+  display: block;
+  margin:auto;
+}
+
+#text-center-service {
+  text-align: center;
+
 }
 
 .main-button a {
-  font-size: 14px;
+  font-size: 16px; /* Increased font size */
   color: #fff;
-  background-color: #5b03e4;
-  padding: 12px 30px;
+  background-color: rgb(var(--bs-info-rgb));
+  padding: 15px 35px; /* Increased padding */
   display: inline-block;
-  border-radius: 25px;
+  border-radius: 50px; /* Increased border-radius for a pill-like shape */
   font-weight: 400;
-  text-transform: capitalize;
-  letter-spacing: 0.5px;
+  text-transform: uppercase; /* Changed text transform to uppercase */
+  letter-spacing: 1px; /* Increased letter spacing */
   transition: all .3s;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Added box-shadow for depth */
 }
 
 .main-button a:hover {
-  background-color: #5b03e4;
+
+  background-color: rgb(var(--bs-info-hover-rgb));
   color: #fff;
   opacity: 0.8;
+  transform: scale(1.1); /* Increased scale effect on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increased box-shadow on hover */
 }
 
 .second-button a {
-  font-size: 14px;
+  font-size: 16px; /* Increased font size */
   color: #fff;
-  background-color: #c03afe;
-  padding: 12px 30px;
+  background-color: rgb(227, 0, 86);
+  padding: 15px 35px; /* Increased padding */
   display: inline-block;
-  border-radius: 25px;
+  border-radius: 50px; /* Increased border-radius for a pill-like shape */
   font-weight: 400;
-  text-transform: capitalize;
-  letter-spacing: 0.5px;
+  text-transform: uppercase; /* Changed text transform to uppercase */
+  letter-spacing: 1px; /* Increased letter spacing */
   transition: all .3s;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Added box-shadow for depth */
 }
 
 .second-button a:hover {
-  background-color: #c03afe;
+  background-color: rgb(246, 37, 117);
   color: #fff;
   opacity: 0.8;
+  transform: scale(1.1); /* Increased scale effect on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increased box-shadow on hover */
 }
 
 .section {
@@ -225,6 +240,7 @@ body {
   background: linear-gradient(90deg, rgba(85,0,227,1) 0%, rgba(198,61,255,1) 100%);
 }
 
+
 .section-heading h2 {
   color: #2a2a2a;
   font-size: 30px;
@@ -235,12 +251,12 @@ body {
 }
 
 .section-heading h2 em {
-  color: #5b03e4;
+  color: rgb(126, 44, 92);
   font-style: normal;
 }
 
 .section-heading h2 span {
-  color: #c03afe;
+  color: rgb(227, 0, 86);
 }
 
 /* 
@@ -882,7 +898,7 @@ Banner Style
 
 .main-banner h6 {
   font-size: 20px;
-  color: #5b03e4;
+  color: rgb(0, 168, 159);
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -904,11 +920,11 @@ Banner Style
 
 .main-banner h4 em {
   font-style: normal;
-  color: #5b03e4;
+  color: rgb(126, 44, 92);
 }
 
 .main-banner h4 span {
-  color: #c03afe;
+  color: rgb(227, 0, 86);
 }
 
 .main-banner p {
@@ -947,7 +963,7 @@ Services Style
 
 .services::before {
   content: url(../images/services-left.jpg);
-  top: 120px;
+  top:  -60px;
   left: 0;
   position: absolute;
   width: 844px;
@@ -968,12 +984,12 @@ Services Style
 }
 
 .services .service-item {
-  border: 1px solid #f3d7ff;
   border-radius: 23px;
   padding: 30px;
   background-color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
   transition: all .4s;
+  /* overflow-wrap: break-word; */
 }
 
 .services .service-item h4 {
@@ -989,9 +1005,19 @@ Services Style
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
-.services .service-item:hover h4 {
-  color: #5b03e4;
+
+.services .first-service:hover h4 {
+  color: rgb(var(--bs-info-rgb));
 }
+
+.services .second-service:hover h4 {
+  color: rgb(var(--bs-primary-rgb));
+}
+
+.services .third-service:hover h4 {
+  color: rgb(var(--bs-secondary-rgb));
+}
+
 
 /* 
 ---------------------------------------------
