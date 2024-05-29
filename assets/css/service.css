@@ -2,6 +2,28 @@
 
 
 /*** Service ***/
+.container-service::before{
+    content: url(../images/banner-left.png);
+    top: -1px;
+    left: 0;
+    position: absolute;
+    width: 194px;
+    height: 655px;
+    z-index: -1;
+}
+
+.container-service::after{
+    content: url(../images/contact-left.jpg);
+    bottom: -150px;
+    right: 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+    width: 103px;
+    height: 464px;
+    z-index: -1;
+}
+
 .service .nav-link{
     color: rgb(var(--bs-primary-rgb));
 }
