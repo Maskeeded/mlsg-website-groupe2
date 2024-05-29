@@ -153,7 +153,15 @@ body {
 }
 
 .templatemo-feature {
-	max-width: 66px; border-radius: 50%;
+	max-width: 86px;
+  border-radius: 0%;
+  display: block;
+  margin:auto;
+}
+
+#text-center-service {
+  text-align: center;
+
 }
 
 .main-button a {
@@ -226,12 +234,12 @@ body {
 }
 
 .section-heading h2 em {
-  color: #5b03e4;
+  color: rgb(126, 44, 92);
   font-style: normal;
 }
 
 .section-heading h2 span {
-  color: #c03afe;
+  color: rgb(227, 0, 86);
 }
 
 /* 
@@ -938,7 +946,7 @@ Services Style
 
 .services::before {
   content: url(../images/services-left.jpg);
-  top: 120px;
+  top:  -60px;
   left: 0;
   position: absolute;
   width: 844px;
@@ -959,12 +967,12 @@ Services Style
 }
 
 .services .service-item {
-  border: 1px solid #f3d7ff;
   border-radius: 23px;
   padding: 30px;
   background-color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
   transition: all .4s;
+  /* overflow-wrap: break-word; */
 }
 
 .services .service-item h4 {
@@ -980,9 +988,19 @@ Services Style
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
-.services .service-item:hover h4 {
-  color: #5b03e4;
+
+.services .first-service:hover h4 {
+  color: rgb(var(--bs-info-rgb));
 }
+
+.services .second-service:hover h4 {
+  color: rgb(var(--bs-primary-rgb));
+}
+
+.services .third-service:hover h4 {
+  color: rgb(var(--bs-secondary-rgb));
+}
+
 
 /* 
 ---------------------------------------------
