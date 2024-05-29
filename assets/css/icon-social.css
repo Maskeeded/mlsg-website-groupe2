@@ -2,6 +2,11 @@
     --bs-link-color-rgb: var(--bs-secondary-rgb);
 }
 
+.wrapper a {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none; }
+
 .wrapper * {
     margin: 0;
     padding: 0;
