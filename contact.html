@@ -18,7 +18,6 @@
   <!-- Additional CSS Files -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-tale-seo-agency.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="vendor/leaflet/css/leaflet.css"/>
@@ -32,8 +31,6 @@
     
   -->
   <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="stylesheet" href="assets/css/carousel.css" />
-  <link rel="stylesheet" href="assets/css/actualites.css">
 </head>
 <body>
 
@@ -115,182 +112,96 @@
   </header>
   <!-- ***** Header Area End ***** -->
 
-  <div class="main-banner" id="top">
+  <div class="contact-us section" id="contact">
     <div class="container">
       <div class="row">
-        <div class="col-lg-7">
-          <div class="caption header-text">
-            <h6>MISSION LOCALE pour l'emploi de Saint-Gilles</h6>
-            <div class="line-dec"></div>
-            <h4>Plongez <em>dans le monde</em> de l'emploi <span>avec nous</span></h4>
-            <p>La Mission Locale de Saint-Gilles est votre partenaire idéal pour trouver des solutions d'emploi adaptées. Nous offrons une variété de services, y compris des conseils personnalisés, des formations et des ateliers. Découvrez nos <a href="index.html">Accueil</a>, <a href="about.html">À propos</a>, et <a href="faqs.html">FAQ</a>.</p>
-            <div class="main-button scroll-to-section"><a href="#animatedCarousel">Découvrez plus</a></div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="services section" id="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 offset-lg-6">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-heading">
-                <h2>Nous offrons <em>divers services</em> &amp;
-                  <span>fonctionnalités</span> pour votre agence d'emploi
-                </h2>
-                <div class="line-dec"></div>
-                <p>Nous nous engageons à fournir des solutions d'emploi innovantes et personnalisées pour répondre aux besoins spécifiques de votre entreprise.</p>
+        <div class="col-lg-12">
+          <div class="contact-us-content">
+            <div class="row">
+              <div class="col-lg-4">
+                <div id="map">
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <form id="contact-form" action="" method="post">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="section-heading">
+                        <h2><em class="text-primary fw-bolder">Contactez-nous</em> &amp; Entrez en <span class="text-secondary">Contact</span></h2>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input class="text-secondary" type="text" name="firstname" id="firstname" placeholder="Votre prénom..." autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input class="text-secondary"  type="text" name="lastname" id="lastname" placeholder="Votre nom de famille..." autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input class="text-secondary"  type="email" name="email" id="email" placeholder="Votre email..." required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input class="text-secondary"  type="text" name="titre" id="titre" placeholder="Sujet..." autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input class="text-secondary"  type="text" name="phone" id="phone" placeholder="Numéro de téléphonne..." pattern="^[0-9\s\./]*$" autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input class="text-secondary"  type="text" name="postal" id="postal" placeholder="Code postal..." pattern="^[0-9]{4}$" autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <textarea class="text-secondary"  name="message" id="message" placeholder="Votre message..." required></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="btn btn-info">Envoyer mon message</button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </form>
+                <div class="more-info">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="info-item">
+                        <i class="fa fa-phone"></i>
+                        <h4><a href="#" class="fw-bold">Tel: 02 542 63 21</a></h4>
+                        <h4><a href="#" class="fw-bold">GSM: 0476/68.07.93 </a></h4>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="info-item">
+                        <i class="fa fa-envelope"></i>
+                        <h4><a href="#" class="fw-bold">contact@mlsg.be</a></h4>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="info-item">
+                        <i class="fa fa-map-marker"></i>
+                        <h4><a href="#" class="fw-bold">Chaussée de Waterloo 255 (2e étage), 1060 Saint-Gilles</a></h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-4 col-sm-4">
-              <a href="your-link-here">
-                <div class="service-item first-service">
-                  <div class="icon">
-                    <img src="assets/images/services-01.jpg" alt="discover SEO" class="templatemo-feature">
-                  </div>
-                  <h4 id="text-center-service">Accompagnement vers l'emploi </h4>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-4 col-sm-4">
-              <a href="your-link-here">
-                <div class="service-item second-service">
-                  <div class="icon">
-                    <img src="assets/images/services-02.jpg" alt="data analysis" class="templatemo-feature">
-                  </div>
-                  <h4 id="text-center-service">Service aux entreprises</h4>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-4 col-sm-4">
-              <a href="your-link-here">
-                <div class="service-item third-service">
-                  <div class="icon">
-                    <img src="assets/images/services-03.jpg" alt="precise data" class="templatemo-feature">
-                  </div>
-                  <h4 id="text-center-service">Orientation et &amp; découverts métiers</h4>
-                </div>
-              </a>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
- <!-- ***** carousel ***** -->
-<div class="carousel-container mt-3 mb-5">
-  <div id="animatedCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="assets/images/carousel/1.jpg" class="d-block w-100" alt="First Slide">
-        <div class="carousel-caption">
-          <img id="logo" class="animate__animated animate__zoomIn mb-5" src="assets/images/carousel/logow.svg" alt="">
-          <h1 class="display-4 mb-4 animate__animated animate__zoomIn"><strong>Mission  Locale pour l'emploi de Saint-Gilles</strong></h1><hr class="white">
-          <h3 class="mb-3 animate__animated animate__zoomIn ">Bienvenue sur le site de la Mission Locale pour l’emploi de Saint-Gilles. <br>Découvrez l’ensemble de nos services via notre Prezi!</h3>
-          <a href="#" class="btn btn-info p-3 px-4 animate__animated animate__zoomIn ">En savoir plus</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="assets/images/carousel/6.png" class="d-block w-100" alt="Second Slide">
-        <div class="carousel-caption">
-          <h1 class="display-4 mb-5 animate__animated animate__fadeInBottomLeft"><strong>Découvrir et se former aux métiers de l’HoReCa</strong></h1>
-          <h3 class="mb-3 animate__animated animate__fadeInBottomLeft">Du 10 au 21 juin 2024 : découverte des métiers de l’HoReCa (commis de cuisine,...</h3>
-          <a href="#" class="btn btn-info p-3 px-4 animate__animated animate__fadeInBottomLeft">En savoir plus</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="assets/images/carousel/9.jpg" class="d-block w-100" alt="Third Slide">
-        <div class="carousel-caption">
-
-          <h1 class="display-4 mb-5 animate__animated animate__fadeInBottomLeft"><strong>Notre Prochain Atelier d’Orientation Professionnelle</strong></h1>
-          <h3 class="mb-3 animate__animated animate__fadeInBottomLeft">Aide dans la construction de votre projet professionnel </h3>
-          <a href="#" class="btn btn-info p-3 px-4 animate__animated animate__fadeInBottomLeft">En savoir plus</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="assets/images/carousel/4.jpg" class="d-block w-100" alt="Third Slide">
-        <div class="carousel-caption">
-
-          <h1 class="display-4 mb-5 animate__animated animate__fadeInBottomLeft"><strong>Découvrir et se former aux métiers de l’Informatique</strong></h1>
-          <h3 class="mb-3 animate__animated animate__fadeInBottomLeft">Tes premiers pas dans l’informatique dès le 6 novembre 2024</h3>
-          <a href="#" class="btn btn-info p-3 px-4 animate__animated animate__fadeInBottomLeft">En savoir plus</a>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#animatedCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#animatedCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
-
-<!-- ***** end-carousel ***** -->
-
-
-  <!-- **** Actualites **** -->
-
-<div class="projects section" id="projects">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="section-heading">
-          <h2><em>Actualités</em> Et <span>Événements</span></h2>
-          <div class="line-dec"></div>
-          <p>Consultez nos actualités et événements à venir pour rester informé des dernières nouvelles de la Mission Locale de Saint-Gilles.</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="project-item">
-          <img src="assets/images/projects-01.jpg" alt="">
-          <div class="text-content">
-            <h4>Atelier d'orientation professionnelle</h4>
-            <p>Le 15 juin 2024</p>
-            <div class="primary-button">
-              <a href="#">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="project-item">
-          <img src="assets/images/projects-02.jpg" alt="">
-          <div class="text-content">
-            <h4>Formation aux métiers de l'HoReCa</h4>
-            <p>Le 10 juin 2024</p>
-            <div class="primary-button">
-              <a href="#">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="project-item">
-          <img src="assets/images/projects-03.jpg" alt="">
-          <div class="text-content">
-            <h4>Formation aux métiers de l'informatique</h4>
-            <p>Le 6 novembre 2024</p>
-            <div class="primary-button">
-              <a href="#">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-    <!-- ****  end Actualites **** -->
 
   <footer>
     <div class="container mt-5 mb-2 partenaria-container">
@@ -383,6 +294,8 @@
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="vendor/leaflet/js/leaflet.js"></script>
+  <script src="assets/js/map.js"></script>
 </body>
 
 </html>
