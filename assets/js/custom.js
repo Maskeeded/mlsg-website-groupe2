@@ -142,6 +142,17 @@
 		}
 	  });
 
+	  var options = {
+		strings: ['Plongez <em>dans le monde</em> de l\'emploi <span>avec nous</span>'],
+		typeSpeed: 30,
+		backSpeed: 40,
+		loop: false,
+		startDelay: 1000, // Delay before start typing
+		backDelay: 1000, // Delay before start backspacing
+		showCursor: false, // Don't show the typing cursor
+	  };
+	  
+	  var typed = new Typed('#typed-text', options);
 	
 
 	// Menu Dropdown Toggle
