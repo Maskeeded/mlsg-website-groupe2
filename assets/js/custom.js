@@ -143,11 +143,11 @@
 	  });
 
 	  var options = {
-		strings: ['Plongez <em>dans le monde</em> de l\'emploi <span>avec nous</span>'],
+		strings: ['Plongez <em>dans le monde</em> de <br> l\'emploi <span>avec nous</span>'],
 		typeSpeed: 30,
 		backSpeed: 40,
 		loop: false,
-		startDelay: 1000, // Delay before start typing
+		startDelay: 100, // Delay before start typing
 		backDelay: 1000, // Delay before start backspacing
 		showCursor: false, // Don't show the typing cursor
 	  };
