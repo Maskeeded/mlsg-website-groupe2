@@ -1,0 +1,71 @@
+:root{
+    --bs-info-hover-border-rgb: 0, 158, 159;
+}
+
+.fc-theme-bootstrap5 a:not([href]){
+    color: rgb(var(--bs-link-color-rgb));
+}
+
+.btn-primary{
+    --bs-btn-bg: rgb(var(--bs-info-rgb));
+    --bs-btn-border-color: rgb(var(--bs-info-hover-rgb));
+
+    --bs-btn-active-bg: rgb(var(--bs-primary-rgb));
+    --bs-btn-active-border-color: rgb(var(--bs-primary-rgb));
+
+    --bs-btn-hover-bg: rgb(var(--bs-info-hover-rgb));
+    --bs-btn-hover-border-color: rgb(var(--bs-info-hover-border-rgb));
+
+    --bs-btn-disabled-bg: rgb(var(--bs-primary-rgb));
+    --bs-btn-disabled-border-color: rgb(var(--bs-primary-rgb));
+    
+}
+
+.formation-week-agenda{
+    cursor: pointer;
+    background-color: rgb(var(--bs-primary-rgb));
+    color: white !important;
+}
+
+.formation-week-agenda:hover{
+    background-color: rgb(var(--bs-secondary-rgb)) !important;
+    color: white !important;
+}
+
+.formation-month-agenda{
+    cursor: pointer;
+    background-color: rgb(var(--bs-primary-rgb));
+}
+
+.formation-month-agenda:hover{
+    background-color: rgb(var(--bs-secondary-rgb)) !important;
+}
+
+.btn-month::after{
+    content: attr(data-content);
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: rgb(var(--bs-primary-rgb));
+    top: -10.5px;
+    right: -10.5px;
+    z-index: 99999;
+    border: 1px solid rgb(var(--bs-primary-rgb));
+}
+
+.active.btn-month::after{
+    background-color: rgb(var(--bs-secondary-rgb));
+    border: 1px solid rgb(var(--bs-primary-rgb));
+}
+
+.btn-month:active:after{
+    background-color: rgb(var(--bs-secondary-rgb));
+    border: 1px solid rgb(var(--bs-primary-rgb));
+}
+
+@media screen and (width < 800px) {
+    #wrapper-agenda{
+        min-height: 750px;
+    }
+}

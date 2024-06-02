@@ -1,7 +1,9 @@
 (function ($) {
 	
 	"use strict";
-
+	
+	new WOW().init();
+	  
 	// Page loading animation
 	$(window).on('load', function() {
 
@@ -117,56 +119,6 @@
 			$(".naccs ul").height(listItemHeight + "px");
 		}
 	});
-
-
-	$(".owl-carousel").owlCarousel({
-		loop: true,
-		margin: 10,
-		nav: true,
-		navText: ["<span class='fa fa-chevron-left'></span>", "<span class='fa fa-chevron-right'></span>"], // Use Font Awesome icons for navigation buttons
-		autoplay: true,
-		autoplayTimeout: 2000, // 3 seconds
-		autoplaySpeed: 1000, // Same as autoplayTimeout for constant speed
-		autoplayHoverPause: true, // Pause on hover
-		smartSpeed: 500, // Transition speed (500ms)
-		responsive: {
-		  0: {
-			items: 1
-		  },
-		  600: {
-			items: 3
-		  },
-		  1000: {
-			items: 3
-		  }
-		}
-	  });
-
-	  var options = {
-		strings: ['Plongez <em>dans le monde</em> de <br> l\'emploi <span>avec nous</span>'],
-		typeSpeed: 30,
-		backSpeed: 40,
-		loop: false,
-		startDelay: 100, // Delay before start typing
-		backDelay: 1000, // Delay before start backspacing
-		showCursor: false, // Don't show the typing cursor
-	  };
-	  
-	  var typed = new Typed('#typed-text', options);
-
-
-	  window.onscroll = function() {scrollFunction()};
-
-	function scrollFunction() {
-		var header = document.querySelector(".header-sticky");
-		var logo = document.getElementById("logo-navbar");
-		if (window.scrollY > header.offsetTop) {
-			logo.classList.add("sticky-logo");
-		} else {
-			logo.classList.remove("sticky-logo");
-		}
-	}
-	
 
 	// Menu Dropdown Toggle
 	if($('.menu-trigger').length){

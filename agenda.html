@@ -10,7 +10,7 @@
     rel="stylesheet">
 
   <title>Tale SEO Agency CSS Template by TemplateMo website</title>
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -18,6 +18,7 @@
   <!-- Additional CSS Files -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-tale-seo-agency.css">
+  <link rel="stylesheet" href="assets/css/agenda.css">
   <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -54,33 +55,33 @@
   </div>
   <!-- ***** Preloader End ***** -->
 
-       <!-- ***** Pre-Header Area Start ***** -->
-       <div class="pre-header">
-        <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-sm-9">
+  <!-- ***** Pre-Header Area Start ***** -->
+  <div class="pre-header">
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-8 col-sm-9">
             <div class="left-info">
                 <ul>
-                <li><a href="#"><i class="fa fa-phone"></i>+000 1234 5678</a></li>
-                <li><a href="#"><i class="fa fa-envelope"></i>infocompany@email.com</a></li>
-                <li><a href="#"><i class="fa fa-map-marker"></i>St. London 54th Bull</a></li>
+                  <li><a href="#"><i class="fa fa-phone"></i>+000 1234 5678</a></li>
+                  <li><a href="#"><i class="fa fa-envelope"></i>infocompany@email.com</a></li>
+                  <li><a href="#"><i class="fa fa-map-marker"></i>St. London 54th Bull</a></li>
                 </ul>
             </div>
-            </div>
-            <div class="col-lg-4 col-sm-3">
+          </div>
+          <div class="col-lg-4 col-sm-3">
             <div class="social-icons">
                 <ul>
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
                 </ul>
             </div>
-            </div>
-        </div>
-        </div>
+          </div>
+      </div>
     </div>
-    <!-- ***** Pre-Header Area End ***** -->
+  </div>
+  <!-- ***** Pre-Header Area End ***** -->
 
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
@@ -117,7 +118,53 @@
       </div>
       </div>
   </header>
-
+  <div style="height: 150px"></div>
+  <div class="container">
+    <img src="assets/js/autumn-foliage-text-october-eps-260nw-717113407.webp" alt="">
+  </div>
+  <div class="container-fluid">
+    <div class="row bg-light">
+      <h2 class="text-center p-5 text-info"><span class="text-primary">Agenda Formations Du Mois</span> <span class="article-month-title text-secondary"></span><span class="text-secondary month-title">Juin</span></h2>
+      <div class="row col-12 col-lg-8 m-auto gap-3 justify-content-center">
+        <div data-content="5" class="active btn btn-info text-white col-5 col-sm-2 btn-month position-relative d-flex justify-content-center align-items-center">Button month</div>
+        <div data-content="5" class="btn btn-info text-white col-5 col-sm-2 btn-month position-relative d-flex justify-content-center align-items-center">Button month</div>
+        <div data-content="5" class="btn btn-info text-white col-5 col-sm-2 btn-month position-relative d-flex justify-content-center align-items-center">Button month</div>
+        <div data-content="5" class="btn btn-info text-white col-5 col-sm-2 btn-month position-relative d-flex justify-content-center align-items-center">Button month</div>
+        <div data-content="5" class="btn btn-info text-white col-5 col-sm-2 btn-month position-relative d-flex justify-content-center align-items-center">Button month</div>
+      </div>
+      <div data-content="5" class="row col-12 col-lg-8 m-auto mt-3 mb-5 gap-3 justify-content-center">
+        <div data-content="5" class="btn btn-info text-white col-5 col-sm-2 btn-month position-relative d-flex justify-content-center align-items-center">Button month</div>
+        <div data-content="5" class="btn btn-info text-white col-5 col-sm-2 btn-month position-relative d-flex justify-content-center align-items-center">Button month</div>
+        <div data-content="5" class="btn btn-info text-white col-5 col-sm-2 btn-month position-relative d-flex justify-content-center align-items-center">Button month</div>
+        <div data-content="5" class="btn btn-info text-white col-5 col-sm-2 btn-month position-relative d-flex justify-content-center align-items-center">Button month</div>
+        <div data-content="5" class="btn btn-info text-white col-5 col-sm-2 btn-month position-relative d-flex justify-content-center align-items-center">Button month</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center py-5" id="wrapper-agenda">
+      <div id="monthAgenda" class="col-12 col-lg-10"></div>
+      <div id="weekAgenda" class="col-12 col-lg-10"></div>
+    </div>
+  </div>
+  <div class="container-fluid bg-light py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-8">
+        <div class="section-heading">
+          <h2><em>Formations du mois</em> <span class="article-month-title"></span><span class="month-title">Octobre</span></h2>
+          <div class="line-dec"></div>
+          <p>Consultez toutes les formations du mois <span class="article-month-title"></span><span class="month-title">octobre</span> de la Mission Locale de Saint-Gilles.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8" id="wrapper-carousel">
+        <div class="owl-carousel owl-theme">
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <footer>
     <div class="container my-4 partenaria-container">
       <div class="row justify-content-center">
@@ -129,7 +176,7 @@
         <div class="col-7 col-lg-2 p-0 p-lg-2"><a target="_blank" href="https://stgilles.brussels/"><img src="assets/images/partenaires/saint-gilles-logo.png" alt="Saint Gilles"></a></div>
       </div>
     </div>
-    <div class="footer-top bg-light p-5">
+    <div class="footer-top bg-light p-sm-5">
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-6 col-lg-2 col-md-6 mt-3">
@@ -203,7 +250,7 @@
           <div class="col-lg-4 col-xl-3 col-md-6 footer-newsletter mt-3 position-relative ms-xl-2">
             <h4 class="text-primary mb-2">Notre Newsletter</h4>
             <p>Nous vous enverrons des mails de nos nouveautés.</p>
-            <form class="newsletter-form">
+            <form class="newsletter-form mb-3">
               <input type="email" class="text-secondary" autocomplete="true" placeholder="Votre email..." />
               <button>
                 <span class="default text-white">Envoyer</span>
@@ -236,6 +283,7 @@
   
   </footer>
   <!-- Scripts -->
+  <script src="vendor/wow/js/wow.min.js"></script>
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -245,10 +293,11 @@
   
   <script src="assets/js/popup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
   <script src="assets/js/custom.js"></script>
 
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/index.global.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/locales/fr.global.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@6.1.13/index.global.min.js'></script>
   <script src="assets/js/agenda.js"></script>
 </body>
 

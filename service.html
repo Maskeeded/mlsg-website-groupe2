@@ -18,16 +18,12 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="assets/css/animate.css" rel="stylesheet">
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/templatemo-tale-seo-agency.css">
 
     <!-- Template Stylesheet -->
     <link href="assets/css/service.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/animate.css"/>
 
     <!-- Dépendance pour la newsletter -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&amp;display=swap">
@@ -252,7 +248,7 @@
           <div class="col-7 col-lg-2 p-0 p-lg-2"><a target="_blank" href="https://stgilles.brussels/"><img src="assets/images/partenaires/saint-gilles-logo.png" alt="Saint Gilles"></a></div>
         </div>
       </div>
-      <div class="footer-top bg-light p-5">
+      <div class="footer-top bg-light p-5 p-sm-5">
         <div class="container-fluid">
           <div class="row justify-content-center">
             <div class="col-6 col-lg-2 col-md-6 mt-3">
@@ -342,8 +338,34 @@
                     <div class="left"></div>
                     <div class="right"></div>
                   </div>
-                </button>
-              </form>
+                  <input class="form-control mt-2 text-center text-secondary" type="text" name="phone" pattern="^[0-9\s\./]*$" placeholder="Numéro Téléphonne..." required>
+                  <input type="submit" class="btn btn-info w-100 text-white fw-bold mt-2" value="Envoyer">
+                </form>
+              </div>
+    
+              <div class="col-lg-4 col-xl-3 col-md-6 footer-newsletter mt-3 position-relative ms-xl-2">
+                <h4 class="text-primary mb-2">Notre Newsletter</h4>
+                <p>Nous vous enverrons des mails de nos nouveautés.</p>
+                <form class="newsletter-form mb-3">
+                  <input type="email" class="text-secondary" autocomplete="true" placeholder="Votre email..." />
+                  <button>
+                    <span class="default text-white">Envoyer</span>
+                    <span class="success">
+                      <svg viewBox="0 0 16 16">
+                        <polyline points="3.75 9 7 12 13 5"></polyline>
+                      </svg>Envoyé
+                    </span>
+                    <svg class="trails" viewBox="0 0 33 64">
+                      <path d="M26,4 C28,13.3333333 29,22.6666667 29,32 C29,41.3333333 28,50.6666667 26,60"></path>
+                      <path d="M6,4 C8,13.3333333 9,22.6666667 9,32 C9,41.3333333 8,50.6666667 6,60"></path>
+                    </svg>
+                    <div class="plane">
+                      <div class="left"></div>
+                      <div class="right"></div>
+                    </div>
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -361,15 +383,14 @@
 
 
     <!-- JavaScript Libraries -->
+    <script src="vendor/wow/js/wow.min.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/wow/js/wow.min.js"></script>
 
     <!-- Template Javascript -->
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
-
 
     <!-- Dépendance pour la newsletter -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>

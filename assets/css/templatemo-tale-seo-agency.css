@@ -39,6 +39,8 @@ reset
   --bs-info-hover-rgb: 0, 178, 159;
 
   --bs-placeholder-opacity: 0.7;
+
+  --bs-link-color-rgb: var(--bs-primary-rgb);
 }
 
 ::placeholder,
@@ -49,6 +51,9 @@ reset
 .btn-info{
   --bs-btn-bg: rgb(var(--bs-info-rgb)); /* info btn turquoise */
   --bs-btn-hover-bg: rgb(var(--bs-info-hover-rgb));
+  --bs-btn-active-bg: rgb(var(--bs-primary-rgb));
+  --bs-btn-active-border-color: rgb(var(--bs-secondary-rgb));
+  --bs-btn-border-color: rgb(var(--bs-info-hover-rgb));
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
