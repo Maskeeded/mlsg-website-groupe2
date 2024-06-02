@@ -301,9 +301,7 @@ function addFormationIntoCarousel(title, start, end){
               <h4>${title}</h4>
               <p>Date de début : ${start}</p>
               <p>Date de fin : ${end}</p>
-              <div class="primary-button">
-                <a href="#">En savoir plus</a>
-              </div>
+              <a class="btn btn-info text-white w-75" href="#">En savoir plus</a>
             </div>
           </div>
         </div>
