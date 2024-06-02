@@ -64,6 +64,7 @@ $(function(){
     const length = +$firstBtnMonth.data('content'); // convert to number
     const month = +$firstBtnMonth.data('month'); // convert to number
     initTitleMonth(month);
+    initBannerMonth(month);
     initEventsCalendar(month);
     initCalendar();
     initCarousel(length);
@@ -104,6 +105,7 @@ function initListener(){
     fillCarousel(month);
     $('.btn-month.active').removeClass('active');
     $element.addClass('active');
+    initBannerMonth(month);
   })
 }
 
@@ -118,6 +120,14 @@ function initTitleMonth(month){
   const monthName = title.charAt(0).toUpperCase() + title.slice(1);
   $('.month-title').text(monthName);
   $('.article-month-title').text(articlesMonth.includes(month) ? 'D\'' : 'De ');
+}
+
+/**
+ * 
+ * @param {number} month 
+ */
+function initBannerMonth(month){
+  $('#month-banner').attr('src', 'assets/images/mois/'+month+'.webp');
 }
 
 /**
@@ -208,8 +218,10 @@ function initButtonMonth(){
     // Juillet == 6 & Aout == 7
     if(date.getMonth() == 6)
         date.setMonth(8);
+    const title = date.toLocaleString('default', { month: 'long' });
+    const monthName = title.charAt(0).toUpperCase() + title.slice(1);
     $(this)
-      .text(date.toLocaleString('default', { month: 'long' }) + ' ' + date.getFullYear())
+      .text(monthName + ' ' + date.getFullYear())
       .attr('data-month', date.getMonth())
       .attr('data-year', date.getFullYear());
     date.setMonth(date.getMonth() + 1);
@@ -255,10 +267,14 @@ function generateDurationFormation(month, year){
  * @param {string} end 
  */
 function addFormationIntoCarousel(title, start, end){
-  const item = `
+  fetch('https://random.imagecdn.app/450/350')
+  .then(response => response.blob())
+  .then(blob => {
+    const url = URL.createObjectURL(blob);
+    const item = `
           <div class="item">
             <div class="project-item">
-              <img src="https://placehold.co/400x350" alt="">
+              <img src="${url}" alt="">
               <div class="text-content">
                 <h4>${title}</h4>
                 <p>Date de début : ${start}</p>
@@ -272,6 +288,9 @@ function addFormationIntoCarousel(title, start, end){
     `;
     $('.owl-carousel').trigger('add.owl.carousel', [item])
     .trigger('refresh.owl.carousel');
+  })
+  .catch(error => console.error('Erreur:', error));
+
 }
 
 function isMonthAgenda(){
