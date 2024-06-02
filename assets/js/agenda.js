@@ -64,6 +64,7 @@ $(function(){
     const length = +$firstBtnMonth.data('content'); // convert to number
     const month = +$firstBtnMonth.data('month'); // convert to number
     initTitleMonth(month);
+    initBannerMonth(month);
     initEventsCalendar(month);
     initCalendar();
     initCarousel(length);
@@ -104,6 +105,7 @@ function initListener(){
     fillCarousel(month);
     $('.btn-month.active').removeClass('active');
     $element.addClass('active');
+    initBannerMonth(month);
   })
 }
 
@@ -118,6 +120,14 @@ function initTitleMonth(month){
   const monthName = title.charAt(0).toUpperCase() + title.slice(1);
   $('.month-title').text(monthName);
   $('.article-month-title').text(articlesMonth.includes(month) ? 'D\'' : 'De ');
+}
+
+/**
+ * 
+ * @param {number} month 
+ */
+function initBannerMonth(month){
+  $('#month-banner').attr('src', 'assets/images/mois/'+month+'.webp');
 }
 
 /**
@@ -208,8 +218,10 @@ function initButtonMonth(){
     // Juillet == 6 & Aout == 7
     if(date.getMonth() == 6)
         date.setMonth(8);
+    const title = date.toLocaleString('default', { month: 'long' });
+    const monthName = title.charAt(0).toUpperCase() + title.slice(1);
     $(this)
-      .text(date.toLocaleString('default', { month: 'long' }) + ' ' + date.getFullYear())
+      .text(monthName + ' ' + date.getFullYear())
       .attr('data-month', date.getMonth())
       .attr('data-year', date.getFullYear());
     date.setMonth(date.getMonth() + 1);
