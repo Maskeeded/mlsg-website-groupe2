@@ -7,6 +7,9 @@ const formations = {};
 let eventsMonth = [];
 let eventsWeek = [];
 
+// Use pour les fetch image pour les formations
+let indexFormationImage = 0;
+
 // Les mois où l'on dit d'octobre , d'avril, d'aout
 const articlesMonth = [3,7,9];
 
@@ -267,29 +270,31 @@ function generateDurationFormation(month, year){
  * @param {string} end 
  */
 function addFormationIntoCarousel(title, start, end){
+  const currentIndex = indexFormationImage++;
   fetch('https://random.imagecdn.app/450/350')
   .then(response => response.blob())
   .then(blob => {
     const url = URL.createObjectURL(blob);
-    const item = `
-          <div class="item">
-            <div class="project-item">
-              <img src="${url}" alt="">
-              <div class="text-content">
-                <h4>${title}</h4>
-                <p>Date de début : ${start}</p>
-                <p>Date de fin : ${end}</p>
-                <div class="primary-button">
-                  <a href="#">En savoir plus</a>
-                </div>
+    $(`.img-formation-${currentIndex}`).attr('src', url);
+  })
+  .catch(error => console.error('Erreur:', error));
+  const item = `
+        <div class="item">
+          <div class="project-item">
+            <img src="https://placehold.co/450x350" class="img-formation-${currentIndex}" alt="">
+            <div class="text-content">
+              <h4>${title}</h4>
+              <p>Date de début : ${start}</p>
+              <p>Date de fin : ${end}</p>
+              <div class="primary-button">
+                <a href="#">En savoir plus</a>
               </div>
             </div>
           </div>
-    `;
-    $('.owl-carousel').trigger('add.owl.carousel', [item])
-    .trigger('refresh.owl.carousel');
-  })
-  .catch(error => console.error('Erreur:', error));
+        </div>
+  `;
+  $('.owl-carousel').trigger('add.owl.carousel', [item])
+  .trigger('refresh.owl.carousel');
 
 }
 
