@@ -1,7 +1,3 @@
-:root{
-    --bs-link-color-rgb: var(--bs-secondary-rgb);
-}
-
 .wrapper a {
   -webkit-transition: none;
   -o-transition: none;
