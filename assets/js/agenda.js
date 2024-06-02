@@ -288,13 +288,15 @@ function addFormationIntoCarousel(title, start, end){
   .then(response => response.blob())
   .then(blob => {
     const url = URL.createObjectURL(blob);
-    $(`.img-formation-${currentIndex}`).attr('src', url);
+    $(`.img-formation-${currentIndex}`).attr('src', url).removeClass('d-none');
+    $(`.spinner-formation-${currentIndex}`).remove();
   })
   .catch(error => console.error('Erreur:', error));
   const item = `
         <div class="item">
           <div class="project-item">
-            <img src="https://placehold.co/450x350" class="img-formation-${currentIndex}" alt="">
+            <img src="assets/images/spinner.svg" class="spinner-formation-${currentIndex}" style="width: 100%" alt="">
+            <img src="" class="img-formation-${currentIndex} d-none" alt="">
             <div class="text-content">
               <h4>${title}</h4>
               <p>Date de début : ${start}</p>
