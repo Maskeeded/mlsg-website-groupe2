@@ -1,8 +1,6 @@
 (function ($) {
 	
 	"use strict";
-	
-	new WOW().init();
 	  
 	// Page loading animation
 	$(window).on('load', function() {
