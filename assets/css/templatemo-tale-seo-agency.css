@@ -877,7 +877,7 @@ Banner Style
 
 .main-banner {
   position: relative;
-  padding: 180px 0px 180px 0px;
+  padding: 180px 0px 0px 0px;
 }
 
 .main-banner:after {
@@ -1979,7 +1979,7 @@ body {
     display: none;
   }
   .main-banner  {
-    padding: 185px 0px;
+    padding: 185px 0 0 0;
   }
   .main-banner h4 {
     font-size: 36px;
