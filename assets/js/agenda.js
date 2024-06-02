@@ -107,7 +107,7 @@ function initListener(){
     initCarousel(length);
     fillCarousel(month);
     $('.btn-month.active').removeClass('active');
-    $element.addClass('active');
+    $(`.btn-month[data-month="${month}"]`).addClass('active');
     initBannerMonth(month);
   })
 }
@@ -216,25 +216,38 @@ function initCalendar() {
 
 function initButtonMonth(){
   const date = new Date();
-  $('.btn-month').each(function(){
-    // On ne prend pas le mois de juillet et le moi d'aout
-    // Juillet == 6 & Aout == 7
-    if(date.getMonth() == 6)
-        date.setMonth(8);
-    const title = date.toLocaleString('default', { month: 'long' });
-    const monthName = title.charAt(0).toUpperCase() + title.slice(1);
-    $(this)
-      .text(monthName + ' ' + date.getFullYear())
-      .attr('data-month', date.getMonth())
-      .attr('data-year', date.getFullYear());
-    date.setMonth(date.getMonth() + 1);
+  $('.btn-month').each(function(index){
+    if(index <= 9){
+      // On ne prend pas le mois de juillet et le moi d'aout
+      // Juillet == 6 & Aout == 7
+      if(date.getMonth() == 6)
+          date.setMonth(8);
+      const title = date.toLocaleString('default', { month: 'long' });
+      const monthName = title.charAt(0).toUpperCase() + title.slice(1);
+      $(this)
+        .text(monthName + ' ' + date.getFullYear())
+        .attr('data-month', date.getMonth())
+        .attr('data-year', date.getFullYear());
+      date.setMonth(date.getMonth() + 1);
+    }else{
+      const $element = $(`.btn-month:eq(${index - 10})`);
+      $(this)
+        .text($element.text())
+        .attr('data-month', $element.data('month'))
+        .attr('data-year', $element.data('year'));
+    }
   });
 }
 
 function initAmountFormationMonth(){
-  $('.btn-month').each(function(){
-    const amount = Math.floor(Math.random() * 10);
-    $(this).attr('data-content', amount);
+  $('.btn-month').each(function(index){
+    if(index <= 9){
+      const amount = Math.floor(Math.random() * 10);
+      $(this).attr('data-content', amount);
+    }else{
+      const $element = $(`.btn-month:eq(${index - 10})`);
+      $(this).attr('data-content', $element.data('content'));
+    }
   });
 }
 
