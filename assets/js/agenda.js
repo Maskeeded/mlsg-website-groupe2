@@ -267,10 +267,14 @@ function generateDurationFormation(month, year){
  * @param {string} end 
  */
 function addFormationIntoCarousel(title, start, end){
-  const item = `
+  fetch('https://random.imagecdn.app/450/350')
+  .then(response => response.blob())
+  .then(blob => {
+    const url = URL.createObjectURL(blob);
+    const item = `
           <div class="item">
             <div class="project-item">
-              <img src="https://placehold.co/400x350" alt="">
+              <img src="${url}" alt="">
               <div class="text-content">
                 <h4>${title}</h4>
                 <p>Date de début : ${start}</p>
@@ -284,6 +288,9 @@ function addFormationIntoCarousel(title, start, end){
     `;
     $('.owl-carousel').trigger('add.owl.carousel', [item])
     .trigger('refresh.owl.carousel');
+  })
+  .catch(error => console.error('Erreur:', error));
+
 }
 
 function isMonthAgenda(){
