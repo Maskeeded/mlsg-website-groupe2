@@ -685,6 +685,12 @@ Header Style
   color: #fff;
 }
 
+.sticky-logo {
+  max-width: 80px !important;
+  max-height: 80px !important;
+  margin-top: -10px !important ;
+}
+
 @media (max-width: 1200px) {
   .header-area .main-nav .nav li {
     padding-left: 10px;

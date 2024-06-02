@@ -153,6 +153,19 @@
 	  };
 	  
 	  var typed = new Typed('#typed-text', options);
+
+
+	  window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		var header = document.querySelector(".header-sticky");
+		var logo = document.getElementById("logo-navbar");
+		if (window.scrollY > header.offsetTop) {
+			logo.classList.add("sticky-logo");
+		} else {
+			logo.classList.remove("sticky-logo");
+		}
+	}
 	
 
 	// Menu Dropdown Toggle
