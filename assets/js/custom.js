@@ -18,9 +18,9 @@
 
 	  if (scroll >= box - header) {
 	    $("header").addClass("background-header");
-	  } else {
-	    $("header").removeClass("background-header");
-	  }
+	} else {
+		$("header").removeClass("background-header");
+	}
 	}); 
 
 	$(document).on("click", ".naccs .menu div", function() {
@@ -50,6 +50,7 @@
 
 	$(document).ready(function () {
 	    $(document).on("scroll", onScroll);
+		$('.header-area').after('<div id="nav-separator"></div>');
 	});
 
 	function onScroll(event){
