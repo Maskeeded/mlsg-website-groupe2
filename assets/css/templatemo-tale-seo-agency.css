@@ -409,11 +409,17 @@ Header Style
 .header-area .main-nav .logo {
   display: block;
   width: 80px;
-  margin-top: 10px;
+  margin-top: 15px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.background-header .main-nav .logo {
+  margin-top: 12.5px;
+  width: 60px;
+  top: 0px;
 }
 
 .header-area .main-nav .nav {
@@ -703,13 +709,11 @@ Header Style
   }
   .header-area .main-nav .logo {
     position: absolute;
+    margin-top: 10px;
     left: 30px;
     top: 0px;
   }
-  .background-header .main-nav .logo {
-    width: 60px;
-    top: 0px;
-  }
+
   .background-header .main-nav .border-button {
     top: 0px !important;
   }
