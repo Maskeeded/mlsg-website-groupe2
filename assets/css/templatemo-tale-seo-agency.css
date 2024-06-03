@@ -407,18 +407,13 @@ Header Style
 }
 
 .header-area .main-nav .logo {
-  margin-top: 25px;
-  flex-basis: 20%;
+  display: block;
+  width: 80px;
+  margin-top: 10px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-
-
-
-.background-header .main-nav .logo {
-  margin-top: 10px;
 }
 
 .header-area .main-nav .nav {
@@ -588,7 +583,7 @@ Header Style
 }
 
 .background-header .main-nav .menu-trigger {
-  top: 17px;
+  top: 23px;
 }
 
 .header-area .main-nav .menu-trigger span,
@@ -712,6 +707,7 @@ Header Style
     top: 0px;
   }
   .background-header .main-nav .logo {
+    width: 60px;
     top: 0px;
   }
   .background-header .main-nav .border-button {
@@ -763,6 +759,7 @@ Header Style
     border-top: 1px solid #eee;
   }
   .header-area.header-sticky .nav {
+    background-color: #f7f7f7;
     margin-top: 100px !important;
   }
   .background-header.header-sticky .nav {
