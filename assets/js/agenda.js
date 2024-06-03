@@ -286,13 +286,7 @@ function generateDurationFormation(month, year){
  */
 function addFormationIntoCarousel(title, start, end){
   const currentIndex = indexFormationImage++;
-  fetch('https://random.imagecdn.app/450/350')
-  .then(response => response.blob())
-  .then(blob => {
-    const url = URL.createObjectURL(blob);
-    $(`.img-formation-${currentIndex}`).attr('src', url);
-  })
-  .catch(error => console.error('Erreur:', error));
+  fetchImageAPI(currentIndex);
   const item = `
         <div class="item">
           <div class="project-item">
@@ -309,6 +303,20 @@ function addFormationIntoCarousel(title, start, end){
   $('.owl-carousel').trigger('add.owl.carousel', [item])
   .trigger('refresh.owl.carousel');
 
+}
+
+function fetchImageAPI(currentIndex, tries = 1){
+  fetch('https://random.imagecdn.app/450/350')
+  .then(response => response.blob())
+  .then(blob => {
+    const url = URL.createObjectURL(blob);
+    $(`.img-formation-${currentIndex}`).attr('src', url);
+  })
+  .catch(error => {
+    console.error('Erreur:', error);
+    if(tries > 3) return;
+    fetchImageAPI(currentIndex, ++tries);
+  });
 }
 
 function isMonthAgenda(){
