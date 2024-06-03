@@ -70,7 +70,8 @@
 	}
 	
 	$(window).on('load', function() {
-		$('#js-preloader').addClass('loaded');
+		if(typeof dontloadagenda === "undefined")
+			$('#js-preloader').addClass('loaded');
 
 		if($('.cover').length){
 			$('.cover').parallax({

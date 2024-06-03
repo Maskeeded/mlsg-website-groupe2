@@ -75,6 +75,9 @@ $(function(){
     initCarousel(length);
     fillCarousel(month);
     initListener();
+    setTimeout(() => {
+      $('#js-preloader').addClass('loaded'); // enleve le loading
+    }, 500); // juste pour le style
 });
 
 function initListener(){
