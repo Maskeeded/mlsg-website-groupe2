@@ -234,7 +234,17 @@ body {
   padding-top: 30px;
   margin-top: 225px;
 }
-
+@media screen and (width < 1400px) {
+  .section {
+    margin-top: 0px;
+  }
+}
+@media screen and (width < 1000px) {
+  .section {
+    margin-top: 100px;
+  }
+  
+}
 
 .section-heading {
   margin-bottom: 30px;
