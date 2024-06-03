@@ -22,6 +22,7 @@ const optionsCalendar = {
         $('#monthAgenda').show();
         const date = new Date();
         date.setMonth(weekCalendar.getDate().getMonth());
+        date.setFullYear(weekCalendar.getDate().getFullYear());
         monthCalendar.gotoDate(date);
         monthCalendar.render();
       }
@@ -33,6 +34,7 @@ const optionsCalendar = {
         $('#weekAgenda').show();
         const date = new Date();
         date.setMonth(monthCalendar.getDate().getMonth());
+        date.setFullYear(monthCalendar.getDate().getFullYear());
         weekCalendar.gotoDate(date);
         weekCalendar.render();
       }
@@ -288,15 +290,13 @@ function addFormationIntoCarousel(title, start, end){
   .then(response => response.blob())
   .then(blob => {
     const url = URL.createObjectURL(blob);
-    $(`.img-formation-${currentIndex}`).attr('src', url).removeClass('d-none');
-    $(`.spinner-formation-${currentIndex}`).remove();
+    $(`.img-formation-${currentIndex}`).attr('src', url);
   })
   .catch(error => console.error('Erreur:', error));
   const item = `
         <div class="item">
           <div class="project-item">
-            <img src="assets/images/spinner.svg" class="spinner-formation-${currentIndex}" style="width: 100%" alt="">
-            <img src="" class="img-formation-${currentIndex} d-none" alt="">
+            <img src="assets/images/spinner.svg" class="img-formation-${currentIndex}" alt="">
             <div class="text-content">
               <h4>${title}</h4>
               <p>Date de début : ${start}</p>
