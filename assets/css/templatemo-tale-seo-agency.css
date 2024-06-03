@@ -92,6 +92,10 @@ html[xmlns] .clearfix {
   z-index: 0;
 }
 
+#nav-separator{
+  height: 110px;
+}
+
 ul, li {
   padding: 0;
   margin: 0;
@@ -228,7 +232,7 @@ body {
 
 .section {
   padding-top: 30px;
-  margin-top: 90px;
+  margin-top: 225px;
 }
 
 
@@ -387,12 +391,12 @@ Header Style
 
 .header-area {
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   background: rgb(85,0,227);
   background: linear-gradient(90deg, rgb(var(--bs-primary-rgb)) 0%, rgb(var(--bs-secondary-rgb)) 100%);
   height: 110px;
-  top: 0px;
-  left: 0;
-  right: 0;
   z-index: 100;
   -webkit-transition: all .5s ease 0s;
   -moz-transition: all .5s ease 0s;
@@ -493,18 +497,21 @@ Header Style
 }
 
 .header-area .main-nav .nav li.has-sub {
-  position: relative;
   padding-right: 15px;
 }
 
-.header-area .main-nav .nav li.has-sub:after {
+.header-area .main-nav .nav li.has-sub a {
+  position: relative;
+}
+
+.header-area .main-nav .nav li.has-sub > a:after {
   font-family: FontAwesome;
   content: "\f107";
   font-size: 12px;
   color: #fff;
   position: absolute;
-  right: 0px;
-  top: 45px;
+  right: -15px;
+  top: 0px;
 }
 
 .background-header .main-nav .nav li.has-sub:after {
@@ -703,6 +710,9 @@ Header Style
 }
 
 @media (max-width: 1000px) {
+  #nav-separator{
+    height: 100px;
+  }
   .header-area .main-nav .nav {
     height: auto;
     flex-basis: 100%;
@@ -810,11 +820,11 @@ Header Style
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     height: auto;
   }
-  .header-area .main-nav .nav li.has-sub:after {
+  .header-area .main-nav .nav li.has-sub > a:after {
     color: #3B566E;
     right: 30px;
     font-size: 14px;
-    top: 15px;
+    top: 0;
   }
   .header-area .main-nav .nav li.submenu:hover ul, .header-area .main-nav .nav li.submenu:focus ul {
     height: 0px;
@@ -881,7 +891,6 @@ Banner Style
 
 .main-banner {
   position: relative;
-  padding: 180px 0px 0px 0px;
 }
 
 .main-banner:after {
