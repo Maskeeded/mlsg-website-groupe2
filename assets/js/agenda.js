@@ -78,12 +78,6 @@ $(function(){
 });
 
 function initListener(){
-  $('.fc-today-button').click(function(){
-  })
-  $('.fc-prev-button').click(function(){
-  })
-  $('.fc-next-button').click(function(){
-  })
   $('.btn-month').click(function(){
     $element = $(this);
     const length = +$element.data('content');
@@ -169,7 +163,10 @@ function initFormations(){
     }
   });
 }
-
+/**
+ * 
+ * @param {number} month 
+ */
 function initEventsCalendar(month){
   eventsMonth = [];
   eventsWeek = [];
@@ -281,6 +278,7 @@ function generateDurationFormation(month, year){
 
 /**
  * 
+ * @param {string} title 
  * @param {string} start 
  * @param {string} end 
  */
@@ -304,7 +302,11 @@ function addFormationIntoCarousel(title, start, end){
   .trigger('refresh.owl.carousel');
 
 }
-
+/**
+ * 
+ * @param {number} currentIndex 
+ * @param {number} tries default 1
+ */
 function fetchImageAPI(currentIndex, tries = 1){
   fetch('https://random.imagecdn.app/450/350')
   .then(response => response.blob())
@@ -333,7 +335,11 @@ function clearAllItemsCarousel(){
 function destroyCarousel(){
   $(".owl-carousel").trigger('destroy.owl.carousel')
 }
-
+/**
+ * 
+ * @param {Date} date 
+ * @returns 
+ */
 function getFormatedDate(date){
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 }
