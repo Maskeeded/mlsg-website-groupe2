@@ -438,7 +438,7 @@ Header Style
 }
 
 .header-area .main-nav .nav {
-  flex-basis: 80%;
+  flex-basis: 90%;
   height: 110px;
   margin-top: 0px;
   margin-right: 0px;
@@ -456,11 +456,6 @@ Header Style
 
 .header-area .main-nav .nav li:last-child {
   padding-right: 0px;
-}
-
-.header-area .main-nav .nav li {
-  padding-left: 30px;
-  padding-right: 30px;
 }
 
 .header-area .main-nav .nav li a {
@@ -720,7 +715,7 @@ Header Style
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1110px) {
   #nav-separator{
     height: 100px;
   }
