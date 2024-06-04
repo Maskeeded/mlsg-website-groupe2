@@ -1461,11 +1461,6 @@ Page Heading Style
 --------------------------------------------- 
 */
 
-.page-heading {
-  padding: 120px 0px;
-  margin-top: 110px;
-}
-
 .page-heading::before {
   content: url(../images/banner-left.png);
   top: -1px;
@@ -1783,10 +1778,7 @@ CTA Style
 */
 
 .cta {
-  background-image: url(../images/cta-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background: linear-gradient(90deg, rgba(var(--bs-primary-rgb)) 0%, rgba(var(--bs-secondary-rgb)) 100%);
   padding: 80px 0px;
   position: relative;
   z-index: 15;
@@ -1816,10 +1808,7 @@ Happy Steps Style
 */
 
 .happy-steps {
-  background-image: url(../images/video-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
+  background: linear-gradient(90deg, rgb(var(--bs-primary-rgb)) 0%, rgb(var(--bs-secondary-rgb)) 100%);
   padding: 80px 0px;
 }
 
@@ -1912,7 +1901,7 @@ Most Asked Style
 }
 
 .most-asked .accordion-head.is-open {
-  color: #5b03e4;
+  color: rgb(var(--bs-secondary-rgb));
   border-bottom: none;
 }
 
@@ -1962,7 +1951,7 @@ Most Asked Style
 #free-quote button {
   border: none;
   height: 46px;
-  background-color: #5b03e4;
+  background-color: rgb(var(--bs-info-rgb));
   width: 100%;
   border-radius: 23px;
   color: #fff;
