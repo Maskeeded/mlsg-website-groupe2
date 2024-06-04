@@ -1,0 +1,14 @@
+.owl-carousel,
+.owl-stage-outer,
+.owl-stage,
+.owl-item,
+.owl-item .item,
+.owl-item .item .project-item{
+    height: 100%;
+}
+
+.project-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

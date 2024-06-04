@@ -292,12 +292,12 @@ function addFormationIntoCarousel(title, start, end){
         <div class="item">
           <div class="project-item">
             <img src="assets/images/spinner.svg" class="img-formation-${currentIndex}" alt="">
+            <h4 class="text-primary text-center">${title}</h4>
             <div class="text-content">
-              <h4>${title}</h4>
-              <p>Date de début : ${start}</p>
-              <p>Date de fin : ${end}</p>
-              <a class="btn btn-info text-white w-75" href="#">En savoir plus</a>
+              <p class="text-center mb-0"><span class="text-secondary fw-bold">Date de début :</span> ${start}</p>
+              <p class="text-center mb-0"><span class="text-secondary fw-bold">Date de fin :</span> ${end}</p>
             </div>
+            <a class="btn btn-info text-white w-75 mx-auto d-block" href="#">En savoir plus</a>
           </div>
         </div>
   `;
