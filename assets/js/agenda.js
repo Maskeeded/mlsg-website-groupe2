@@ -2,6 +2,7 @@ let monthCalendar, weekCalendar;
 
 const baseTitle = 'Formation';
 
+const randomNameFormation = ['Informatique', 'Full-Stack', 'Mobile', 'Design', 'Cuisine', 'Serveur', 'Chef Cuisine', 'Bar Man', 'Jardinier']
 const formations = {};
 
 let eventsMonth = [];
@@ -151,13 +152,16 @@ function initFormations(){
     const month = $element.data('month');
     const year = $element.data('year');
     formations[month] = [];
+    const randomNameFormationCopy = [...randomNameFormation];
 
     for(let i = 0; i < length; i++){
       const formation = {};
   
       const duration = generateDurationFormation(month, year);
-  
-      formation.title = baseTitle + ' ' + Math.floor(Math.random() * 999999999999);
+      const randomName = randomNameFormationCopy[Math.floor(Math.random() * randomNameFormationCopy.length)];
+      const indexName = randomNameFormationCopy.findIndex(name => name === randomName);
+
+      formation.title = baseTitle + ' ' + randomNameFormationCopy.splice(indexName, 1)[0];
       formation.start = duration.start;
       formation.end = duration.end;
       formation.allDay = true;
