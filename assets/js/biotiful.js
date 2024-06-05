@@ -36,14 +36,14 @@ function flutter(vartimer)
         nexttimer[index]=(nexttimer[index] < 1500 || nexttimer[index] > 3000 ? 1500 : nexttimer[index]);
         
         size[index]+=generaterandomno(-10,20);
-        size[index]=(size[index]<30?40:size[index]);
-        size[index]=(size[index]>100?90:size[index]);
+        size[index]=(size[index]<30?30:size[index]);
+        size[index]=(size[index]>maxSizeButterfly?maxSizeButterfly - 10:size[index]);
         x[index]+=generaterandomno(-window.innerWidth,window.innerWidth);
         y[index]+=generaterandomno(-1000,1000);
         x[index]= x[index] < 20 ? 30 : x[index];
         y[index]= y[index] < 20 ? 30 : y[index];
-        x[index]= x[index] > window.innerWidth ? Math.floor(window.innerWidth - size[index] - maxSizeButterfly * 2) : x[index];
-        y[index]= y[index] > 1000 ? Math.floor(1000 - size[index] - maxSizeButterfly * 2) : y[index];
+        x[index]= x[index] > window.innerWidth ? Math.floor(window.innerWidth - size[index]) : x[index];
+        y[index]= y[index] > 1000 ? Math.floor(1000 - size[index]) : y[index];
 
         rotation[index]+=generaterandomno(-10,10);
         rotation[index]=(rotation[index]<20?0:rotation[index]);
