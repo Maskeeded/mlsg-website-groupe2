@@ -4,8 +4,8 @@
     --secondary-butterfly-color: 0,0,0;
     cursor: grab;
     z-index: 200;
-    width:150px;
-    height:150px;
+    width:50px;
+    height:50px;
     position:absolute;
 }
 

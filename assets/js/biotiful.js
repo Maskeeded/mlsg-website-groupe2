@@ -28,7 +28,7 @@ $(function(){
             x[i] = Math.floor(Math.random() * window.innerWidth - 100);
         y = Array.from({length}, () => 0);
         for(let i = 0; i < y.length; ++i)
-            y[i] = Math.floor(Math.random() * 900);
+            y[i] = Math.floor(Math.random() * containerOfButterFlys.scrollHeight);
         size = Array.from({length}, () => 30);
         rotation = Array.from({length}, () => 0);
         transitiontimer = Array.from({length}, () => 0);
