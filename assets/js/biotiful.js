@@ -33,7 +33,7 @@ function flutter(vartimer)
 
     for(let index = 0; index < butterflys.length; index++){
         nexttimer[index]=vartimer+(generaterandomno(-200,200));
-        nexttimer[index]=(nexttimer[index] < 1500 || nexttimer[index] > 3000 ? 1500 : nexttimer[index]);
+        nexttimer[index]=(nexttimer[index] < 2500 || nexttimer[index] > 5000 ? 2500 : nexttimer[index]);
         
         size[index]+=generaterandomno(-10,20);
         size[index]=(size[index]<30?30:size[index]);
@@ -46,10 +46,10 @@ function flutter(vartimer)
         y[index]= y[index] > 1000 ? Math.floor(1000 - size[index]) : y[index];
 
         rotation[index]+=generaterandomno(-10,10);
-        rotation[index]=(rotation[index]<20?0:rotation[index]);
-        rotation[index]=(rotation[index]>20?0:rotation[index]);
+        rotation[index]=(rotation[index]< -20 ? 0 : rotation[index]);
+        rotation[index]=(rotation[index] > 20 ? 0 :rotation[index]);
 
-        transitiontimer[index]=generaterandomno(50,200)/10;
+        transitiontimer[index]=generaterandomno(40,60)/10;
 
         butterflys[index].style.marginLeft=x[index]+"px";
         butterflys[index].style.marginTop=y[index]+"px";
