@@ -54,8 +54,8 @@ function flutter(vartimer, butterFly, index)
 
     transitiontimer[index]=generaterandomno(40,60)/10;
 
-    butterFly.style.marginLeft=x[index]+"px";
-    butterFly.style.marginTop=y[index]+"px";
+    butterFly.style.left=x[index]+"px";
+    butterFly.style.top=y[index]+"px";
     butterFly.style.width=size[index]+"px";
     butterFly.style.height=size[index]+"px";
     butterFly.style.transform="rotate("+rotation[index]+"deg)";
