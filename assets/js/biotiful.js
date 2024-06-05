@@ -39,8 +39,8 @@ function flutter(vartimer, butterFly, index)
     nexttimer[index]=(nexttimer[index] < 2500 || nexttimer[index] > 5000 ? 2500 : nexttimer[index]);
     
     size[index]+=generaterandomno(-10,20);
-    size[index]=(size[index]<30?30:size[index]);
-    size[index]=(size[index]>maxSizeButterfly?maxSizeButterfly - 10:size[index]);
+    size[index]=(size[index]<30 ? 30 + generaterandomno(0, 30) : size[index]);
+    size[index]=(size[index] > maxSizeButterfly ? maxSizeButterfly - generaterandomno(0, 40) : size[index]);
     x[index]+=generaterandomno(-window.innerWidth,window.innerWidth);
     y[index]+=generaterandomno(-1000,1000);
     x[index]= x[index] < 20 ? 30 + generaterandomno(0, 500) : x[index];
