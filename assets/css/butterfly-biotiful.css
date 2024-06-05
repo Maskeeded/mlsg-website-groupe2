@@ -5,6 +5,7 @@
 
 .butterfly_wrapper
 {
+    cursor: grab;
     z-index: 200;
     width:150px;
     height:150px;

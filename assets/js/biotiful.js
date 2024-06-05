@@ -5,12 +5,57 @@ let rotation;
 let transitiontimer;
 let wingtimer;
 let nexttimer;
+let isGrab = -1;
+let timeout;
 const maxSizeButterfly = 100;
+const butterflys = document.getElementsByClassName("butterfly_wrapper");
 $(function(){
-    const butterflys = document.getElementsByClassName("butterfly_wrapper");
     initButterfly(butterflys);
-    startFlutter(5000);
+    initListenerButterFly(butterflys);
+    startFlutter(5000, butterflys);
 })
+
+function initListenerButterFly(butterflys){
+    for(let index = 0; index < butterflys.length; index++){
+        butterflys[index].addEventListener('mousedown', function(e){
+            isGrab = index;
+            clearTimeout(timeout[index]);
+            const boundingRect = butterflys[index].getBoundingClientRect();
+            const width = boundingRect.width;
+            const height = boundingRect.height;
+            butterflys[index].style.width = width + "px";
+            butterflys[index].style.height = height + "px";
+            butterflys[index].style.transition = "none";	
+            moveButterFly(e);
+        });
+        butterflys[index].addEventListener('mouseup', function(){
+            if(isGrab === -1) return;
+            isGrab = -1;
+            flutter(nexttimer[index], butterflys[index], index);
+        });
+        butterflys[index].addEventListener('mouseleave', function(){
+            if(isGrab === -1) return;
+            isGrab = -1;
+            flutter(nexttimer[index], butterflys[index], index);
+        });
+    }
+
+    addEventListener('mousemove', function(e){
+        if(isGrab === -1) return;
+        moveButterFly(e);
+    })
+
+    function moveButterFly(e){
+        const service = document.querySelector('.services-1-wrap');
+        const offsetTop = service.offsetTop;
+        const pageY = e.pageY;
+        const y = pageY - offsetTop;
+        const x = e.pageX;
+        const boundingRect = butterflys[isGrab].getBoundingClientRect();
+        butterflys[isGrab].style.left= (x - Math.floor(boundingRect.width / 2)) + "px";
+        butterflys[isGrab].style.top= (y - Math.floor(boundingRect.height / 2)) + "px"; 
+    }
+}
 
 function initButterfly(butterflys){
     const length = butterflys.length;
@@ -25,16 +70,17 @@ function initButterfly(butterflys){
     transitiontimer = Array.from({length}, () => 0);
     wingtimer = Array.from({length}, () => 0);
     nexttimer = Array.from({length}, () => 0);
+    timeout = Array.from({length}, () => -1);
 }
 
-function startFlutter(vartimer){
-    const butterflys = document.getElementsByClassName("butterfly_wrapper");
+function startFlutter(vartimer, butterflys){
     for(let index = 0; index < butterflys.length; index++)
         flutter(vartimer, butterflys[index], index);
 }
 
 function flutter(vartimer, butterFly, index)
 {
+    if(isGrab === index) return;
     nexttimer[index]=vartimer+(generaterandomno(-200,200));
     nexttimer[index]=(nexttimer[index] < 2500 || nexttimer[index] > 5000 ? 2500 : nexttimer[index]);
     
@@ -75,7 +121,7 @@ function flutter(vartimer, butterFly, index)
         lowerwings[k].style.webkitAnimationDuration="0."+wingtimer[index]+"s";
     }
 
-    setTimeout(function(){flutter(nexttimer[index], butterFly, index);},vartimer);
+    timeout[index] = setTimeout(function(){flutter(nexttimer[index], butterFly, index);},vartimer);
 }
 
 function generaterandomno(varmin,varmax)
