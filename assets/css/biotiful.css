@@ -11,6 +11,12 @@
 html {
   overflow-x: hidden; }
 
+body.grabbed-butter-fly{
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
 body {
   line-height: 1.7;
   color: gray;

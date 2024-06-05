@@ -470,9 +470,11 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/biotiful.js"></script>
     <script>
-      setTimeout(() => {
-        $('#js-preloader').addClass('loaded');
-      }, 5000); // TODO: remove me
+      $(function(){
+        setTimeout(() => {
+          $('#js-preloader').addClass('loaded');
+        }, 500);
+      })
     </script>
   </body>
 
