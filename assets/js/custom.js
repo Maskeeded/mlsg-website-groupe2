@@ -70,7 +70,11 @@
 	}
 	
 	$(window).on('load', function() {
-		if(typeof dontloadagenda === "undefined")
+		if(
+			typeof dontloadagenda === "undefined"
+			&&
+			typeof dontloadquisommesnous === "undefined"
+		)
 			$('#js-preloader').addClass('loaded');
 
 		if($('.cover').length){
