@@ -85,6 +85,31 @@ h1, h2, h3, h4, h5,
   opacity: 0;
   visibility: hidden; }
 
+.services-1-wrap.services-1-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: url('../images/contact-left.jpg') top right no-repeat,
+              url('../images/contact-left.jpg') bottom right no-repeat;
+  width: 103px; /* Mettre le width de l'image */
+  z-index: -1;
+}
+
+.services-1-wrap.services-1-wrap::after {
+  content: "";
+  position: absolute;
+  transform: scaleX(-1);  /* Permet d'inverser l'image */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../images/contact-left.jpg') top right no-repeat,
+              url('../images/contact-left.jpg') bottom right no-repeat;
+  width: 103px; /* Mettre le width de l'image */
+  z-index: -1;
+}
+
 .offcanvas-menu .site-wrap {
   height: 100%;
   width: 100%;
