@@ -19,10 +19,11 @@ function initListenerButterFly(butterflys){
     for(let index = 0; index < butterflys.length; index++){
         butterflys[index].addEventListener('mousedown', function(e){
             isGrab = index;
+            $('body').addClass('grabbed-butter-fly');
             clearTimeout(timeout[index]);
             const boundingRect = butterflys[index].getBoundingClientRect();
-            const width = boundingRect.width;
-            const height = boundingRect.height;
+            const width = boundingRect.width > maxSizeButterfly ? maxSizeButterfly : boundingRect.width;
+            const height = boundingRect.height > maxSizeButterfly ? maxSizeButterfly : boundingRect.height;
             butterflys[index].style.width = width + "px";
             butterflys[index].style.height = height + "px";
             butterflys[index].style.transition = "none";	
@@ -30,11 +31,13 @@ function initListenerButterFly(butterflys){
         });
         butterflys[index].addEventListener('mouseup', function(){
             if(isGrab === -1) return;
+            $('body').removeClass('grabbed-butter-fly');
             isGrab = -1;
             flutter(nexttimer[index], butterflys[index], index);
         });
         butterflys[index].addEventListener('mouseleave', function(){
             if(isGrab === -1) return;
+            $('body').removeClass('grabbed-butter-fly');
             isGrab = -1;
             flutter(nexttimer[index], butterflys[index], index);
         });
