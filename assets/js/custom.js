@@ -74,6 +74,8 @@
 			typeof dontloadagenda === "undefined"
 			&&
 			typeof dontloadquisommesnous === "undefined"
+			&&
+			typeof dontloadbiotiful === "undefined"
 		)
 			$('#js-preloader').addClass('loaded');
 
