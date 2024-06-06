@@ -90,7 +90,10 @@
 			&&
 			typeof dontloadbiotiful === "undefined"
 		)
-			$('#js-preloader').addClass('loaded');
+			setTimeout(() => {
+				$('#js-preloader').addClass('loaded');
+			}, 500);
+
 
 		if($('.cover').length){
 			$('.cover').parallax({
