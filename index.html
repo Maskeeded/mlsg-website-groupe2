@@ -51,10 +51,33 @@
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
               <ul class="nav gap-xxl-4 justify-content-center">
-                <li><a href="#" class="active">Accueil</a></li>
-                <li><a href="qui-sommes-nous.html">Qui sommes nous ?</a></li>
+                <li class="has-sub">
+                  <a href="javascript:void(0)" class="active">Accueil</a>
+                  <ul class="sub-menu">
+                    <li><a class="scroll-to-section" href="#services">Nos services</a></li>
+                    <li><a class="scroll-to-section" href="#diaporama">Diaporama</a></li>
+                    <li><a class="scroll-to-section" href="#actualites">Nos actualités</a></li>
+                  </ul>
+                </li>
+                <li class="has-sub">
+                  <a href="javascript:void(0)">Qui sommes-nous</a>
+                  <ul class="sub-menu">
+                    <li><a href="qui-sommes-nous.html#missions">Nos missions & méthodes & valeurs</a></li>
+                    <li><a href="qui-sommes-nous.html#equipe">Notre équipe</a></li>
+                    <li><a href="qui-sommes-nous.html#conseil-administration">Le conseil d'administration</a></li>
+                    <li><a href="qui-sommes-nous.html#partenaires-et-adhesion">Partenaires et adhésion</a></li>
+                    <li><a href="qui-sommes-nous.html#rapports-activite">Rapports d'activité & status & comptes annuels</a></li>
+                  </ul>
+                </li>
+                <li class="has-sub">
+                  <a href="javascript:void(0)" class="text-decoration-line-through">Accompagnement</a>
+                  <ul class="sub-menu">
+                    <li><a href="404-accompagnement.html#individuel">Individuel</a></li>
+                    <li><a href="404-accompagnement.html#social">Social</a></li>
+                    <li><a href="404-accompagnement.html#espace-public">Espace public numérique</a></li>
+                  </ul>
+                </li>
                 <li><a href="orientation.html">Orientation</a></li>
-                <li><a href="404-accompagnement.html" class="text-decoration-line-through">Accompagnement</a></li>
                 <li><a href="biotiful.html">Biotiful</a></li>
                 <li><a href="offres-emploi.html">Offres d'emploi</a></li>
                 <li><a href="agenda.html">Agenda</a></li>
@@ -71,7 +94,7 @@
   </header>
     <!-- ***** Header Area End ***** -->
 
-  <div class="main-banner py-5" id="top">
+  <div class="main-banner py-5" id="services">
     <div class="container">
       <div class="row">
         <div class="col-lg-7">
@@ -80,7 +103,7 @@
             <div class="line-dec"></div>
             <h4 id="typed-text"></h4>
             <p class="fw-bold fs-5">La Mission Locale de Saint-Gilles est votre partenaire idéal pour trouver des solutions d'emploi adaptées. Nous offrons une variété de services, y compris des conseils personnalisés, des formations et des ateliers. Découvrez nos <a href="offres-emploi.html">Offres D'Emploi</a> et l'<a href="agenda.html">Agenda Formation</a>.</p>
-            <div class="main-button"><a href="#animatedCarousel">Découvrez plus</a></div>
+            <div class="main-button"><a href="#diaporama">Découvrez plus</a></div>
           </div>
         </div>
       </div>
@@ -140,7 +163,7 @@
 
  <!-- ***** carousel ***** -->
 <div class="carousel-container">
-  <div id="animatedCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div id="diaporama" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="assets/images/carousel/bureau_open_space_alsek_open_space_02_1450x935.jpg" class="d-block w-100" alt="First Slide">
@@ -178,11 +201,11 @@
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#animatedCarousel" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#diaporama" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#animatedCarousel" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#diaporama" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
@@ -194,7 +217,7 @@
 
   <!-- **** Actualites **** -->
 
-  <div class="projects" id="projects">
+  <div class="projects" id="actualites">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
