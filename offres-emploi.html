@@ -26,26 +26,30 @@
 
   <link rel="stylesheet" href="assets/css/icon-social.css" />
   <style>
-    #jobs::before {
-      content: url(./assets/images/banner-left.png);
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(30%);
-      height: 100%;
-      z-index: -1;
-    }
+#jobs {
+  position: relative; /* This is needed to contain the absolute positioned pseudo-elements */
+  overflow: hidden; /* This will hide the overflowing content */
+}
 
+#jobs::before {
+  content: url(./assets/images/banner-left.png);
+  position: absolute; /* Changed from relative to absolute */
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Changed from 30% to -50% to center the image vertically */
+  height: 100%;
+  z-index: -1;
+}
 
-    #jobs::after {
-      content: url(./assets/images/banner-left.png);
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(5%) rotate(180deg);
-      height: 100%;
-      z-index: -1;
-    }
+#jobs::after {
+  content: url(./assets/images/banner-left.png);
+  position: absolute; /* Changed from relative to absolute */
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg); /* Changed from 5% to -50% to center the image vertically */
+  height: 100%;
+  z-index: -1;
+}
 
     @media screen and (max-width: 1040px) {
 
@@ -170,14 +174,12 @@
           <a href="#jobs" class="btn btn-info text-white">Voir les Offres d'Emploi</a>
         </div>
         <div class="col-lg-6">
-          <img src="./assets/images/emploi/2456983-adobestock-236655945-766x438.jpeg"
-            style="width: 90%; margin-left: 120px;" alt="Image représentant des offres d'emploi">
+          <img src="./assets/images/emploi/2456983-adobestock-236655945-766x438.jpeg" style="width: 90%; margin-left: 120px;" alt="Image représentant des offres d'emploi">
         </div>
       </div>
     </div>
   </div>
-
-
+  
   <div class="jobs mt-5" id="jobs">
     <div class="container bg-light">
       <!-- Jobs -->
@@ -195,16 +197,13 @@
               <div class="mt-2" style="min-height: 165px;">
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Secteur:</span> Informatique</p>
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Date:</span> 01/06/2024</p>
-                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Développement de
-                  sites web et d'applications</p>
+                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Développement de sites web et d'applications</p>
               </div>
-              <a target="_blank"
-                href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06"
-                class="btn btn-info text-white">Voir les détails</a>
+              <a target="_blank" href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06" class="btn btn-info text-white">Voir les détails</a>
             </div>
           </div>
         </div>
-
+  
         <!-- Emploi 2 -->
         <div class="col-lg-3 my-3">
           <div class="card">
@@ -218,16 +217,13 @@
               <div class="mt-2" style="min-height: 165px;">
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Secteur:</span> Horeca</p>
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Date:</span> 02/06/2024</p>
-                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Service en salle
-                  dans un restaurant</p>
+                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Service en salle dans un restaurant</p>
               </div>
-              <a target="_blank"
-                href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06"
-                class="btn btn-info text-white">Voir les détails</a>
+              <a target="_blank" href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06" class="btn btn-info text-white">Voir les détails</a>
             </div>
           </div>
         </div>
-
+  
         <!-- Emploi 3 -->
         <div class="col-lg-3 my-3">
           <div class="card">
@@ -241,16 +237,13 @@
               <div class="mt-2" style="min-height: 165px;">
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Secteur:</span> Horeca</p>
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Date:</span> 03/06/2024</p>
-                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Préparation de
-                  plats dans un restaurant</p>
+                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Préparation de plats dans un restaurant</p>
               </div>
-              <a target="_blank"
-                href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06"
-                class="btn btn-info text-white">Voir les détails</a>
+              <a target="_blank" href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06" class="btn btn-info text-white">Voir les détails</a>
             </div>
           </div>
         </div>
-
+  
         <!-- Emploi 4 -->
         <div class="col-lg-3 my-3">
           <div class="card">
@@ -264,16 +257,13 @@
               <div class="mt-2" style="min-height: 165px;">
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Secteur:</span> Informatique</p>
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Date:</span> 04/06/2024</p>
-                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Développement
-                  d'applications mobiles</p>
+                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Développement d'applications mobiles</p>
               </div>
-              <a target="_blank"
-                href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06"
-                class="btn btn-info text-white">Voir les détails</a>
+              <a target="_blank" href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06" class="btn btn-info text-white">Voir les détails</a>
             </div>
           </div>
         </div>
-
+  
         <!-- Emploi 5 -->
         <div class="col-lg-3 my-3">
           <div class="card">
@@ -287,16 +277,13 @@
               <div class="mt-2" style="min-height: 165px;">
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Secteur:</span> Informatique</p>
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Date:</span> 05/06/2024</p>
-                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Conception et
-                  développement de logiciels</p>
+                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Conception et développement de logiciels</p>
               </div>
-              <a target="_blank"
-                href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06"
-                class="btn btn-info text-white">Voir les détails</a>
+              <a target="_blank" href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06" class="btn btn-info text-white">Voir les détails</a>
             </div>
           </div>
         </div>
-
+  
         <!-- Emploi 6 -->
         <div class="col-lg-3 my-3">
           <div class="card">
@@ -310,22 +297,18 @@
               <div class="mt-2" style="min-height: 165px;">
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Secteur:</span> Horeca</p>
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Date:</span> 06/06/2024</p>
-                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Service au bar
-                  dans un restaurant ou un café</p>
+                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Service au bar dans un restaurant ou un café</p>
               </div>
-              <a target="_blank"
-                href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06"
-                class="btn btn-info text-white">Voir les détails</a>
+              <a target="_blank" href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06" class="btn btn-info text-white">Voir les détails</a>
             </div>
           </div>
         </div>
-
+  
         <!-- Emploi 7 -->
         <div class="col-lg-3 my-3">
           <div class="card">
             <div class="img-container">
-              <img src="assets/images/emploi/male-chef-his-african-american-600nw-2150288403.webp" class="card-img-top"
-                alt="Entreprise 7">
+              <img src="assets/images/emploi/male-chef-his-african-american-600nw-2150288403.webp" class="card-img-top" alt="Entreprise 7">
               <div class="card-img-overlay">Lieu: Forest</div>
             </div>
             <div class="card-body">
@@ -334,16 +317,13 @@
               <div class="mt-2" style="min-height: 165px;">
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Secteur:</span> Horeca</p>
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Date:</span> 07/06/2024</p>
-                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Gestion de la
-                  cuisine dans un restaurant</p>
+                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Gestion de la cuisine dans un restaurant</p>
               </div>
-              <a target="_blank"
-                href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06"
-                class="btn btn-info text-white">Voir les détails</a>
+              <a target="_blank" href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06" class="btn btn-info text-white">Voir les détails</a>
             </div>
           </div>
         </div>
-
+  
         <!-- Emploi 8 -->
         <div class="col-lg-3 my-3">
           <div class="card">
@@ -357,17 +337,15 @@
               <div class="mt-2" style="min-height: 165px;">
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Secteur:</span> Informatique</p>
                 <p class="card-text mb-1"><span class="text-secondary fw-bold">Date:</span> 08/06/2024</p>
-                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Data analysis
-                  for decision-making.</p>
+                <p class="card-text mb-2"><span class="text-secondary fw-bold">Description:</span> <br> Data analysis for decision-making.</p>
               </div>
-              <a target="_blank"
-                href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06"
-                class="btn btn-info text-white">Voir les détails</a>
+              <a target="_blank" href="https://emplois.be.indeed.com/jobs?q=serveur&l=Bruxelles&from=searchOnHP&vjk=d13da9069b448a06" class="btn btn-info text-white">Voir les détails</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 
 
