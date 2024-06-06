@@ -96,10 +96,11 @@ h1, h2, h3, h4, h5,
   position: absolute;
   top: 0;
   left: 0;
-  bottom: -90px;
-  background: url('../images/') top right no-repeat,
-              url('../images/biotiful/21-removebg-preview\(1\).png') bottom right no-repeat;
-  width: 590px; /* Mettre le width de l'image */
+  bottom: 0px;
+  transform: scaleX(-1);
+  background: url('../images/biotiful/charly.png') top left no-repeat,
+              url('../images/') bottom right no-repeat;
+  width: 370px; /* Mettre le width de l'image */
   z-index: -1;
 }
 
@@ -113,6 +114,13 @@ h1, h2, h3, h4, h5,
               url('../images/biotiful/') bottom right no-repeat;
   width: 600px; /* Mettre le width de l'image */
   z-index: -1;
+}
+
+@media screen and (width < 720px) {
+  #biologo{
+    background-color: rgba(255,255,255,0.25);
+    border-radius: 2rem;
+  }
 }
 
 .offcanvas-menu .site-wrap {
