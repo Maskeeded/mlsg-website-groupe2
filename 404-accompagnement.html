@@ -45,6 +45,54 @@
             
         }
 
+        
+        .about-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-img::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(assets/images/accompagnement/bg-about-img.png) top left no-repeat;
+    background-size: contain;
+}
+
+.btn {
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50px;
+}
+
         .section-styled {
             padding: 20px;
             border-radius: 10px;
@@ -119,6 +167,8 @@
     .card:hover .card-img-overlay {
       opacity: 1;
     }
+
+    
     </style>
 </head>
 
@@ -168,19 +218,43 @@
 
     
 
+    <!-- **** Accompa Section **** -->
+     <
     <div class="container mt-5">
         <div class="jumbotron text-center">
-            <h1 class=" mb-3 display-3 fw-bold ">Accompagnement!</h1>
-            <p class="fw-bold fs-4" style="color: #E30056;">Nous sommes ici pour vous aider à naviguer dans votre parcours professionnel.</p>
+            <h1 class=" mb-3 display-3 fw-bold wow bounceInDown">Accompagnement!</h1>
+            <p class="fw-bold fs-4 wow fadeInUpBig" style="color: #E30056;">Nous sommes ici pour vous aider à naviguer dans votre parcours professionnel.</p>
             <hr class="my-4">
         </div>
     </div>
-
     <div>
-
-      <h2 class="text-center text-primary mt-5">ACCOMPAGNEMENT VERS L’EMPLOI</h2>
-
-    
+    <!-- About Start -->
+    <div class="container-fluid py-5 mt-5 ">
+      <div class="container py-5">
+          <div class="row g-5 align-items-center">
+              <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="about-img">
+                      <img class="img-fluid" src="assets/images/accompagnement/2.jpg">
+                  </div>
+              </div>
+              <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                  <div class="btn btn-sm border bg-info rounded-pill text-white px-3 mb-3 wow slideInRight">A propos de nous</div>
+                  <h1 class="mb-4 wow  ">Accompagnement</h1>
+                  <p class="mb-4">Une aide sur mesure pour décrocher un emploi, entrer en formation, reprendre des études et déterminer votre projet professionnel. Des outils pour votre recherche d’emploi : CV, lettre de motivation, recherche d’offres et de formations, préparation aux entretiens d’embauche, etc.</p>
+                  <div class="row g-3">
+                      <div class="col-sm-6">
+                          <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Clair</h6>
+                          <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Personnel professionel</h6>
+                      </div>
+                      <div class="col-sm-6">
+                          <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>A votre ecoute</h6>
+                          <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Toujours disponible </h6>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
 
       <div class="container mt-5">
@@ -294,7 +368,7 @@
                 <div class="row g-3">
                     <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                         <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="wow flip " src="assets/images/accompagnement/1.jpg" alt="">
+                            <img class="wow zoomIn" src="assets/images/accompagnement/1.jpg" alt="">
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                                 <h5 class="m-0">Web Design</h5>
                                 <small class="text-primary">Formations</small>
@@ -323,7 +397,7 @@
             </div>
             <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
                 <a class="position-relative d-block h-100 overflow-hidden" href="">
-                    <img class="img-fluid position-absolute w-100 h-100" src="assets/images/accompagnement/1.jpg" alt="" style="object-fit: cover;">
+                    <img class="img-fluid position-absolute w-100 h-100" src="assets/images/accompagnement/social1.jpg" alt="" style="object-fit: cover;">
                     <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
                         <h5 class="m-0">Online Marketing</h5>
                         <small class="text-primary">Soyez prêt</small>
@@ -333,108 +407,6 @@
         </div>
     </div>
 </div>
-<!-- Categories Start -->
-
-
-<!-- Courses Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
-            <h1 class="mb-5">GUIDANCE ET ACCOMPAGNEMENT SOCIAL</h1>
-        </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item bg-light">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid" src="assets/images/accompagnement/1.jpg" alt="">
-                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4 pb-0">
-                        <h3 class="mb-0">$149.00</h3>
-                        <div class="mb-3">
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small>(123)</small>
-                        </div>
-                        <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
-                    </div>
-                    <div class="d-flex border-top">
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                        <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="course-item bg-light">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid" src="assets/images/accompagnement/1.jpg" alt="">
-                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4 pb-0">
-                        <h3 class="mb-0">$149.00</h3>
-                        <div class="mb-3">
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small>(123)</small>
-                        </div>
-                        <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
-                    </div>
-                    <div class="d-flex border-top">
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                        <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="course-item bg-light">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid" src="assets/images/accompagnement/1.jpg" alt="">
-                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4 pb-0">
-                        <h3 class="mb-0">$149.00</h3>
-                        <div class="mb-3">
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small>(123)</small>
-                        </div>
-                        <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
-                    </div>
-                    <div class="d-flex border-top">
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                        <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
      <!-- ****  start Footer **** -->
      <footer>
       <div class="container my-4 partenaria-container">
