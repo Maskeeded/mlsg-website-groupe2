@@ -44,7 +44,6 @@ $(function(){
     
     function flutter(vartimer, butterFly, index)
     {
-        if(isGrab === index) return;
         nexttimer[index]=vartimer+(generaterandomno(-200,200));
         nexttimer[index]=(nexttimer[index] < 2500 || nexttimer[index] > 5000 ? 2500 : nexttimer[index]);
         
@@ -110,10 +109,17 @@ $(function(){
             butterflys[index].addEventListener('mouseup', function(){
                 if(isGrab === -1) return;
                 $('body').removeClass('grabbed-butter-fly');
+                flutter(nexttimer[isGrab], butterflys[isGrab], isGrab);
                 isGrab = -1;
-                flutter(nexttimer[index], butterflys[index], index);
             });
         }
+
+        $('body').on('mouseleave', function(e){
+            if(isGrab === -1) return;
+            $('body').removeClass('grabbed-butter-fly');
+            flutter(nexttimer[isGrab], butterflys[isGrab], isGrab);
+            isGrab = -1;
+        });
     
         addEventListener('mousemove', function(e){
             if(isGrab === -1) return;
