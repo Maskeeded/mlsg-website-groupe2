@@ -24,76 +24,107 @@
 
     <style>
 
-        .jumbotron {
-            background-image: linear-gradient(to #E30056, #7E2C5C);
+        <style>
+          .jumbotron {
             padding: 2rem 1rem;
             margin-bottom: 2rem;
             border-radius: 0.3rem;
-
+            background-color: #f8f9fa;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
-
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
             transition: all 0.3s ease;
             color: #333;
             text-align: center;
             font-size: 1.5rem;
             border-radius: 10px;
-            
-        }
+          }
 
-        
-        .about-img {
-    position: relative;
-    overflow: hidden;
-}
+          .jumbotron h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+          }
 
-.about-img::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url(assets/images/accompagnement/bg-about-img.png) top left no-repeat;
-    background-size: contain;
-}
+          .jumbotron p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+          }
 
-.btn {
-    font-weight: 500;
-    transition: .5s;
-}
+          .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
 
-.btn-square {
-    width: 38px;
-    height: 38px;
-}
+          .about-img {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+          }
 
-.btn-sm-square {
-    width: 32px;
-    height: 32px;
-}
+          .about-img::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            background: url(assets/images/accompagnement/bg-about-img.png) top left no-repeat;
+            background-size: contain;
+          }
 
-.btn-lg-square {
-    width: 48px;
-    height: 48px;
-}
+          .btn {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+          }
 
-.btn-square,
-.btn-sm-square,
-.btn-lg-square {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: normal;
-    border-radius: 50px;
-}
+          .btn-square {
+            width: 40px;
+            height: 40px;
+          }
 
-        .section-styled {
+          .btn-sm-square {
+            width: 30px;
+            height: 30px;
+          }
+
+          .btn-lg-square {
+            width: 44px;
+            height: 44px;
+          }
+
+          .btn-square,
+          .btn-sm-square,
+          .btn-lg-square {
+            border-radius: 0;
+          }
+
+          .section-title h6::before,
+          .section-title h6::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background-color: #E30056;
+            transition: all 0.3s ease;
+          }
+
+          .section-title h6::after {
+            right: 0;
+          }
+
+          .section-styled {
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -101,47 +132,46 @@
             background-color: #fff;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            
-        }
+          }
 
-        .section-styled:hover {
+          .section-styled:hover {
             transform: translateY(-5px);
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-        }
+          }
 
-        .section-title {
+          .section-title {
             cursor: pointer;
             font-size: 1.5rem;
             color: #333;
             margin-bottom: 10px;
             transition: color 0.3s ease;
-        }
+          }
 
-        .section-title:after {
+          .section-title:after {
             content: '\25BC';
             float: right;
-        }
+          }
 
-        .section-title:hover {
+          .section-title:hover {
             color: #E30056;
-        }
+          }
 
-        .section-content {
+          .section-content {
             padding: 10px 0;
             color: #666;
             line-height: 1.6;
-        }
+          }
 
-        .section-content p {
+          .section-content p {
             margin-bottom: 10px;
-        }
+          }
 
-        .tooltip-custom {
+          .tooltip-custom {
             position: relative;
             cursor: pointer;
-        }
+          }
 
-        .tooltip-custom:after {
+          .tooltip-custom:after {
             content: attr(title);
             position: absolute;
             top: -30px;
@@ -154,19 +184,111 @@
             font-size: 0.8rem;
             opacity: 0;
             transition: opacity 0.3s ease;
-        }
+          }
 
-        .tooltip-custom:hover:after {
+          .tooltip-custom:hover:after {
             opacity: 1;
-        }
+          }
 
-        .card-img-overlay {
-      opacity: 0;
-      transition: opacity 0.5s;
-    }
-    .card:hover .card-img-overlay {
-      opacity: 1;
-    }
+          .img-container {
+            position: relative;
+          }
+
+          .card-img-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+          }
+
+          .card-img-overlay:hover {
+            opacity: 1;
+          }
+
+          .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          .card {
+            height: 100%;
+          }
+
+          .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+          }
+
+          .card-text {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+
+          .card-link {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #E30056;
+            transition: color 0.3s ease;
+          }
+
+
+          .category {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+          }
+
+          .category h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+          }
+
+          .category h6 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+          }
+
+          .category p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+
+          .category img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .category .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+          }
+
+          .category .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+          }
+          
+
+
+        </style>
 
     
     </style>
@@ -219,10 +341,10 @@
     
 
     <!-- **** Accompa Section **** -->
-     <
+
     <div class="container mt-5">
         <div class="jumbotron text-center">
-            <h1 class=" mb-3 display-3 fw-bold wow bounceInDown">Accompagnement!</h1>
+            <h1 class=" mb-3 display-3 fw-bold wow bounceInDown">ACCOMPAGNEMENT VERS L’EMPLOI</h1>
             <p class="fw-bold fs-4 wow fadeInUpBig" style="color: #E30056;">Nous sommes ici pour vous aider à naviguer dans votre parcours professionnel.</p>
             <hr class="my-4">
         </div>
@@ -234,19 +356,19 @@
           <div class="row g-5 align-items-center">
               <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                   <div class="about-img">
-                      <img class="img-fluid" src="assets/images/accompagnement/2.jpg">
+                      <img class="img-fluid" src="assets/images/accompagnement/dapdap.jpg">
                   </div>
               </div>
               <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                  <div class="btn btn-sm border bg-info rounded-pill text-white px-3 mb-3 wow slideInRight">A propos de nous</div>
-                  <h1 class="mb-4 wow  ">Accompagnement</h1>
-                  <p class="mb-4">Une aide sur mesure pour décrocher un emploi, entrer en formation, reprendre des études et déterminer votre projet professionnel. Des outils pour votre recherche d’emploi : CV, lettre de motivation, recherche d’offres et de formations, préparation aux entretiens d’embauche, etc.</p>
+                  <div class="btn btn-sm border bg-info rounded-pill text-white px-3 mb-3 wow slideInRight">En savoir plus</div>
+                  <h2 class="mb-4 text-secondary wow slideInRight">Accompagnement individuel</h2>
+                  <p class="mb-4 text-primary  fs-4 wow slideInRight">Une aide sur mesure pour décrocher un emploi, entrer en formation, reprendre des études et déterminer votre projet professionnel. Des outils pour votre recherche d’emploi : CV, lettre de motivation, recherche d’offres et de formations, préparation aux entretiens d’embauche, etc.</p>
                   <div class="row g-3">
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 wow slideInRight">
                           <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Clair</h6>
                           <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Personnel professionel</h6>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 wow slideInRight">
                           <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>A votre ecoute</h6>
                           <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Toujours disponible </h6>
                       </div>
@@ -255,15 +377,12 @@
           </div>
       </div>
   </div>
-
-
       <div class="container mt-5">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card">
               <img src="assets/images/accompagnement/4.jpg" class="card-img" alt="Image 1">
               <div class="card-img-overlay">
-                <h5 class="card-title text-black fs-6">Travail de groupe</h5>
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-info text-white">Go</a>
               </div>
             </div>
@@ -272,7 +391,6 @@
             <div class="card">
               <img src="assets/images/accompagnement/2.jpg" class="card-img" alt="Image 2">
               <div class="card-img-overlay">
-                <h5 class="card-title text-black fs-6">Carriére</h5>
                 <a href="https://www.youtube.com/shorts/jxqzTQazdDg" class="btn btn-info text-white">Go</a> 
               </div>
             </div>
@@ -281,7 +399,6 @@
             <div class="card">
               <img src="assets/images/accompagnement/3.jpg" class="card-img" alt="Image 2">
               <div class="card-img-overlay">
-                <h5 class="card-title text-black fs-6">Super Job</h5>
                 <a href="https://www.youtube.com/watch?v=JG1r65IXcnA" class="btn btn-info text-white">Go</a>
               </div>
             </div>
@@ -290,7 +407,6 @@
             <div class="card">
               <img src="assets/images/accompagnement/1.jpg" class="card-img" alt="Image 2">
               <div class="card-img-overlay">
-                <h5 class="card-title text-black fs-6">Télétravail</h5>
                 <a href="https://www.youtube.com/watch?v=-6nJphX7_Ac" class="btn btn-info text-white">Go</a>
               </div>
             </div>
@@ -298,9 +414,7 @@
         </div>
       </div>
     </div>
-
-
-    <div class="container">
+      <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="section-styled">
@@ -321,8 +435,7 @@
                 </div>
             </div>
         </div>
-
-        <div class="row">
+          <div class="row">
             <div class="col-md-6">
                 <div class="section-styled">
                     <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Quels sont les avantages de l'accompagnement?</h2>
@@ -332,7 +445,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+              <div class="col-md-6">
                 <div class="section-styled">
                     <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment puis-je bénéficier de l'accompagnement?</h2>
                     <div class="section-content" style="display: none;">
@@ -343,25 +456,22 @@
             </div>
         </div>
     </div>
-
-    
-
-    <script>
+      <script>
         $(document).ready(function () {
             $(".section-title").click(function () {
                 $(this).next(".section-content").slideToggle();
             });
         });
     </script>
-</body>
+  </body>
 </div>
 
 <div> 
   <div class="container-xxl py-5 category">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
-            <h1 class="mb-5">Courses Categories</h1>
+            <h6 class="section-title bg-white text-center text-primary px-3">ESPACE PUBLIC NUMÉRIQUE</h6>
+            <h2 class="text-white">Mise à disposition d’un espace équipé pour votre recherche d’emploi et de formation. Sous la supervision d’un agent d’accueil, accès gratuit à 16 ordinateurs, une connexion internet, un téléphone, un fax, une imprimante, des enveloppes et des timbres pour accomplir toutes vos démarches de recherche d’emploi ou de formation</h2>
         </div>
         <div class="row g-3">
             <div class="col-lg-7 col-md-6">
