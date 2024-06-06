@@ -533,7 +533,6 @@ Header Style
 
 .header-area .main-nav .nav li.has-sub ul.sub-menu {
   position: absolute;
-  width: 160px;
   border-radius: 0px 0px 5px 5px;
   background-color: #eee;
   box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
@@ -544,6 +543,16 @@ Header Style
   transform: translateY(+2em);
   visibility: hidden;
   z-index: -1;
+}
+
+.header-area .main-nav .nav li.has-sub:nth-child(1) ul.sub-menu{
+  width: 160px;
+}
+.header-area .main-nav .nav li.has-sub:nth-child(2) ul.sub-menu{
+  width: 350px;
+}
+.header-area .main-nav .nav li.has-sub:nth-child(3) ul.sub-menu{
+  width: 250px;
 }
 
 .background-header .main-nav .nav li.has-sub ul.sub-menu {
