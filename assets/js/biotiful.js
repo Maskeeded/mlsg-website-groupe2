@@ -113,12 +113,6 @@ $(function(){
                 isGrab = -1;
                 flutter(nexttimer[index], butterflys[index], index);
             });
-            butterflys[index].addEventListener('mouseleave', function(){
-                if(isGrab === -1) return;
-                $('body').removeClass('grabbed-butter-fly');
-                isGrab = -1;
-                flutter(nexttimer[index], butterflys[index], index);
-            });
         }
     
         addEventListener('mousemove', function(e){
