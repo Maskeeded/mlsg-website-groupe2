@@ -96,23 +96,22 @@ h1, h2, h3, h4, h5,
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  background: url('../images/contact-left.jpg') top right no-repeat,
-              url('../images/contact-left.jpg') bottom right no-repeat;
-  width: 103px; /* Mettre le width de l'image */
+  bottom: -90px;
+  background: url('../images/') top right no-repeat,
+              url('../images/biotiful/21-removebg-preview\(1\).png') bottom right no-repeat;
+  width: 590px; /* Mettre le width de l'image */
   z-index: -1;
 }
 
 .services-1-wrap.services-1-wrap::after {
   content: "";
   position: absolute;
-  transform: scaleX(-1);  /* Permet d'inverser l'image */
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   bottom: 0;
-  background: url('../images/contact-left.jpg') top right no-repeat,
-              url('../images/contact-left.jpg') bottom right no-repeat;
-  width: 103px; /* Mettre le width de l'image */
+  background: url('../images/biotiful/charly.png') top right no-repeat,
+              url('../images/biotiful/') bottom right no-repeat;
+  width: 600px; /* Mettre le width de l'image */
   z-index: -1;
 }
 
