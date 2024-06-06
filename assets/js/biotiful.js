@@ -9,8 +9,16 @@ $(function(){
     let isGrab = -1;
     let timeout;
     let maxSizeButterfly = 100;
-    const butterflys = document.getElementsByClassName("butterfly_wrapper");
+    const butterflys = initArrayOfButterFlys();
     const containerOfButterFlys = document.querySelector('.services-1-wrap');
+
+    function initArrayOfButterFlys(){
+        const toReturn = [];
+        const butterflys = document.getElementsByClassName("butterfly_wrapper");
+        for(let i = 0; i < butterflys.length; ++i)
+            toReturn.push(butterflys[i]);
+        return toReturn;
+    }
 
     function initMaxSizeButterfly(){
         if(window.innerWidth > 1000)
@@ -35,25 +43,6 @@ $(function(){
         wingtimer = Array.from({length}, () => 0);
         nexttimer = Array.from({length}, () => 0);
         timeout = Array.from({length}, () => -1);
-    }
-
-    function addButterFly(index, butterfly){
-        x.push(x[index] + Math.floor(size[index] / 2));
-        y.push(y[index] + Math.floor(size[index] / 2));
-        size.push(size[index]);
-        rotation.push(rotation[index]);
-        transitiontimer.push(transitiontimer[index]);
-        wingtimer.push(wingtimer[index]);
-        nexttimer.push(nexttimer[index]);
-        timeout.push(-1);
-        const cloneButterfly = document.createElement('div');
-        cloneButterfly.innerHTML = butterfly.innerHTML;
-        cloneButterfly.className = butterfly.className;
-
-        // TODO : Position top left + width height + evenement click + copy code function
-
-        butterfly.after(cloneButterfly);
-        flutter(nexttimer[index], cloneButterfly, x.length - 1);
     }
     
     function startFlutter(vartimer, butterflys){
@@ -114,25 +103,11 @@ $(function(){
     function initListenerButterFly(butterflys){
         for(let index = 0; index < butterflys.length; index++){
             butterflys[index].addEventListener('mousedown', function(e){
-                isGrab = index;
-                $('body').addClass('grabbed-butter-fly');
-                clearTimeout(timeout[index]);
-                const boundingRect = this.getBoundingClientRect();
-                const width = boundingRect.width > maxSizeButterfly ? maxSizeButterfly : boundingRect.width;
-                const height = boundingRect.height > maxSizeButterfly ? maxSizeButterfly : boundingRect.height;
-                this.style.width = width + "px";
-                this.style.height = height + "px";
-                this.style.transition = "none";	
-                moveButterFly(e);
+                (onMouseDown.bind(this))(e, index);
             });
-            butterflys[index].addEventListener('mouseup', function(){
-                if(isGrab === -1) return;
-                $('body').removeClass('grabbed-butter-fly');
-                flutter(nexttimer[isGrab], this, isGrab);
-                isGrab = -1;
-            });
-            butterflys[index].addEventListener('dblclick', function(){
-                addButterFly(index, this);
+            butterflys[index].addEventListener('mouseup', onMouseUp);
+            butterflys[index].addEventListener('dblclick', function(e){
+                (onDblClick.bind(this))(e, index);
             });
         }
 
@@ -149,6 +124,66 @@ $(function(){
         });
     
         addEventListener('resize', initMaxSizeButterfly);
+
+        function addButterFly(index, butterfly, mousePosX, mousePosY){
+            x.push(mousePosX);
+            y.push(mousePosY);
+            size.push(size[index]);
+            rotation.push(rotation[index]);
+            transitiontimer.push(transitiontimer[index]);
+            wingtimer.push(wingtimer[index]);
+            nexttimer.push(nexttimer[index]);
+            timeout.push(-1);
+            const newIndex = x.length - 1;
+            const $cloneButterfly = $('<div></div>');
+            $cloneButterfly
+                .html(butterfly.innerHTML)
+                .attr('class', butterfly.className)
+                .css({
+                    'left': mousePosX + 'px',
+                    'top': mousePosY + 'px'
+                })
+                .on('mousedown', function(e){
+                    (onMouseDown.bind(this))(e, newIndex);
+                })
+                .on('mouseup', onMouseUp)
+                .on('dblclick', function(e){
+                    (onDblClick.bind(this))(e, newIndex);
+                });
+            
+            butterflys.push($cloneButterfly.get(0));
+            butterfly.after($cloneButterfly.get(0));
+            flutter(nexttimer[index], $cloneButterfly.get(0), newIndex);
+        }
+
+        function onMouseUp(){
+            if(isGrab === -1) return;
+            $('body').removeClass('grabbed-butter-fly');
+            flutter(nexttimer[isGrab], this, isGrab);
+            isGrab = -1;
+        }
+    
+        function onMouseDown(e, index){
+            isGrab = index;
+            $('body').addClass('grabbed-butter-fly');
+            clearTimeout(timeout[isGrab]);
+            const boundingRect = this.getBoundingClientRect();
+            const width = boundingRect.width > maxSizeButterfly ? maxSizeButterfly : boundingRect.width;
+            const height = boundingRect.height > maxSizeButterfly ? maxSizeButterfly : boundingRect.height;
+            this.style.width = width + "px";
+            this.style.height = height + "px";
+            this.style.transition = "none";	
+            moveButterFly(e);
+        }
+
+        function onDblClick(e, index){
+            const service = document.querySelector('.services-1-wrap');
+            const offsetTop = service.offsetTop;
+            const pageY = e.pageY;
+            const y = pageY - offsetTop;
+            const x = e.pageX;
+            addButterFly(index, this, x, y);
+        }
     
         function moveButterFly(e){
             const service = document.querySelector('.services-1-wrap');
