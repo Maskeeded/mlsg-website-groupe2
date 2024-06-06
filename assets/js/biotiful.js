@@ -10,13 +10,13 @@ $(function(){
     let timeout;
     let maxSizeButterfly = 100;
     const butterflys = initArrayOfButterFlys();
-    const containerOfButterFlys = document.querySelector('.services-1-wrap');
+    const $containerOfButterFlys = $('.services-1-wrap');
 
     function initArrayOfButterFlys(){
         const toReturn = [];
-        const butterflys = document.getElementsByClassName("butterfly_wrapper");
-        for(let i = 0; i < butterflys.length; ++i)
-            toReturn.push(butterflys[i]);
+        $('.butterfly_wrapper').each(function(){
+            toReturn.push(this);
+        });
         return toReturn;
     }
 
@@ -36,7 +36,7 @@ $(function(){
             x[i] = Math.floor(Math.random() * window.innerWidth - 100);
         y = Array.from({length}, () => 0);
         for(let i = 0; i < y.length; ++i)
-            y[i] = Math.floor(Math.random() * containerOfButterFlys.scrollHeight);
+            y[i] = Math.floor(Math.random() * $containerOfButterFlys.prop('scrollHeight'));
         size = Array.from({length}, () => 30);
         rotation = Array.from({length}, () => 0);
         transitiontimer = Array.from({length}, () => 0);
@@ -47,11 +47,13 @@ $(function(){
     
     function startFlutter(vartimer, butterflys){
         for(let index = 0; index < butterflys.length; index++)
-            flutter(vartimer, butterflys[index], index);
+            flutter(vartimer, $(butterflys[index]), index);
     }
     
-    function flutter(vartimer, butterFly, index)
+    function flutter(vartimer, $butterFly, index)
     {
+        const scrollHeight = $containerOfButterFlys.prop('scrollHeight');
+
         nexttimer[index]=vartimer+(generaterandomno(-200,200));
         nexttimer[index]=(nexttimer[index] < 2500 || nexttimer[index] > 5000 ? 2500 : nexttimer[index]);
         
@@ -59,11 +61,11 @@ $(function(){
         size[index]=(size[index] < 30 ? 30 + generaterandomno(0, 30) : size[index]);
         size[index]=(size[index] > maxSizeButterfly ? maxSizeButterfly - generaterandomno(0, 40) : size[index]);
         x[index]+=generaterandomno(-window.innerWidth,window.innerWidth);
-        y[index]+=generaterandomno(-containerOfButterFlys.scrollHeight,containerOfButterFlys.scrollHeight);
+        y[index]+=generaterandomno(-scrollHeight,scrollHeight);
         x[index]= x[index] < 20 ? 30 + generaterandomno(0, 500) : x[index];
         y[index]= y[index] < 20 ? 30 + generaterandomno(0, 500) : y[index];
         x[index]= x[index] > window.innerWidth ? Math.floor(window.innerWidth - size[index]) - generaterandomno(0,500) : x[index];
-        y[index]= y[index] > containerOfButterFlys.scrollHeight ? Math.floor(containerOfButterFlys.scrollHeight - size[index]) - generaterandomno(0,500) : y[index];
+        y[index]= y[index] > scrollHeight ? Math.floor(scrollHeight - size[index]) - generaterandomno(0,500) : y[index];
     
         rotation[index]+=generaterandomno(-10,10);
         rotation[index]=(rotation[index]< -20 ? 0 : rotation[index]);
@@ -71,14 +73,16 @@ $(function(){
     
         transitiontimer[index]=generaterandomno(40,60)/10;
     
-        butterFly.style.left=x[index]+"px";
-        butterFly.style.top=y[index]+"px";
-        butterFly.style.width=size[index]+"px";
-        butterFly.style.height=size[index]+"px";
-        butterFly.style.transform="rotate("+rotation[index]+"deg)";
-        butterFly.style.webkitTransform="rotate("+rotation[index]+"deg)";		
-        butterFly.style.transition="all "+transitiontimer[index]+"s";	
-        butterFly.style.webkitTransition="all "+transitiontimer[index]+"s";
+        $butterFly.css({
+            'left': x[index]+"px",
+            'top': y[index]+"px",
+            'width': size[index]+"px",
+            'height': size[index]+"px",
+            'transform': "rotate("+rotation[index]+"deg)",
+            'webkitTransform': "rotate("+rotation[index]+"deg)",
+            'transition': "all "+transitiontimer[index]+"s",
+            'webkitTransition': "all "+transitiontimer[index]+"s"
+        });
     
         wingtimer[index]=generaterandomno(1,5);
         var upperwings=document.getElementsByClassName("upperwing");
@@ -92,7 +96,7 @@ $(function(){
             lowerwings[k].style.webkitAnimationDuration="0."+wingtimer[index]+"s";
         }
     
-        timeout[index] = setTimeout(function(){flutter(nexttimer[index], butterFly, index);},vartimer);
+        timeout[index] = setTimeout(function(){flutter(nexttimer[index], $butterFly, index);},vartimer);
     }
     
     function generaterandomno(varmin,varmax)
@@ -114,7 +118,7 @@ $(function(){
         $('body').on('mouseleave', function(e){
             if(isGrab === -1) return;
             $('body').removeClass('grabbed-butter-fly');
-            flutter(nexttimer[isGrab], butterflys[isGrab], isGrab);
+            flutter(nexttimer[isGrab], $(butterflys[isGrab]), isGrab);
             isGrab = -1;
         });
     
@@ -125,7 +129,7 @@ $(function(){
     
         addEventListener('resize', initMaxSizeButterfly);
 
-        function addButterFly(index, butterfly, mousePosX, mousePosY){
+        function addButterFly(index, $butterfly, mousePosX, mousePosY){
             x.push(mousePosX);
             y.push(mousePosY);
             size.push(size[index]);
@@ -137,8 +141,8 @@ $(function(){
             const newIndex = x.length - 1;
             const $cloneButterfly = $('<div></div>');
             $cloneButterfly
-                .html(butterfly.innerHTML)
-                .attr('class', butterfly.className)
+                .html($butterfly.html())
+                .attr('class', $butterfly.attr('class'))
                 .css({
                     'left': mousePosX + 'px',
                     'top': mousePosY + 'px'
@@ -152,14 +156,14 @@ $(function(){
                 });
             
             butterflys.push($cloneButterfly.get(0));
-            butterfly.after($cloneButterfly.get(0));
-            flutter(nexttimer[index], $cloneButterfly.get(0), newIndex);
+            $butterfly.after($cloneButterfly);
+            flutter(nexttimer[index], $cloneButterfly, newIndex);
         }
 
         function onMouseUp(){
             if(isGrab === -1) return;
             $('body').removeClass('grabbed-butter-fly');
-            flutter(nexttimer[isGrab], this, isGrab);
+            flutter(nexttimer[isGrab], $(this), isGrab);
             isGrab = -1;
         }
     
@@ -170,9 +174,11 @@ $(function(){
             const boundingRect = this.getBoundingClientRect();
             const width = boundingRect.width > maxSizeButterfly ? maxSizeButterfly : boundingRect.width;
             const height = boundingRect.height > maxSizeButterfly ? maxSizeButterfly : boundingRect.height;
-            this.style.width = width + "px";
-            this.style.height = height + "px";
-            this.style.transition = "none";	
+            $(this).css({
+                'width': width + "px",
+                'height': height + "px",
+                'transition': "none"
+            });
             moveButterFly(e);
         }
 
@@ -182,7 +188,7 @@ $(function(){
             const pageY = e.pageY;
             const y = pageY - offsetTop;
             const x = e.pageX;
-            addButterFly(index, this, x, y);
+            addButterFly(index, $(this), x, y);
         }
     
         function moveButterFly(e){
