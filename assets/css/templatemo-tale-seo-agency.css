@@ -350,7 +350,7 @@ Pre-loader Style
   height: 16px;
   top: 12px;
   left: 15px;
-  background: #5b03e4;
+  background: rgb(var(--bs-primary-rgb));
   border-radius: 50%;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -373,7 +373,7 @@ Pre-loader Style
   width: 16px;
   height: 16px;
   margin-left: 16px;
-  background: #5b03e4;
+  background: rgb(var(--bs-primary-rgb));
   border-radius: 50%;
 }
 
@@ -423,6 +423,7 @@ Header Style
 .header-area .main-nav .logo {
   display: block;
   width: 80px;
+  height: 80px;
   margin-top: 15px;
   margin-left: 30px;
   -webkit-transition: all 0.3s ease 0s;
@@ -435,6 +436,7 @@ Header Style
   margin-top: 12.5px;
   margin-left: 50px;
   width: 60px;
+  height: 60px;
   top: 0px;
 }
 
@@ -449,6 +451,10 @@ Header Style
   transition: all 0.3s ease 0s;
   position: relative;
   z-index: 999;
+}
+
+.background-header .main-nav .nav{
+  height: 80px;
 }
 
 .nav {
@@ -486,8 +492,8 @@ Header Style
   text-align: right;
 }
 
-.header-area .main-nav .nav li.has-sub ul.sub-menu li:last-child a:hover,
-.background-header .main-nav .nav li.has-sub ul.sub-menu li:last-child a:hover {
+.header-area .main-nav .nav li.has-sub ul.sub-menu li a:hover,
+.background-header .main-nav .nav li.has-sub ul.sub-menu li a:hover {
   padding-left: 25px !important;
 }
 
@@ -574,7 +580,7 @@ Header Style
 
 .header-area .main-nav .nav li.has-sub ul li a:hover {
   background: #fff;
-  color: #5b03e4!important;
+  color: rgb(var(--bs-primary-rgb))!important;
   padding-left: 25px;
 }
 
@@ -697,7 +703,6 @@ Header Style
   color: rgb(56, 182, 255) !important;
   font-weight: 900 !important;
   text-decoration: underline !important;
-  cursor: default;
 }
 
 .sticky-logo {
@@ -741,7 +746,7 @@ Header Style
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #5b03e4!important;
+    color: rgb(var(--bs-primary-rgb)) !important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -793,6 +798,12 @@ Header Style
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+  .header-area .main-nav .nav .sub-menu li a {
+    background: #d3d3d3 !important;
+  }
+  .header-area .main-nav .nav .sub-menu li a:hover {
+    background: #e0e0e0 !important;
+  }
   .header-area .main-nav .nav li a {
     height: 50px !important;
     line-height: 50px !important;
@@ -803,7 +814,7 @@ Header Style
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #5b03e4!important;
+    color: rgb(var(--bs-primary-rgb)) !important;
   }
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     position: relative;
@@ -817,6 +828,7 @@ Header Style
     height: 0px;
     transition: all 0s;
   }
+  
   .header-area .main-nav .nav li.submenu ul li a {
     font-size: 12px;
     font-weight: 400;
@@ -1190,7 +1202,7 @@ Projects Style
   position: absolute;
   right: 30px;
   top: 50%;
-  color: #5b03e4;
+  color: rgb(var(--bs-primary-rgb));
   transform: translateY(-23px);
 }
 
@@ -1287,13 +1299,13 @@ Infos Style
 
 .infos .main-content .skill-slide .fill {
   height: 10px;
-  background-color: #5b03e4;
+  background-color: rgb(var(--bs-primary-rgb));
   border-radius: 5px;
 }
 
 .infos .main-content .skill-slide h6 {
   position: absolute;
-  color: #5b03e4;
+  color: rgb(var(--bs-primary-rgb));
   font-size: 15px;
   left: 0;
   top: -25px;
@@ -1301,7 +1313,7 @@ Infos Style
 
 .infos .main-content .skill-slide span {
   position: absolute;
-  color: #5b03e4;
+  color: rgb(var(--bs-primary-rgb));
   font-size: 15px;
   font-weight: 700;
   top: -25px;
@@ -1469,7 +1481,7 @@ Page Heading Style
 
 .page-heading h6 {
   font-size: 20px;
-  color: #5b03e4;
+  color: rgb(var(--bs-primary-rgb));
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -1491,7 +1503,7 @@ Page Heading Style
 
 .page-heading h4 em {
   font-style: normal;
-  color: #5b03e4;
+  color: rgb(var(--bs-primary-rgb));
 }
 
 .page-heading h4 span {
@@ -1546,7 +1558,7 @@ Infos Style
   transform: translate(-23px, -23px);
   background-color: #fff;
   border-radius: 50%;
-  color: #5b03e4;
+  color: rgb(var(--bs-primary-rgb));
   display: inline-block;
   text-align: center;
   width: 46px;
@@ -1586,7 +1598,7 @@ Infos Style
 
 .video-info .skill-slide .fill {
   height: 10px;
-  background-color: #5b03e4;
+  background-color: rgb(var(--bs-primary-rgb));
   border-radius: 5px;
 }
 
@@ -1701,7 +1713,7 @@ Happy Clients Style
 }
 
 .happy-clients .naccs .menu div.active {
-  color: #5b03e4;
+  color: rgb(var(--bs-primary-rgb));
 }
 
 .happy-clients ul.nacc {
@@ -1733,7 +1745,7 @@ Happy Clients Style
 }
 
 .happy-clients ul.nacc li .line-dec {
-  background-color: #5b03e4;
+  background-color: rgb(var(--bs-primary-rgb));
   width: 60px;
   height: 2px;
   margin-bottom: 25px;
@@ -1745,7 +1757,7 @@ Happy Clients Style
 
 .happy-clients ul.nacc li .info span {
   display: inline-block;
-  background-color: #5b03e4;
+  background-color: rgb(var(--bs-primary-rgb));
   border-radius: 20px;
   height: 40px;
   line-height: 40px;
@@ -1793,7 +1805,7 @@ CTA Style
 
 .cta .main-button a {
   background-color: #fff;
-  color: #5b03e4;
+  color: rgb(var(--bs-primary-rgb));
   margin-top: 30px;
 }
 

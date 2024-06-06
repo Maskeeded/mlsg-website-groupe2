@@ -54,10 +54,33 @@
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
               <ul class="nav gap-xxl-4 justify-content-center">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="#" class="active">Qui sommes nous ?</a></li>
+                <li class="has-sub">
+                  <a href="javascript:void(0)">Accueil</a>
+                  <ul class="sub-menu">
+                    <li><a href="index.html#services">Nos services</a></li>
+                    <li><a href="index.html#diaporama">Diaporama</a></li>
+                    <li><a href="index.html#actualites">Nos actualités</a></li>
+                  </ul>
+                </li>
+                <li class="has-sub">
+                  <a href="javascript:void(0)" class="active">Qui sommes-nous</a>
+                  <ul class="sub-menu">
+                    <li><a class="scroll-to-section" href="#missions">Nos missions & méthodes & valeurs</a></li>
+                    <li><a class="scroll-to-section" href="#equipe">Notre équipe</a></li>
+                    <li><a class="scroll-to-section" href="#conseil-administration">Le conseil d'administration</a></li>
+                    <li><a class="scroll-to-section" href="#partenaires-et-adhesion">Partenaires et adhésion</a></li>
+                    <li><a class="scroll-to-section" href="#rapports-activite">Rapports d'activité & status & comptes annuels</a></li>
+                  </ul>
+                </li>
+                <li class="has-sub">
+                  <a href="javascript:void(0)" class="text-decoration-line-through">Accompagnement</a>
+                  <ul class="sub-menu">
+                    <li><a href="404-accompagnement.html#individuel">Individuel</a></li>
+                    <li><a href="404-accompagnement.html.html#social">Social</a></li>
+                    <li><a href="404-accompagnement.html.html#espace-public">Espace public numérique</a></li>
+                  </ul>
+                </li>
                 <li><a href="orientation.html">Orientation</a></li>
-                <li><a href="404-accompagnement.html" class="text-decoration-line-through">Accompagnement</a></li>
                 <li><a href="biotiful.html">Biotiful</a></li>
                 <li><a href="offres-emploi.html">Offres d'emploi</a></li>
                 <li><a href="agenda.html">Agenda</a></li>
@@ -87,23 +110,23 @@
                             data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
                             <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i> Qui sommes nous ?</h5>
                         </button>
-                        <button data-wow-delay="0.25s" class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
+                        <button data-wow-delay="0.25s" class="missions nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
                             <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Nos missions, notre méthode, nos valeurs</h5>
                         </button>
-                        <button data-wow-delay="0.25s" class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
+                        <button data-wow-delay="0.25s" class="equipe nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
                             <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>L’équipe</h5>
                         </button>
-                        <button data-wow-delay="0.25s" class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
+                        <button data-wow-delay="0.25s" class="conseil-administration nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
                             <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Le Conseil d’Administration depuis 2022</h5>
                         </button>
-                        <button data-wow-delay="0.25s" class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
+                        <button data-wow-delay="0.25s" class="partenaires-et-adhesion nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-5" type="button">
                             <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Partenaires et adhésions</h5>
                         </button>
-                        <button data-wow-delay="0.25s" class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-0 wow slideInLeft"
+                        <button data-wow-delay="0.25s" class="rapports-activite nav-link w-100 d-flex align-items-center text-start border p-4 mb-0 wow slideInLeft"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-6" type="button">
                             <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Rapports d’activité</h5>
                         </button>
@@ -345,13 +368,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="assets/js/newsletter.js"></script>
     <script src="assets/js/initwow.js"></script>
-    <script>
-      $(function(){
-        setTimeout(() => {
-          $('#js-preloader').addClass('loaded');
-        }, 500);
-      })
-    </script>
+    <script src="assets/js/qui-sommes-nous.js"></script>
 </body>
 
 </html>

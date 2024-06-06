@@ -1,15 +1,35 @@
 (function ($) {
 	
 	"use strict";
-	  
-
-	addEventListener('resize', function(){
-		if(window.innerWidth >= 1000){
+	
+	let bigNav = window.innerWidth > 1110;
+	
+	function initNav(){
+		if(window.innerWidth > 1110){
 			$('.header-area .nav').show();
 			$('.header-area .nav').css('display', '');
 			$(".menu-trigger").removeClass('active');
+			$('header .sub-menu').css('display', '')
+			bigNav = true;
+		}else if(window.innerWidth <= 1110){
+			$('header .sub-menu').hide();
+			bigNav = false;
 		}
-	})
+	}
+
+	initNav();
+	addEventListener('resize', function(){
+		if(!bigNav && window.innerWidth > 1110){
+			$('.header-area .nav').show();
+			$('.header-area .nav').css('display', '');
+			$(".menu-trigger").removeClass('active');
+			$('header .sub-menu').css('display', '')
+			bigNav = true;
+		}else if(bigNav && window.innerWidth <= 1110){
+			$('header .sub-menu').hide();
+			bigNav = false;
+		}
+	});
 
 	$(window).scroll(function() {
 	  var scroll = $(window).scrollTop();
@@ -49,25 +69,18 @@
 	}
 
 	$(document).ready(function () {
-	    $(document).on("scroll", onScroll);
 		$('.header-area').after('<div id="nav-separator"></div>');
-	});
+		const linkToActive = window.location.href.split('#')[1];
+		if(linkToActive !== undefined){
+			// TODO	
+		}
+		
+		$('.scroll-to-section').click(function(){
+			$('.scroll-to-section.active').removeClass('active');
+			$(this).addClass('active');
+		});
 
-	function onScroll(event){
-	    var scrollPos = $(document).scrollTop();
-	    $('.nav a').each(function () {
-	        var currLink = $(this);
-			if(typeof currLink.attr("href") === 'string') return;
-	        var refElement = $(currLink.attr("href"));
-	        if (refElement.position() !== undefined && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-	            $('.nav ul li a').removeClass("active");
-	            currLink.addClass("active");
-	        }
-	        else{
-	            currLink.removeClass("active");
-	        }
-	    });
-	}
+	});
 	
 	$(window).on('load', function() {
 		if(
@@ -105,6 +118,7 @@
             var _this = $(this);
 
             _this.on('tap click', function (e) {
+				if(window.innerWidth > 1110) return;
                 var thisItemParent = _this.parent('li'),
                     thisItemParentSiblingsWithDrop = thisItemParent.siblings('.has-sub');
 
