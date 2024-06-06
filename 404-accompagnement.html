@@ -2,99 +2,299 @@
 <html lang="fr">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Accompagnement</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-tale-seo-agency.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/newsletter.css">
+    <link rel="stylesheet" href="assets/css/icon-social.css">
+    <link rel="stylesheet" href="assets/css/404.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <title>Accompagnement</title>
+    <style>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        .jumbotron {
+            background-image: linear-gradient(to #E30056, #7E2C5C);
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+            border-radius: 0.3rem;
 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
 
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-tale-seo-agency.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            color: #333;
+            text-align: center;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            
+        }
 
+        .section-styled {
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            
+        }
 
-  
-  <!--
-    
-    TemplateMo 582 Tale SEO Agency
-    
-    https://templatemo.com/tm-582-tale-seo-agency
-    
-  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css">
-  <link rel="stylesheet" href="assets/css/carousel.css" />
-  <!-- Dépendance pour la newsletter -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&amp;display=swap">
-  <link rel="stylesheet" href="assets/css/newsletter.css">
+        .section-styled:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
 
-  <link rel="stylesheet" href="assets/css/icon-social.css">
-  <link rel="stylesheet" href="assets/css/404.css">
+        .section-title {
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .section-title:after {
+            content: '\25BC';
+            float: right;
+        }
+
+        .section-title:hover {
+            color: #E30056;
+        }
+
+        .section-content {
+            padding: 10px 0;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .section-content p {
+            margin-bottom: 10px;
+        }
+
+        .tooltip-custom {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .tooltip-custom:after {
+            content: attr(title);
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .tooltip-custom:hover:after {
+            opacity: 1;
+        }
+
+        .card-img-overlay {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    .card:hover .card-img-overlay {
+      opacity: 1;
+    }
+    </style>
 </head>
+
 <body>
 
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
+
+
+    <!-- Preloader Start -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- Header Area Start -->
+    <header class="header-area header-sticky">
+        <div class="container-fluid px-2">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">
+                            <img id="logo-navbar" src="assets/images/logo.png" alt="">
+                        </a>
+                        <ul class="nav gap-xxl-4 justify-content-center">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="qui-sommes-nous.html">Qui sommes nous ?</a></li>
+                            <li><a href="orientation.html">Orientation</a></li>
+                            <li><a href="accompagnement">Accompagnement</a></li>
+                            <li><a href="biotiful.html">Biotiful</a></li>
+                            <li><a href="offres-emploi.html">Offres d'emploi</a></li>
+                            <li><a href="agenda.html">Agenda</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    
+
+    <div class="container mt-5">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Bienvenue à Mon Accompagnement!</h1>
+            <p class="fw-bold fs-5" style="color: #E30056;">Nous sommes ici pour vous aider à naviguer dans votre parcours professionnel.</p>
+            <hr class="my-4">
+        </div>
+    </div>
+
+    <div>
+
+      <h1 class="text-center fw-bold fs-1 text-primary mt-5">INDIVIDUEL</h1>
+
+    
+
+
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="assets/images/accompagnement/4.jpg" class="card-img" alt="Image 1">
+              <div class="card-img-overlay">
+                <h5 class="card-title text-black fs-6">Travail de groupe</h5>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-info text-white">Go</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="assets/images/accompagnement/2.jpg" class="card-img" alt="Image 2">
+              <div class="card-img-overlay">
+                <h5 class="card-title text-black fs-6">Carriére</h5>
+                <a href="https://www.youtube.com/shorts/jxqzTQazdDg" class="btn btn-info text-white">Go</a> 
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="assets/images/accompagnement/3.jpg" class="card-img" alt="Image 2">
+              <div class="card-img-overlay">
+                <h5 class="card-title text-black fs-6">Super Job</h5>
+                <a href="https://www.youtube.com/watch?v=JG1r65IXcnA" class="btn btn-info text-white">Go</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="assets/images/accompagnement/1.jpg" class="card-img" alt="Image 2">
+              <div class="card-img-overlay">
+                <h5 class="card-title text-black fs-6">Télétravail</h5>
+                <a href="https://www.youtube.com/watch?v=-6nJphX7_Ac" class="btn btn-info text-white">Go</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-      <div class="container-fluid px-2">
-      <div class="row">
-          <div class="col-12">
-          <nav class="main-nav">
-              <!-- ***** Logo Start ***** -->
-              <a href="index.html" class="logo">
-              <img id="logo-navbar" src="assets/images/logo.png" alt="">
-              </a>
-              <!-- ***** Logo End ***** -->
-              <!-- ***** Menu Start ***** -->
-              <ul class="nav gap-xxl-4 justify-content-center">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="qui-sommes-nous.html">Qui sommes nous ?</a></li>
-                <li><a href="orientation.html">Orientation</a></li>
-                <li><a href="#" class="text-decoration-line-through active">Accompagnement</a></li>
-                <li><a href="biotiful.html">Biotiful</a></li>
-                <li><a href="offres-emploi.html">Offres d'emploi</a></li>
-                <li><a href="agenda.html">Agenda</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-              <a class='menu-trigger'>
-              <span>Menu</span>
-              </a>
-              <!-- ***** Menu End ***** -->
-          </nav>
-          </div>
-      </div>
-      </div>
-  </header>
-    <!-- ***** Header Area End ***** -->
 
 
-    <div class="container-fluid p-0" id="container-404">
-      <div class="row col-12 m-auto bg-primary">
-          <div class="d-flex justify-content-center my-2">
-              <img src="assets/images/error404-charly2.jpeg" class="col-12 col-lg-5" alt="">
-          </div>
-      </div>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section-styled">
+                    <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment pouvons-nous vous aider?</h2>
+                    <div class="section-content" style="display: none;">
+                        <p class="fw-bold fs-5" style="color: #E30056;">Notre équipe est là pour vous aider à trouver des réponses à vos questions sur l'emploi, la formation et bien plus encore.</p>
+                        <p class="fw-bold fs-5" style="color: #E30056;">Que vous soyez à la recherche d'un emploi, d'une formation ou simplement de conseils sur votre carrière, nous sommes là pour vous aider.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="section-styled">
+                    <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment fonctionne l'accompagnement?</h2>
+                    <div class="section-content" style="display: none;">
+                        <p class="fw-bold fs-5" style="color: #E30056;">Notre équipe vous accompagnera tout au long de votre parcours professionnel, en vous aidant à trouver des solutions adaptées à vos besoins.</p>
+                        <p class="fw-bold fs-5" style="color: #E30056;">Nous vous aiderons à identifier vos objectifs professionnels, à trouver des opportunités d'emploi et de formation, et à développer les compétences dont vous avez besoin pour réussir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- ****  end Actualites **** -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section-styled">
+                    <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Quels sont les avantages de l'accompagnement?</h2>
+                    <div class="section-content" style="display: none;">
+                        <p class="fw-bold fs-5" style="color: #E30056;">L'accompagnement vous permet de bénéficier de conseils personnalisés et de ressources adaptées à vos besoins.</p>
+                        <p class="fw-bold fs-5" style="color: #E30056;">Notre équipe vous aidera à identifier vos forces et vos faiblesses, à trouver des solutions à vos problèmes et à atteindre vos objectifs professionnels.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="section-styled">
+                    <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment puis-je bénéficier de l'accompagnement?</h2>
+                    <div class="section-content" style="display: none;">
+                        <p class="fw-bold fs-5" style="color: #E30056;">Il vous suffit de prendre rendez-vous avec un membre de notre équipe pour discuter de vos besoins et de vos objectifs professionnels.</p>
+                        <p class="fw-bold fs-5" style="color: #E30056;">Nous vous aiderons à trouver des solutions adaptées à vos besoins et à mettre en place un plan d'action pour atteindre vos objectifs professionnels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        $(document).ready(function () {
+            $(".section-title").click(function () {
+                $(this).next(".section-content").slideToggle();
+            });
+        });
+    </script>
+</body>
+</div>
+
+<div> 
+    <h1 class="text-center fw-bold fs-1 text-primary mt-5">SOCIAL</h1>
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="assets/images/accompagnement/5.jpg" class="card-img" alt="Image 1">
+              
+
+</div>
+</div>
+
+
 
      <!-- ****  start Footer **** -->
      <footer>
@@ -229,7 +429,6 @@
   
   <script src="assets/js/popup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
   <script src="assets/js/custom.js"></script>
   <!-- Dépendance pour la newsletter -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
