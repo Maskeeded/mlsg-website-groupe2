@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Accompagnement</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-tale-seo-agency.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/newsletter.css">
+    <link rel="stylesheet" href="assets/css/icon-social.css">
+    <link rel="stylesheet" href="assets/css/404.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+      .jumbotron {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 0.3rem;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+        color: #333;
+        text-align: center;
+        font-size: 1rem;
+        border-radius: 10px;
+      }
+
+          .jumbotron h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+          }
+
+          .jumbotron p {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+          }
+
+          .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .about-img {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+          }
+
+          .about-img::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            background: url(assets/images/accompagnement/bg-about-img.png) top left no-repeat;
+            background-size: contain;
+          }
+
+          .btn {
+            font-size: 0.8rem;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+          }
+
+          .btn-square {
+            width: 30px;
+            height: 30px;
+          }
+
+          .btn-sm-square {
+            width: 20px;
+            height: 20px;
+          }
+
+          .btn-lg-square {
+            width: 34px;
+            height: 34px;
+          }
+
+          .btn-square,
+          .btn-sm-square,
+          .btn-lg-square {
+            border-radius: 50%;
+          }
+
+          .section-title h6::before,
+          .section-title h6::after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 2px;
+            background-color: #E30056;
+            transition: all 0.3s ease;
+          }
+
+          .section-title h6::after {
+            right: 0;
+          }
+
+          .section-styled {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0.3rem;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            color: #333;
+            text-align: center;
+            font-size: 1rem;
+            border-radius: 10px;
+          }
+
+          .section-styled:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+          }
+
+          .section-title {
+            cursor: pointer;
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 5px;
+            transition: color 0.3s ease;
+          }
+
+          .section-title:after {
+            content: '\25BC';
+            float: right;
+          }
+
+          .section-title:hover {
+            color: #E30056;
+          }
+
+          .section-content {
+            padding: 5px 0;
+            color: #666;
+            line-height: 1.6;
+          }
+
+          .section-content p {
+            margin-bottom: 5px;
+          }
+
+          .tooltip-custom {
+            position: relative;
+            cursor: pointer;
+          }
+
+          .tooltip-custom:after {
+            content: attr(title);
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+
+          .tooltip-custom:hover:after {
+            opacity: 1;
+          }
+
+          .img-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+          }
+
+          .card-img-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+          }
+
+          .card-img-overlay:hover {
+            opacity: 1;
+          }
+
+          .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          .card {
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+          }
+
+          .card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+
+          }
+
+          .card-text {
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .card-link {
+            font-size: 0.8rem;
+            color: #E30056;
+            transition: color 0.3s ease;
+          }
+
+
+          .category {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+          }
+
+          .category h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+          }
+
+          .category h6 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+          }
+
+          .category p {
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .category img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .category .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+          }
+
+          .category .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+          }
+
+
+          .category img,
+      .course-item img {
+          transition: .3s;
+      }
+
+      .category a:hover img,
+      .course-item:hover img {
+          transform: scale(1.05);
+      }
+
+      .category .card-img-overlay:hover {
+          opacity: 1;
+      }
+
+      /*** Team ***/
+      .team-item img {
+          transition: .3s;
+      }
+
+      .team-item:hover img {
+          transform: scale(1.05);
+      }
+        </style>
+    </style>
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- Header Area Start -->
+    <header class="header-area header-sticky">
+        <div class="container-fluid px-2">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">
+                            <img id="logo-navbar" src="assets/images/logo.png" alt="">
+                        </a>
+                        <ul class="nav gap-xxl-4 justify-content-center">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="qui-sommes-nous.html">Qui sommes nous ?</a></li>
+                            <li><a href="orientation.html">Orientation</a></li>
+                            <li><a href="accompagnement">Accompagnement</a></li>
+                            <li><a href="biotiful.html">Biotiful</a></li>
+                            <li><a href="offres-emploi.html">Offres d'emploi</a></li>
+                            <li><a href="agenda.html">Agenda</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    
+
+    <!-- **** Accompa Section **** -->
+
+    <div class="container mt-5">
+        <div class="jumbotron text-center">
+            <h1 class="mb-3 mt-5 fs-1 fw-bolder wow bounceInDown  ">ACCOMPAGNEMENT VERS L’EMPLOI</h1>
+            <p class="fs-4 fw-bolder wow fadeInUpBig text-primary" >Nous sommes ici pour vous aider à naviguer dans votre parcours professionnel.</p>
+            <hr class="my-4">
+        </div>
+    </div>
+    <div>
+    <!-- About Start -->
+    <div class="container-xxl py-5 category">
+      <div class="container py-5">
+          <div class="row g-5 align-items-center">
+              <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="about-img">
+                      <img class="img-fluid" src="assets/images/accompagnement/dapdap.jpg" alt="Image description">
+                  </div>
+              </div>
+              <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                  <a href="https://mlsg.be/accompagnement-vers-l-emploi.html" class="btn btn-sm border bg-info rounded-pill text-white px-3 mb-3 wow slideInRight">En savoir plus</a>
+                  <h2 class="mb-4 text-secondary wow slideInRight">Accompagnement individuel</h2>
+                  <p class="mb-4 text-primary fs-4 wow slideInRight">Une aide sur mesure pour décrocher un emploi, entrer en formation, reprendre des études et déterminer votre projet professionnel. Des outils pour votre recherche d’emploi : CV, lettre de motivation, recherche d’offres et de formations, préparation aux entretiens d’embauche, etc.</p>
+                  <div class="row g-3">
+                      <div class="col-sm-6 wow slideInRight">
+                          <h6 class="mb-3 text-secondary"><i class="fa fa-check text-info me-2"></i>Clair</h6>
+                          <h6 class="mb-0 text-secondary"><i class="fa fa-check text-info me-2"></i>Personnel professionel</h6>
+                      </div>
+                      <div class="col-sm-6 wow slideInRight">
+                          <h6 class="mb-3 text-secondary"><i class="fa fa-check text-info me-2"></i>A votre ecoute</h6>
+                          <h6 class="mb-0 text-secondary text "><i class="fa fa-check text-info me-2"></i>Toujours disponible </h6>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="container-xxl py-5 category">
+    <div class="container">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h2 class="mb-4 text-secondary wow slideInRight">ACCOMPAGNEMENT SOCIAL</h2>
+        <p class="fs-4 text-primary wow slideInRight">Accompagnement spécifique sur RDV auprès d’un conseiller social sur des problématiques qui freinent votre recherche d’emploi et/ou de formation telles que l’endettement, le logement, la perte de revenus, la protection des droits sociaux, etc.</p>
+      </div>
+</div>
+<div>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="assets/images/accompagnement/4.jpg" class="card-img" alt="Image 1">
+              <div class="card-img-overlay">
+                <a href="https://mlsg.be/accompagnement-vers-l-emploi/accompagnement-social.html" class="btn btn-info text-white">Go</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="assets/images/accompagnement/2.jpg" class="card-img" alt="Image 2">
+              <div class="card-img-overlay">
+                <a href="https://mlsg.be/accompagnement-vers-l-emploi/accompagnement-social.html" class="btn btn-info text-white">Go</a> 
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="assets/images/accompagnement/3.jpg" class="card-img" alt="Image 2">
+              <div class="card-img-overlay">
+                <a href="https://mlsg.be/accompagnement-vers-l-emploi/accompagnement-social.html" class="btn btn-info text-white">Go</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="assets/images/accompagnement/1.jpg" class="card-img" alt="Image 2">
+              <div class="card-img-overlay">
+                <a href="https://mlsg.be/accompagnement-vers-l-emploi/accompagnement-social.html" class="btn btn-info text-white">Go</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-6 mt-lg-5 mt-sm-2">
+                <div class="section-styled">
+                  <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment pouvons-nous vous aider?</h2>
+                  <div class="section-content" style="display: none;">
+                      <p class="fw-bold fs-5 text-primary">Notre équipe est là pour vous aider à trouver des réponses à vos questions sur l'emploi, la formation et bien plus encore.</p>
+                      <p class="fw-bold fs-5 text-primary">Que vous soyez à la recherche d'un emploi, d'une formation ou simplement de conseils sur votre carrière, nous sommes là pour vous aider.</p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-lg-5">
+                <div class="section-styled">
+                    <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment fonctionne l'accompagnement?</h2>
+                    <div class="section-content" style="display: none;">
+                        <p class="fw-bold fs-5 text-primary">Notre équipe vous accompagnera tout au long de votre parcours professionnel, en vous aidant à trouver des solutions adaptées à vos besoins.</p>
+                        <p class="fw-bold fs-5 text-primary">Nous vous aiderons à identifier vos objectifs professionnels, à trouver des opportunités d'emploi et de formation, et à développer les compétences dont vous avez besoin pour réussir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-md-6">
+                <div class="section-styled">
+                    <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Quels sont les avantages de l'accompagnement?</h2>
+                    <div class="section-content" style="display: none;">
+                        <p class="fw-bold fs-5 text-primary">L'accompagnement vous permet de bénéficier de conseils personnalisés et de ressources adaptées à vos besoins.</p>
+                        <p class="fw-bold fs-5 text-primary">Notre équipe vous aidera à identifier vos forces et vos faiblesses, à trouver des solutions à vos problèmes et à atteindre vos objectifs professionnels.</p>
+                    </div>
+                </div>
+            </div>
+              <div class="col-md-6">
+                <div class="section-styled">
+                    <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment puis-je bénéficier de l'accompagnement?</h2>
+                    <div class="section-content" style="display: none;">
+                        <p class="fw-bold fs-5 text-primary">Il vous suffit de prendre rendez-vous avec un membre de notre équipe pour discuter de vos besoins et de vos objectifs professionnels.</p>
+                        <p class="fw-bold fs-5 text-primary">Nous vous aiderons à trouver des solutions adaptées à vos besoins et à mettre en place un plan d'action pour atteindre vos objectifs professionnels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <script>
+        $(document).ready(function () {
+            $(".section-title").click(function () {
+                $(this).next(".section-content").slideToggle();
+            });
+        });
+    </script>
+  </body>
+</div>
+</div>
+<div class="container-xxl py-5 category">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h2 class="mb-4 text-secondary wow slideInRight">ESPACE PUBLIC NUMÉRIQUE</h2>
+      <p class="fs-4 text-primary wow slideInRight">Mise à disposition d’un espace équipé pour votre recherche d’emploi et de formation. Sous la supervision d’un agent d’accueil, accès gratuit à 16 ordinateurs.</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-lg-4 col-md-6">
+        <div class="row g-3">
+          <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+            <a class="position-relative d-block overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
+              <img class="wow zoomIn" src="assets/images/accompagnement/technic.jpg" alt="">
+              <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                <h5 class="m-0">Technicien</h5>
+                <small class="text-primary">Devenez pro</small>
+              </div>
+            </a>
+          </div>
+          <div class="rounded-3 col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+            <a class="position-relative d-block overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
+              <img class="img-fluid" src="assets/images/accompagnement/web.jpg" alt="">
+              <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                <h5 class="m-0">Social</h5>
+                <small class="text-primary">Changez de vie</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+            <a class="position-relative d-block overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
+              <img class="img-fluid" src="assets/images/accompagnement/code.jpg" alt="">
+              <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                <h5 class="m-0">Code Dev</h5>
+                <small class="text-primary">Apprentissage poussé</small>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 row-cols-8  wow zoomIn" data-wow-delay="0.7s">
+        <a class="position-relative d-block h-100 overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
+          <img class="img-fluid position-absolute w-100 h-100" src="assets/images/accompagnement/social1.jpg" alt="" style="object-fit: cover;">
+          <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
+            <h5 class="m-0">Web Design</h5>
+            <small class="text-primary">Formations</small>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+     <!-- ****  start Footer **** -->
+     <footer>
+      <div class="container my-4 partenaria-container">
+        <div class="row justify-content-center">
+          <div class="col-7 col-lg-2 p-0 p-lg-2 wow tada"><a target="_blank" href="https://www.actiris.brussels/fr/citoyens/"><img src="assets/images/partenaires/actiris.png" alt="Actiris"></a></div>
+          <div class="col-7 col-lg-2 p-0 p-lg-2 wow tada"><a target="_blank" href="https://be.brussels/fr"><img src="assets/images/partenaires/be.brussels.jpg" alt="Be brussels"></a></div>
+          <div class="col-7 col-lg-2 p-0 p-lg-2 wow tada"><a target="_blank" href="https://www.bruxellesformation.brussels/"><img src="assets/images/partenaires/bruxelles-formation.jpg" alt="Bruxelles Formation"></a></div>
+          <div class="col-7 col-lg-2 p-0 p-lg-2 wow tada"><a target="_blank" href="https://ccf.brussels/"><img src="assets/images/partenaires/bruxelles-franco.jpg" alt="Francophones Bruxelles"></a></div>
+          <div class="col-7 col-lg-2 p-0 p-lg-2 wow tada d-flex justify-content-center align-items-center"><a target="_blank" href="https://fse.be/"><img src="assets/images/partenaires/fse.jpg" alt="FSE"></a></div>
+          <div class="col-7 col-lg-2 p-0 p-lg-2 wow tada"><a target="_blank" href="https://stgilles.brussels/"><img src="assets/images/partenaires/saint-gilles-logo.png" alt="Saint Gilles"></a></div>
+        </div>
+      </div>
+      <div class="footer-top bg-light p-sm-5">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-6 col-lg-2 col-md-6 mt-3">
+              <div class="footer-info">
+                <h3 class="text-primary mb-2 wow slideInRight">Mission Locale</h3>
+                <p class="fs-6"><strong>
+                  Chaussée de Waterloo 255 (2e étage)<br>
+                  1060 Saint-Gilles<br><br>
+                  </strong>
+                  <strong>Tel: 02 542 63 21<br></strong>
+                  <strong>GSM: 0476/68.07.93<br></strong>
+                  <strong>Email: </strong><a href= "mailto: contact@mlsg.be">contact@mlsg.be</a>
+                </p>
+                <div class="social-links wow slideInRight">
+                  <ul class="wrapper mt-3 position-relative" style="left: -15px;">
+                    <a target="_blank" href="https://www.facebook.com/missionlocaledesaintgilles?fref=ts">
+                      <li class="icon facebook">
+                        <span class="tooltip">Facebook</span>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                      </li>
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/missionlocaledesaintgilles/">
+                      <li class="icon instagram">
+                        <span class="tooltip">Instagram</span>
+                        <span><i class="fab fa-instagram"></i></span>
+                      </li>
+                    </a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UC-_2jO4Bw7PqM5k00sGFdgA">
+                      <li class="icon youtube">
+                        <span class="tooltip">Youtube</span>
+                        <span><i class="fab fa-youtube"></i></span>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-6 col-lg-2 col-xl-2 col-md-6 footer-links mt-3">
+              <h4 class="text-primary mb-2 wow slideInRight">Liens Interne</h4>
+              <ul>
+                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="index.html">Accueil</a></li>
+                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="qui-sommes-nous.html">Qui sommes nous ?</a></li>
+                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="biotiful.html">Biotiful</a></li>
+                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="offres-emploi.html">Offres Emploi</a></li>
+                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="agenda.html">Agenda</a></li>
+                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="orientation.html">Orientation</a></li>
+                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="contact.html">Contact</a></li>
+              </ul>
+              <h4 class="text-primary mb-2 wow slideInRight mt-2">Liens Externe</h4>
+              <ul>
+                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="404-orientation.html">Mentions légales</a></li>
+                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="http://mlsg.be/partenariats">Partenaires</a></li>
+                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="404-orientation.html">Presse</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 mt-3 position-relative">
+              <h4 class="text-primary mb-2 fs-4 wow slideInRight">Nous contacter</h4>
+              <p class="fs-6"><strong>Nous vous contacterons par la suite.</strong></p>
+              <form action="" method="post">
+                <div class="input-group gap-2">
+                    <input class="form-control mt-2 text-secondary" type="text" name="firstname" placeholder="Votre prénom..." required>
+                    <input class="form-control mt-2 text-secondary" type="text" name="lastname" placeholder="Votre nom..." required>
+                </div>
+                <div class="input-group gap-2">
+                  <input class="form-control mt-2 text-secondary" type="email" name="email" placeholder="Votre email..." required>
+                  <input class="form-control mt-2 text-secondary" style="max-width: 125px;" type="text" name="postal" pattern="^[0-9]{4}$" placeholder="CodePostal..." required>
+                </div>
+                <input class="form-control mt-2 text-center text-secondary" type="text" name="phone" pattern="^[0-9\s\./]*$" placeholder="Numéro Téléphonne..." required>
+                <input type="submit" class="btn btn-info w-100 text-white fw-bold mt-2" value="Envoyer">
+              </form>
+            </div>
+  
+            <div class="col-lg-4 col-xl-3 col-md-6 mt-3 position-relative ms-xl-2">
+              <h4 class="text-primary mb-2 wow slideInRight">Notre Newsletter</h4>
+              <p class="fs-6"><strong>Nous vous enverrons des mails de nos nouveautés.</strong></p>
+              <form class="newsletter-form mb-3">
+                <input type="email" class="text-secondary" autocomplete="true" placeholder="Votre email..." />
+                <button>
+                  <span class="default text-white">M'inscrire</span>
+                  <span class="success">
+                    <svg viewBox="0 0 16 16">
+                      <polyline points="3.75 9 7 12 13 5"></polyline>
+                    </svg>Envoyé
+                  </span>
+                  <svg class="trails" viewBox="0 0 33 64">
+                    <path d="M26,4 C28,13.3333333 29,22.6666667 29,32 C29,41.3333333 28,50.6666667 26,60"></path>
+                    <path d="M6,4 C8,13.3333333 9,22.6666667 9,32 C9,41.3333333 8,50.6666667 6,60"></path>
+                  </svg>
+                  <div class="plane">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                  </div>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container-fluid bg-primary text-white">
+        <div class="copyright text-center py-3 wow slideInRight">
+          &copy; Copyright <strong><span>Kevin Vanwassenhove & Sebastien Struys & Julian Wisniewski</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    </footer>
+  <!-- ****  start Footer **** -->
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+  <!-- <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#116530"/></svg></div> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  
+  
+  
+  <script src="assets/js/popup.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <!-- Dépendance pour la newsletter -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+  <script src="assets/js/newsletter.js"></script>
+  <script src="assets/js/initwow.js"></script>
+</body>
+
+</html>
