@@ -108,13 +108,15 @@
       <div class="container py-5">
           <div class="row g-5 align-items-center">
               <div class="col-lg-6" data-aos="fade">
-                  <div class="about-img">
-                      <img class="img-fluid" src="assets/images/accompagnement/dapdap.jpg" alt="Image description">
+                  <div class="card" data-aos="zoom-in-up">
+                    <img src="assets/images/accompagnement/dapdap.jpg" class="card-img" alt="Image 1">
+                    <div class="card-img-overlay">
+                      <a href="https://mlsg.be/accompagnement-vers-l-emploi.html" class="btn btn-info text-white">En savoir plus</a>
+                    </div>
                   </div>
               </div>
               <div class="col-lg-6" data-aos="fade">
-                  <a href="https://mlsg.be/accompagnement-vers-l-emploi.html" class="btn btn-sm border bg-info rounded-pill text-white px-3 mb-3" data-aos="slide-left">En savoir plus</a>
-                  <h2 class="mb-4 text-secondary" data-aos="slide-left">Accompagnement individuel</h2>
+                 <h2 class="mb-4 text-secondary" data-aos="slide-left">Accompagnement individuel</h2>
                   <p class="mb-4 text-primary fs-4" data-aos="slide-left">Une aide sur mesure pour décrocher un emploi, entrer en formation, reprendre des études et déterminer votre projet professionnel. Des outils pour votre recherche d’emploi : CV, lettre de motivation, recherche d’offres et de formations, préparation aux entretiens d’embauche, etc.</p>
                   <div class="row g-3">
                       <div class="col-sm-6" data-aos="slide-left" data-aos-offset="100">
@@ -132,13 +134,10 @@
   </div>
 
   <div class="container-xxl category mt-5" id="social">
-    < class="container">
       <div class="text-center" data-aos="fade">
         <h2 class="mb-4 text-secondary" data-aos="slide-left">ACCOMPAGNEMENT SOCIAL</h2>
         <p class="fs-4 text-primary" data-aos="slide-left">Accompagnement spécifique sur RDV auprès d’un conseiller social sur des problématiques qui freinent votre recherche d’emploi et/ou de formation telles que l’endettement, le logement, la perte de revenus, la protection des droits sociaux, etc.</p>
       </div>
-
-<div>
       <div class="container mt-5 mb-5">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
@@ -179,7 +178,7 @@
       <div class="container">
         <div class="row">
             <div class="col-md-6 mt-lg-5 mt-sm-2">
-                <div class="section-styled" data-aos="slide-right">
+                <div class="section-styled" style="cursor: pointer;" data-aos="slide-right">
                   <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment pouvons-nous vous aider?</h2>
                   <div class="section-content" style="display: none;">
                       <p class="fw-bold fs-5 text-primary">Notre équipe est là pour vous aider à trouver des réponses à vos questions sur l'emploi, la formation et bien plus encore.</p>
@@ -188,7 +187,7 @@
                 </div>
             </div>
             <div class="col-md-6 mt-lg-5">
-                <div class="section-styled" data-aos="slide-left">
+                <div class="section-styled" style="cursor: pointer;" data-aos="slide-left">
                     <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment fonctionne l'accompagnement?</h2>
                     <div class="section-content" style="display: none;">
                         <p class="fw-bold fs-5 text-primary">Notre équipe vous accompagnera tout au long de votre parcours professionnel, en vous aidant à trouver des solutions adaptées à vos besoins.</p>
@@ -199,7 +198,7 @@
         </div>
           <div class="row">
             <div class="col-md-6">
-                <div class="section-styled" data-aos="slide-right">
+                <div class="section-styled" style="cursor: pointer;" data-aos="slide-right">
                     <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Quels sont les avantages de l'accompagnement?</h2>
                     <div class="section-content" style="display: none;">
                         <p class="fw-bold fs-5 text-primary">L'accompagnement vous permet de bénéficier de conseils personnalisés et de ressources adaptées à vos besoins.</p>
@@ -208,7 +207,7 @@
                 </div>
             </div>
               <div class="col-md-6">
-                <div class="section-styled" data-aos="slide-left">
+                <div class="section-styled" style="cursor: pointer;" data-aos="slide-left">
                     <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment puis-je bénéficier de l'accompagnement?</h2>
                     <div class="section-content" style="display: none;">
                         <p class="fw-bold fs-5 text-primary">Il vous suffit de prendre rendez-vous avec un membre de notre équipe pour discuter de vos besoins et de vos objectifs professionnels.</p>
@@ -218,13 +217,6 @@
             </div>
         </div>
     </div>
-      <script>
-        $(document).ready(function () {
-            $(".section-title").click(function () {
-                $(this).next(".section-content").slideToggle();
-            });
-        });
-    </script>
   </body>
 </div>
 </div>
@@ -239,7 +231,7 @@
         <div class="row g-3">
           <div class="col-lg-12 col-md-12" data-aos="zoom-in">
             <a class="position-relative d-block overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
-              <img data-aos="zoom-in" src="assets/images/accompagnement/technic.jpg" alt="">
+              <img class="img-fluid" src="assets/images/accompagnement/technic.jpg" alt="">
               <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                 <h5 class="m-0">Technicien</h5>
                 <small class="text-primary">Devenez pro</small>
@@ -417,6 +409,13 @@
   <!-- Dépendance pour la newsletter -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
   <script src="assets/js/newsletter.js"></script>
+  <script>
+    $(document).ready(function () {
+        $(".section-styled").click(function () {
+            $(this).children('.section-content').slideToggle();
+        });
+    });
+</script>
 </body>
 
 </html>
