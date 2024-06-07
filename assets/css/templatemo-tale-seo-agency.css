@@ -184,8 +184,9 @@ body {
   margin:auto;
 }
 
-#text-center-service {
+.text-center-service {
   text-align: center;
+  hyphens: auto !important;
 }
 
 
@@ -1035,6 +1036,12 @@ Services Style
   z-index: -1;
 }
 
+.services .row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
 .services .service-item {
   border: 3px solid #f3d7ff;
   border-radius: 23px;
@@ -1044,6 +1051,7 @@ Services Style
   transition: all .4s;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  height: 70%; 
 }
 
 .services .service-item h4 {
