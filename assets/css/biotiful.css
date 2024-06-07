@@ -17,12 +17,6 @@ body.grabbed-butter-fly{
   user-select: none; /* Standard syntax */
 }
 
-body {
-  line-height: 1.7;
-  color: gray;
-  font-weight: 300;
-  font-size: 1.1rem;
-  font-family: "Open Sans", sans-serif; }
   body:before {
     content: "";
     position: fixed;
