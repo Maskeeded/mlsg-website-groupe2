@@ -9,7 +9,6 @@ const options = {
 };
 
 const typed = new Typed('#typed-text', options);
-
 $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 10,
@@ -31,3 +30,8 @@ $(".owl-carousel").owlCarousel({
       }
     }
   });
+  /*$(".owl-carousel").on('changed.owl.carousel', function () {
+    $('.carousel-item.active .carousel-caption .aos-animate').removeClass('aos-animate');
+    const $item = $('.carousel-item.active .carousel-caption');
+    $item.children('h1.aos-init').addClass('aos-animate');
+  });*/
