@@ -70,17 +70,40 @@
 
 	$(document).ready(function () {
 		$('.header-area').after('<div id="nav-separator"></div>');
-		const linkToActive = window.location.href.split('#')[1];
-		if(linkToActive !== undefined){
-			// TODO	
+		const $target = $(window.location.hash);
+		if($target.length){
+			$('html,body').animate({
+				scrollTop: ($target.offset().top) + 80
+			}, 700);
 		}
 		
+		$('.nav-link').click(function(){
+			$('.scroll-to-section.active').removeClass('active');
+			const $navLink = $('.scroll-to-section[href="#'+this.classList[0]+'"]');
+			if($navLink.length)
+				$navLink.addClass('active');
+		})
+
 		$('.scroll-to-section').click(function(){
 			$('.scroll-to-section.active').removeClass('active');
 			$(this).addClass('active');
 		});
 
+		$(document).on('scroll', onScroll);
+
 	});
+
+	function onScroll(){
+	    const scrollPos = $(document).scrollTop();
+	    $('.nav .scroll-to-section').each(function () {
+	        const currLink = $(this);
+	        const refElement = $(currLink.attr("href"));
+	        if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+	            $('.scroll-to-section.active').removeClass("active");
+	            currLink.addClass("active");
+	        }
+	    });
+	}
 	
 	$(window).on('load', function() {
 		if(
