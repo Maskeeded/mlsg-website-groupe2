@@ -26,8 +26,8 @@
 
         <style>
           .jumbotron {
-            padding: 2rem 1rem;
-            margin-bottom: 2rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
             border-radius: 0.3rem;
             background-color: #f8f9fa;
             display: flex;
@@ -39,20 +39,20 @@
             transition: all 0.3s ease;
             color: #333;
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1rem;
             border-radius: 10px;
           }
 
           .jumbotron h1 {
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
           }
 
           .jumbotron p {
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: 400;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
           }
 
           .about-img img {
@@ -83,25 +83,25 @@
           }
 
           .btn {
-            font-size: 1rem;
+            font-size: 0.8rem;
             padding: 0.5rem 1rem;
             border-radius: 10px;
             transition: all 0.3s ease;
           }
 
           .btn-square {
-            width: 40px;
-            height: 40px;
-          }
-
-          .btn-sm-square {
             width: 30px;
             height: 30px;
           }
 
+          .btn-sm-square {
+            width: 20px;
+            height: 20px;
+          }
+
           .btn-lg-square {
-            width: 44px;
-            height: 44px;
+            width: 34px;
+            height: 34px;
           }
 
           .btn-square,
@@ -114,7 +114,7 @@
           .section-title h6::after {
             content: "";
             position: absolute;
-            width: 20px;
+            width: 15px;
             height: 2px;
             background-color: #E30056;
             transition: all 0.3s ease;
@@ -125,9 +125,9 @@
           }
 
           .section-styled {
-            padding: 20px;
+            padding: 10px;
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             text-align: center;
             background-color: #fff;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -135,15 +135,15 @@
           }
 
           .section-styled:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
           }
 
           .section-title {
             cursor: pointer;
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: #333;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             transition: color 0.3s ease;
           }
 
@@ -157,13 +157,13 @@
           }
 
           .section-content {
-            padding: 10px 0;
+            padding: 5px 0;
             color: #666;
             line-height: 1.6;
           }
 
           .section-content p {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
           }
 
           .tooltip-custom {
@@ -174,14 +174,14 @@
           .tooltip-custom:after {
             content: attr(title);
             position: absolute;
-            top: -30px;
+            top: -20px;
             left: 50%;
             transform: translateX(-50%);
             padding: 5px 10px;
             background-color: #333;
             color: #fff;
             border-radius: 5px;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             opacity: 0;
             transition: opacity 0.3s ease;
           }
@@ -225,18 +225,18 @@
           }
 
           .card-title {
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
           }
 
           .card-text {
-            font-size: 1rem;
-            margin-bottom: 1rem;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
           }
 
           .card-link {
-            font-size: 1rem;
+            font-size: 0.8rem;
             font-weight: 700;
             color: #E30056;
             transition: color 0.3s ease;
@@ -245,27 +245,27 @@
 
           .category {
             background-color: #f8f9fa;
-            padding: 50px 0;
+            padding: 30px 0;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
           }
 
           .category h1 {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
           }
 
           .category h6 {
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
           }
 
           .category p {
-            font-size: 1rem;
-            margin-bottom: 1rem;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
           }
 
           .category img {
@@ -282,22 +282,35 @@
           }
 
           .category .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
           }
-          
 
 
+          .category img,
+      .course-item img {
+          transition: .3s;
+      }
+
+      .category a:hover img,
+      .course-item:hover img {
+          transform: scale(1.05);
+      }
+
+
+      /*** Team ***/
+      .team-item img {
+          transition: .3s;
+      }
+
+      .team-item:hover img {
+          transform: scale(1.05);
+      }
         </style>
-
-    
     </style>
 </head>
 
 <body>
-
-
-
     <!-- Preloader Start -->
     <div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
@@ -344,8 +357,8 @@
 
     <div class="container mt-5">
         <div class="jumbotron text-center">
-            <h1 class=" mb-3 display-3 fw-bold wow bounceInDown">ACCOMPAGNEMENT VERS L’EMPLOI</h1>
-            <p class="fw-bold fs-4 wow fadeInUpBig" style="color: #E30056;">Nous sommes ici pour vous aider à naviguer dans votre parcours professionnel.</p>
+            <h1 class="mb-3 display-3 fw-bold wow bounceInDown">ACCOMPAGNEMENT VERS L’EMPLOI</h1>
+            <p class="fs-4 wow fadeInUpBig text-primary" >Nous sommes ici pour vous aider à naviguer dans votre parcours professionnel.</p>
             <hr class="my-4">
         </div>
     </div>
@@ -362,7 +375,7 @@
               <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                   <div class="btn btn-sm border bg-info rounded-pill text-white px-3 mb-3 wow slideInRight">En savoir plus</div>
                   <h2 class="mb-4 text-secondary wow slideInRight">Accompagnement individuel</h2>
-                  <p class="mb-4 text-primary  fs-4 wow slideInRight">Une aide sur mesure pour décrocher un emploi, entrer en formation, reprendre des études et déterminer votre projet professionnel. Des outils pour votre recherche d’emploi : CV, lettre de motivation, recherche d’offres et de formations, préparation aux entretiens d’embauche, etc.</p>
+                  <p class="mb-4 text-primary fs-4 wow slideInRight">Une aide sur mesure pour décrocher un emploi, entrer en formation, reprendre des études et déterminer votre projet professionnel. Des outils pour votre recherche d’emploi : CV, lettre de motivation, recherche d’offres et de formations, préparation aux entretiens d’embauche, etc.</p>
                   <div class="row g-3">
                       <div class="col-sm-6 wow slideInRight">
                           <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Clair</h6>
@@ -377,13 +390,21 @@
           </div>
       </div>
   </div>
+  <div class="container-xxl py-5 category">
+    <div class="container">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h2 class="mb-4 text-secondary wow slideInRight">ACCOMPAGNEMENT SOCIAL</h2>
+        <p class="fs-4 text-primary wow slideInRight">Accompagnement spécifique sur RDV auprès d’un conseiller social sur des problématiques qui freinent votre recherche d’emploi et/ou de formation telles que l’endettement, le logement, la perte de revenus, la protection des droits sociaux, etc.</p>
+      </div>
+</div>
+<div>
       <div class="container mt-5">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card">
               <img src="assets/images/accompagnement/4.jpg" class="card-img" alt="Image 1">
               <div class="card-img-overlay">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-info text-white">Go</a>
+                <a href="https://mlsg.be/accompagnement-vers-l-emploi/accompagnement-social.html" class="btn btn-info text-white">Go</a>
               </div>
             </div>
           </div>
@@ -391,7 +412,7 @@
             <div class="card">
               <img src="assets/images/accompagnement/2.jpg" class="card-img" alt="Image 2">
               <div class="card-img-overlay">
-                <a href="https://www.youtube.com/shorts/jxqzTQazdDg" class="btn btn-info text-white">Go</a> 
+                <a href="https://mlsg.be/accompagnement-vers-l-emploi/accompagnement-social.html" class="btn btn-info text-white">Go</a> 
               </div>
             </div>
           </div>
@@ -399,7 +420,7 @@
             <div class="card">
               <img src="assets/images/accompagnement/3.jpg" class="card-img" alt="Image 2">
               <div class="card-img-overlay">
-                <a href="https://www.youtube.com/watch?v=JG1r65IXcnA" class="btn btn-info text-white">Go</a>
+                <a href="https://mlsg.be/accompagnement-vers-l-emploi/accompagnement-social.html" class="btn btn-info text-white">Go</a>
               </div>
             </div>
           </div>
@@ -407,7 +428,7 @@
             <div class="card">
               <img src="assets/images/accompagnement/1.jpg" class="card-img" alt="Image 2">
               <div class="card-img-overlay">
-                <a href="https://www.youtube.com/watch?v=-6nJphX7_Ac" class="btn btn-info text-white">Go</a>
+                <a href="https://mlsg.be/accompagnement-vers-l-emploi/accompagnement-social.html" class="btn btn-info text-white">Go</a>
               </div>
             </div>
           </div>
@@ -465,58 +486,58 @@
     </script>
   </body>
 </div>
-
-<div> 
-  <div class="container-xxl py-5 category">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">ESPACE PUBLIC NUMÉRIQUE</h6>
-            <h2 class="text-white">Mise à disposition d’un espace équipé pour votre recherche d’emploi et de formation. Sous la supervision d’un agent d’accueil, accès gratuit à 16 ordinateurs, une connexion internet, un téléphone, un fax, une imprimante, des enveloppes et des timbres pour accomplir toutes vos démarches de recherche d’emploi ou de formation</h2>
-        </div>
-        <div class="row g-3">
-            <div class="col-lg-7 col-md-6">
-                <div class="row g-3">
-                    <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                        <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="wow zoomIn" src="assets/images/accompagnement/1.jpg" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">Web Design</h5>
-                                <small class="text-primary">Formations</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                        <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="img-fluid" src="assets/images/accompagnement/1.jpg" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">Graphic Design</h5>
-                                <small class="text-primary">Aide pour les stages</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                        <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="img-fluid" src="assets/images/accompagnement/1.jpg" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">Video Editing</h5>
-                                <small class="text-primary">Devenez pro</small>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                <a class="position-relative d-block h-100 overflow-hidden" href="">
-                    <img class="img-fluid position-absolute w-100 h-100" src="assets/images/accompagnement/social1.jpg" alt="" style="object-fit: cover;">
-                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                        <h5 class="m-0">Online Marketing</h5>
-                        <small class="text-primary">Soyez prêt</small>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
 </div>
+<div class="container-xxl py-5 category">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h2 class="mb-4 text-secondary wow slideInRight">ESPACE PUBLIC NUMÉRIQUE</h2>
+      <p class="fs-4 text-primary wow slideInRight">Mise à disposition d’un espace équipé pour votre recherche d’emploi et de formation. Sous la supervision d’un agent d’accueil, accès gratuit à 16 ordinateurs.</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-lg-7 col-md-6">
+        <div class="row g-3">
+          <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+            <a class="position-relative d-block overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
+              <img class="wow zoomIn" src="assets/images/accompagnement/social1.jpg" alt="">
+              <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                <h5 class="m-0">Web Design</h5>
+                <small class="text-primary">Formations</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+            <a class="position-relative d-block overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
+              <img class="img-fluid" src="assets/images/accompagnement/web.jpg" alt="">
+              <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                <h5 class="m-0">Code Dev</h5>
+                <small class="text-primary">Aide pour les stages</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+            <a class="position-relative d-block overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
+              <img class="img-fluid" src="assets/images/accompagnement/code.jpg" alt="">
+              <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                <h5 class="m-0">Technicien</h5>
+                <small class="text-primary">Devenez pro</small>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+        <a class="position-relative d-block h-100 overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
+          <img class="img-fluid position-absolute w-100 h-100" src="assets/images/accompagnement/technic.jpg" alt="" style="object-fit: cover;">
+          <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
+            <h5 class="m-0">CPU</h5>
+            <small class="text-primary">Soyez prêt</small>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
      <!-- ****  start Footer **** -->
      <footer>
       <div class="container my-4 partenaria-container">
