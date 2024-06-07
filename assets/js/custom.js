@@ -103,7 +103,7 @@
 	function onScroll(){
 	    const scrollPos = $(document).scrollTop();
 	    $('.nav .scroll-to-section').each(function () {
-	        const currLink = $(this);
+			const currLink = $(this);
 	        const refElement = $(currLink.attr("href"));
 	        if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
 	            $('.scroll-to-section.active').removeClass("active");

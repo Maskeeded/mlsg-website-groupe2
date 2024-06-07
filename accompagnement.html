@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-tale-seo-agency.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/carousel.css">
     <link rel="stylesheet" href="assets/css/newsletter.css">
     <link rel="stylesheet" href="assets/css/icon-social.css">
@@ -352,18 +352,18 @@
         <div class="col-12">
         <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
             <img id="logo-navbar" src="assets/images/logo.png" alt="">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav gap-xxl-4 justify-content-center">
               <li class="has-sub">
-                <a href="javascript:void(0)" class="active">Accueil</a>
+                <a href="index.html">Accueil</a>
                 <ul class="sub-menu">
-                  <li><a class="scroll-to-section" href="#services">Nos services</a></li>
-                  <li><a class="scroll-to-section" href="#diaporama">Diaporama</a></li>
-                  <li><a class="scroll-to-section" href="#actualites">Nos actualités</a></li>
+                  <li><a href="#services">Nos services</a></li>
+                  <li><a href="#diaporama">Diaporama</a></li>
+                  <li><a href="#actualites">Nos actualités</a></li>
                 </ul>
               </li>
               <li class="has-sub">
@@ -377,11 +377,11 @@
                 </ul>
               </li>
               <li class="has-sub">
-                <a href="accompagnement.html" class="">Accompagnement</a>
+                <a href="javascript:void(0)" class="active">Accompagnement</a>
                 <ul class="sub-menu">
-                  <li><a href="accompagnement.html#individuel">Individuel</a></li>
-                  <li><a href="accompagnement.html#social">Social</a></li>
-                  <li><a href="accompagnement.html#espace-public">Espace public numérique</a></li>
+                  <li><a class="scroll-to-section" href="#individuel">Individuel</a></li>
+                  <li><a class="scroll-to-section" href="#social">Social</a></li>
+                  <li><a class="scroll-to-section" href="#espace-numerique">Espace public numérique</a></li>
                 </ul>
               </li>
               <li><a href="orientation.html">Orientation</a></li>
@@ -407,31 +407,30 @@
 
     <div class="container mt-5">
         <div class="jumbotron text-center">
-            <h1 class="mb-3 mt-5 fs-1 fw-bolder wow bounceInDown  ">ACCOMPAGNEMENT VERS L’EMPLOI</h1>
-            <p class="fs-4 fw-bolder wow fadeInUpBig text-primary" >Nous sommes ici pour vous aider à naviguer dans votre parcours professionnel.</p>
+            <h1 class="mb-3 mt-5 fs-1 fw-bolder" data-aos="zoom-in-down">ACCOMPAGNEMENT VERS L’EMPLOI</h1>
+            <p class="fs-4 fw-bolder text-primary" data-aos="fade-up">Nous sommes ici pour vous aider à naviguer dans votre parcours professionnel.</p>
             <hr class="my-4">
         </div>
     </div>
-    <div>
     <!-- About Start -->
-    <div class="container-xxl py-5 category">
+    <div class="container-xxl py-5 category header-text" id="individuel">
       <div class="container py-5">
           <div class="row g-5 align-items-center">
-              <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+              <div class="col-lg-6" data-aos="fade">
                   <div class="about-img">
                       <img class="img-fluid" src="assets/images/accompagnement/dapdap.jpg" alt="Image description">
                   </div>
               </div>
-              <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                  <a href="https://mlsg.be/accompagnement-vers-l-emploi.html" class="btn btn-sm border bg-info rounded-pill text-white px-3 mb-3 wow slideInRight">En savoir plus</a>
-                  <h2 class="mb-4 text-secondary wow slideInRight">Accompagnement individuel</h2>
-                  <p class="mb-4 text-primary fs-4 wow slideInRight">Une aide sur mesure pour décrocher un emploi, entrer en formation, reprendre des études et déterminer votre projet professionnel. Des outils pour votre recherche d’emploi : CV, lettre de motivation, recherche d’offres et de formations, préparation aux entretiens d’embauche, etc.</p>
+              <div class="col-lg-6" data-aos="fade">
+                  <a href="https://mlsg.be/accompagnement-vers-l-emploi.html" class="btn btn-sm border bg-info rounded-pill text-white px-3 mb-3" data-aos="slide-left">En savoir plus</a>
+                  <h2 class="mb-4 text-secondary" data-aos="slide-left">Accompagnement individuel</h2>
+                  <p class="mb-4 text-primary fs-4" data-aos="slide-left">Une aide sur mesure pour décrocher un emploi, entrer en formation, reprendre des études et déterminer votre projet professionnel. Des outils pour votre recherche d’emploi : CV, lettre de motivation, recherche d’offres et de formations, préparation aux entretiens d’embauche, etc.</p>
                   <div class="row g-3">
-                      <div class="col-sm-6 wow slideInRight">
+                      <div class="col-sm-6" data-aos="slide-left" data-aos-offset="120">
                           <h6 class="mb-3 text-secondary"><i class="fa fa-check text-info me-2"></i>Clair</h6>
                           <h6 class="mb-0 text-secondary"><i class="fa fa-check text-info me-2"></i>Personnel professionel</h6>
                       </div>
-                      <div class="col-sm-6 wow slideInRight">
+                      <div class="col-sm-6" data-aos="slide-left" data-aos-offset="120">
                           <h6 class="mb-3 text-secondary"><i class="fa fa-check text-info me-2"></i>A votre ecoute</h6>
                           <h6 class="mb-0 text-secondary text "><i class="fa fa-check text-info me-2"></i>Toujours disponible </h6>
                       </div>
@@ -441,18 +440,18 @@
       </div>
   </div>
 
-  <div class="container-xxl category">
-    <div class="container">
-      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-        <h2 class="mb-4 text-secondary wow slideInRight">ACCOMPAGNEMENT SOCIAL</h2>
-        <p class="fs-4 text-primary wow slideInRight">Accompagnement spécifique sur RDV auprès d’un conseiller social sur des problématiques qui freinent votre recherche d’emploi et/ou de formation telles que l’endettement, le logement, la perte de revenus, la protection des droits sociaux, etc.</p>
+  <div class="container-xxl category" id="social">
+    < class="container">
+      <div class="text-center" data-aos="fade">
+        <h2 class="mb-4 text-secondary" data-aos="slide-left">ACCOMPAGNEMENT SOCIAL</h2>
+        <p class="fs-4 text-primary" data-aos="slide-left">Accompagnement spécifique sur RDV auprès d’un conseiller social sur des problématiques qui freinent votre recherche d’emploi et/ou de formation telles que l’endettement, le logement, la perte de revenus, la protection des droits sociaux, etc.</p>
       </div>
-</div>
+
 <div>
       <div class="container mt-5 mb-5">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
               <img src="assets/images/accompagnement/4.jpg" class="card-img" alt="Image 1">
               <div class="card-img-overlay">
                 <a href="https://mlsg.be/accompagnement-vers-l-emploi/accompagnement-social.html" class="btn btn-info text-white">Go</a>
@@ -460,7 +459,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
               <img src="assets/images/accompagnement/2.jpg" class="card-img" alt="Image 2">
               <div class="card-img-overlay">
                 <a href="https://mlsg.be/accompagnement-vers-l-emploi/accompagnement-social.html" class="btn btn-info text-white">Go</a> 
@@ -468,7 +467,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
               <img src="assets/images/accompagnement/3.jpg" class="card-img" alt="Image 2">
               <div class="card-img-overlay">
                 <a href="https://mlsg.be/accompagnement-vers-l-emploi/accompagnement-social.html" class="btn btn-info text-white">Go</a>
@@ -476,7 +475,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up">
               <img src="assets/images/accompagnement/1.jpg" class="card-img" alt="Image 2">
               <div class="card-img-overlay">
                 <a href="https://mlsg.be/accompagnement-vers-l-emploi/accompagnement-social.html" class="btn btn-info text-white">Go</a>
@@ -489,7 +488,7 @@
       <div class="container">
         <div class="row">
             <div class="col-md-6 mt-lg-5 mt-sm-2">
-                <div class="section-styled">
+                <div class="section-styled" data-aos="slide-right">
                   <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment pouvons-nous vous aider?</h2>
                   <div class="section-content" style="display: none;">
                       <p class="fw-bold fs-5 text-primary">Notre équipe est là pour vous aider à trouver des réponses à vos questions sur l'emploi, la formation et bien plus encore.</p>
@@ -498,7 +497,7 @@
                 </div>
             </div>
             <div class="col-md-6 mt-lg-5">
-                <div class="section-styled">
+                <div class="section-styled" data-aos="slide-left">
                     <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment fonctionne l'accompagnement?</h2>
                     <div class="section-content" style="display: none;">
                         <p class="fw-bold fs-5 text-primary">Notre équipe vous accompagnera tout au long de votre parcours professionnel, en vous aidant à trouver des solutions adaptées à vos besoins.</p>
@@ -509,7 +508,7 @@
         </div>
           <div class="row">
             <div class="col-md-6">
-                <div class="section-styled">
+                <div class="section-styled" data-aos="slide-right">
                     <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Quels sont les avantages de l'accompagnement?</h2>
                     <div class="section-content" style="display: none;">
                         <p class="fw-bold fs-5 text-primary">L'accompagnement vous permet de bénéficier de conseils personnalisés et de ressources adaptées à vos besoins.</p>
@@ -518,7 +517,7 @@
                 </div>
             </div>
               <div class="col-md-6">
-                <div class="section-styled">
+                <div class="section-styled" data-aos="slide-left">
                     <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment puis-je bénéficier de l'accompagnement?</h2>
                     <div class="section-content" style="display: none;">
                         <p class="fw-bold fs-5 text-primary">Il vous suffit de prendre rendez-vous avec un membre de notre équipe pour discuter de vos besoins et de vos objectifs professionnels.</p>
@@ -538,25 +537,25 @@
   </body>
 </div>
 </div>
-<div class="container-xxl py-5 category">
+<div class="container-xxl py-5 category" id="espace-numerique">
   <div class="container">
-    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-      <h2 class="mb-4 text-secondary wow slideInRight">ESPACE PUBLIC NUMÉRIQUE</h2>
-      <p class="fs-4 text-primary wow slideInRight">Mise à disposition d’un espace équipé pour votre recherche d’emploi et de formation. Sous la supervision d’un agent d’accueil, accès gratuit à 16 ordinateurs.</p>
+    <div class="text-center" data-aos="fade">
+      <h2 class="mb-4 text-secondary" data-aos="slide-left">ESPACE PUBLIC NUMÉRIQUE</h2>
+      <p class="fs-4 text-primary" data-aos="slide-left">Mise à disposition d’un espace équipé pour votre recherche d’emploi et de formation. Sous la supervision d’un agent d’accueil, accès gratuit à 16 ordinateurs.</p>
     </div>
     <div class="row g-3">
       <div class="col-lg-4 col-md-6">
         <div class="row g-3">
-          <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+          <div class="col-lg-12 col-md-12" data-aos="zoom-in">
             <a class="position-relative d-block overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
-              <img class="wow zoomIn" src="assets/images/accompagnement/technic.jpg" alt="">
+              <img data-aos="zoom-in" src="assets/images/accompagnement/technic.jpg" alt="">
               <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                 <h5 class="m-0">Technicien</h5>
                 <small class="text-primary">Devenez pro</small>
               </div>
             </a>
           </div>
-          <div class="rounded-3 col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+          <div class="rounded-3 col-lg-6 col-md-12" data-aos="zoom-in">
             <a class="position-relative d-block overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
               <img class="img-fluid" src="assets/images/accompagnement/web.jpg" alt="">
               <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
@@ -565,7 +564,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+          <div class="col-lg-6 col-md-12" data-aos="zoom-in">
             <a class="position-relative d-block overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
               <img class="img-fluid" src="assets/images/accompagnement/code.jpg" alt="">
               <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
@@ -576,7 +575,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-8 row-cols-8  wow zoomIn" data-wow-delay="0.7s">
+      <div class="col-lg-8 row-cols-8" data-aos="zoom-in">
         <a class="position-relative d-block h-100 overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
           <img class="img-fluid position-absolute w-100 h-100" src="assets/images/accompagnement/social1.jpg" alt="" style="object-fit: cover;">
           <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
@@ -593,12 +592,12 @@
      <footer>
       <div class="container my-4 partenaria-container">
         <div class="row justify-content-center">
-          <div class="col-7 col-lg-2 p-0 p-lg-2 wow tada"><a target="_blank" href="https://www.actiris.brussels/fr/citoyens/"><img src="assets/images/partenaires/actiris.png" alt="Actiris"></a></div>
-          <div class="col-7 col-lg-2 p-0 p-lg-2 wow tada"><a target="_blank" href="https://be.brussels/fr"><img src="assets/images/partenaires/be.brussels.jpg" alt="Be brussels"></a></div>
-          <div class="col-7 col-lg-2 p-0 p-lg-2 wow tada"><a target="_blank" href="https://www.bruxellesformation.brussels/"><img src="assets/images/partenaires/bruxelles-formation.jpg" alt="Bruxelles Formation"></a></div>
-          <div class="col-7 col-lg-2 p-0 p-lg-2 wow tada"><a target="_blank" href="https://ccf.brussels/"><img src="assets/images/partenaires/bruxelles-franco.jpg" alt="Francophones Bruxelles"></a></div>
-          <div class="col-7 col-lg-2 p-0 p-lg-2 wow tada d-flex justify-content-center align-items-center"><a target="_blank" href="https://fse.be/"><img src="assets/images/partenaires/fse.jpg" alt="FSE"></a></div>
-          <div class="col-7 col-lg-2 p-0 p-lg-2 wow tada"><a target="_blank" href="https://stgilles.brussels/"><img src="assets/images/partenaires/saint-gilles-logo.png" alt="Saint Gilles"></a></div>
+          <div class="col-7 col-lg-2 p-0 p-lg-2" data-aos="zoom-out-up"><a target="_blank" href="https://www.actiris.brussels/fr/citoyens/"><img src="assets/images/partenaires/actiris.png" alt="Actiris"></a></div>
+          <div class="col-7 col-lg-2 p-0 p-lg-2" data-aos="zoom-out-up"><a target="_blank" href="https://be.brussels/fr"><img src="assets/images/partenaires/be.brussels.jpg" alt="Be brussels"></a></div>
+          <div class="col-7 col-lg-2 p-0 p-lg-2" data-aos="zoom-out-up"><a target="_blank" href="https://www.bruxellesformation.brussels/"><img src="assets/images/partenaires/bruxelles-formation.jpg" alt="Bruxelles Formation"></a></div>
+          <div class="col-7 col-lg-2 p-0 p-lg-2" data-aos="zoom-out-up"><a target="_blank" href="https://ccf.brussels/"><img src="assets/images/partenaires/bruxelles-franco.jpg" alt="Francophones Bruxelles"></a></div>
+          <div class="col-7 col-lg-2 p-0 p-lg-2 d-flex justify-content-center align-items-center" data-aos="zoom-out-up"><a target="_blank" href="https://fse.be/"><img src="assets/images/partenaires/fse.jpg" alt="FSE"></a></div>
+          <div class="col-7 col-lg-2 p-0 p-lg-2" data-aos="zoom-out-up"><a target="_blank" href="https://stgilles.brussels/"><img src="assets/images/partenaires/saint-gilles-logo.png" alt="Saint Gilles"></a></div>
         </div>
       </div>
       <div class="footer-top bg-light p-sm-5">
@@ -606,7 +605,7 @@
           <div class="row justify-content-center">
             <div class="col-6 col-lg-2 col-md-6 mt-3">
               <div class="footer-info">
-                <h3 class="text-primary mb-2 wow slideInRight">Mission Locale</h3>
+                <h3 class="text-primary mb-2" data-aos="slide-left">Mission Locale</h3>
                 <p class="fs-6"><strong>
                   Chaussée de Waterloo 255 (2e étage)<br>
                   1060 Saint-Gilles<br><br>
@@ -615,7 +614,7 @@
                   <strong>GSM: 0476/68.07.93<br></strong>
                   <strong>Email: </strong><a href= "mailto: contact@mlsg.be">contact@mlsg.be</a>
                 </p>
-                <div class="social-links wow slideInRight">
+                <div class="social-links" data-aos="slide-left">
                   <ul class="wrapper mt-3 position-relative" style="left: -15px;">
                     <a target="_blank" href="https://www.facebook.com/missionlocaledesaintgilles?fref=ts">
                       <li class="icon facebook">
@@ -641,7 +640,7 @@
             </div>
   
             <div class="col-6 col-lg-2 col-xl-2 col-md-6 footer-links mt-3">
-              <h4 class="text-primary mb-2 wow slideInRight">Liens Interne</h4>
+              <h4 class="text-primary mb-2" data-aos="slide-left">Liens Interne</h4>
               <ul>
                 <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="index.html">Accueil</a></li>
                 <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="qui-sommes-nous.html">Qui sommes nous ?</a></li>
@@ -651,7 +650,7 @@
                 <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="orientation.html">Orientation</a></li>
                 <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="contact.html">Contact</a></li>
               </ul>
-              <h4 class="text-primary mb-2 wow slideInRight mt-2">Liens Externe</h4>
+              <h4 class="text-primary mb-2 mt-2" data-aos="slide-left">Liens Externe</h4>
               <ul>
                 <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="404-orientation.html">Mentions légales</a></li>
                 <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="http://mlsg.be/partenariats">Partenaires</a></li>
@@ -660,7 +659,7 @@
             </div>
   
             <div class="col-lg-4 col-md-6 mt-3 position-relative">
-              <h4 class="text-primary mb-2 fs-4 wow slideInRight">Nous contacter</h4>
+              <h4 class="text-primary mb-2 fs-4" data-aos="slide-left">Nous contacter</h4>
               <p class="fs-6"><strong>Nous vous contacterons par la suite.</strong></p>
               <form action="" method="post">
                 <div class="input-group gap-2">
@@ -677,7 +676,7 @@
             </div>
   
             <div class="col-lg-4 col-xl-3 col-md-6 mt-3 position-relative ms-xl-2">
-              <h4 class="text-primary mb-2 wow slideInRight">Notre Newsletter</h4>
+              <h4 class="text-primary mb-2" data-aos="slide-left">Notre Newsletter</h4>
               <p class="fs-6"><strong>Nous vous enverrons des mails de nos nouveautés.</strong></p>
               <form class="newsletter-form mb-3">
                 <input type="email" class="text-secondary" autocomplete="true" placeholder="Votre email..." />
@@ -704,14 +703,13 @@
       </div>
   
       <div class="container-fluid bg-primary text-white">
-        <div class="copyright text-center py-3 wow slideInRight">
+        <div class="copyright text-center py-3" data-aos="slide-left">
           &copy; Copyright <strong><span>Kevin Vanwassenhove & Sebastien Struys & Julian Wisniewski</span></strong>. All Rights Reserved
         </div>
       </div>
     </footer>
   <!-- ****  start Footer **** -->
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
   <!-- <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#116530"/></svg></div> -->
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -722,11 +720,11 @@
   
   <script src="assets/js/popup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/custom.js"></script>
   <!-- Dépendance pour la newsletter -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
   <script src="assets/js/newsletter.js"></script>
-  <script src="assets/js/initwow.js"></script>
 </body>
 
 </html>
