@@ -30,6 +30,17 @@
 </head>
 
 <body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
       <div class="container-fluid px-2">
@@ -43,8 +54,32 @@
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
               <ul class="nav gap-xxl-4 justify-content-center">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="#" class="active">Qui sommes nous ?</a></li>
+                <li class="has-sub">
+                  <a href="index.html">Accueil</a>
+                  <ul class="sub-menu">
+                    <li><a href="index.html#services">Nos services</a></li>
+                    <li><a href="index.html#diaporama">Diaporama</a></li>
+                    <li><a href="index.html#actualites">Nos actualités</a></li>
+                  </ul>
+                </li>
+                <li class="has-sub">
+                  <a href="javascript:void(0)" class="active">Qui sommes-nous</a>
+                  <ul class="sub-menu">
+                    <li><a class="scroll-to-section" href="#missions">Nos missions & méthodes & valeurs</a></li>
+                    <li><a class="scroll-to-section" href="#equipe">Notre équipe</a></li>
+                    <li><a class="scroll-to-section" href="#conseil-administration">Le conseil d'administration</a></li>
+                    <li><a class="scroll-to-section" href="#partenaires-et-adhesion">Partenaires et adhésion</a></li>
+                    <li><a class="scroll-to-section" href="#rapports-activite">Rapports d'activité & status & comptes annuels</a></li>
+                  </ul>
+                </li>
+                <li class="has-sub">
+                  <a href="404-accompagnement.html" class="text-decoration-line-through">Accompagnement</a>
+                  <ul class="sub-menu">
+                    <li><a href="404-accompagnement.html#individuel">Individuel</a></li>
+                    <li><a href="404-accompagnement.html#social">Social</a></li>
+                    <li><a href="404-accompagnement.html#espace-public">Espace public numérique</a></li>
+                  </ul>
+                </li>
                 <li><a href="orientation.html">Orientation</a></li>
                 <li><a href="accompagnement.html" class="text-decoration-line-through">Accompagnement</a></li>
                 <li><a href="biotiful.html">Biotiful</a></li>
@@ -72,27 +107,27 @@
             <div class="row g-4" >
                 <div class="col-lg-4">
                     <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
-                        <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 active wow slideInLeft"
+                        <button data-wow-delay="0.25s" class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 active wow slideInLeft"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
                             <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i> Qui sommes nous ?</h5>
                         </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
+                        <button data-wow-delay="0.25s" class="missions nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
                             <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Nos missions, notre méthode, nos valeurs</h5>
                         </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
+                        <button data-wow-delay="0.25s" class="equipe nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
                             <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>L’équipe</h5>
                         </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
+                        <button data-wow-delay="0.25s" class="conseil-administration nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
                             <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Le Conseil d’Administration depuis 2022</h5>
                         </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
+                        <button data-wow-delay="0.25s" class="partenaires-et-adhesion nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 wow slideInLeft"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-5" type="button">
                             <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Partenaires et adhésions</h5>
                         </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-0 wow slideInLeft"
+                        <button data-wow-delay="0.25s" class="rapports-activite nav-link w-100 d-flex align-items-center text-start border p-4 mb-0 wow slideInLeft"
                             data-bs-toggle="pill" data-bs-target="#tab-pane-6" type="button">
                             <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Rapports d’activité</h5>
                         </button>
@@ -108,7 +143,7 @@
                                             style="object-fit: contain;" alt="">
                                     </div>
                                 </div>
-                                <div class="col-md-6 wow slideInRight">
+                                <div data-wow-delay="0.25s" class="col-md-6 wow slideInRight">
                                     <h2 class="mb-4 text-primary ">Qui sommes nous ?</h2>
                                     <h5 class="mb-1 text-secondary">Asbl d’insertion socioprofessionnelle , <h5 class=" mb-1 text-secondary">la Mission Locale pour l’emploi de Saint-Gilles est un opérateur agréé de </h5><h5 class=" mb-1 text-secondary">formation et d’accompagnement des demandeurs d’emploi,</h5> <h5 class=" mb-1 text-secondary">avec une attention particulière pour les</h5><h5 class=" mb-1 text-secondary">personnes les plus fragilisées.</h5>
                                     <a href="https://mlsg.be/presentation/qui-sommes-nous.html" class="btn btn-info text-white py-3 px-5 mt-3 ">En savoir plus</a>
@@ -123,7 +158,7 @@
                                             style="object-fit: contain;" alt="">
                                     </div>
                                 </div>
-                                <div class="col-md-6 wow slideInRight">
+                                <div data-wow-delay="0.25s" class="col-md-6 wow slideInRight">
                                     <h2 class="mb-4 text-primary">Nos missions, notre méthode, nos valeurs.</h2>
                                     <h5 class="mb-1 text-secondary">Nos missions sont définies par nos statuts.</h5><h5 class="mb-1 text-secondary">Notre méthode se base sur les recherches validées par les professionnels du secteur.</h5><h5 class="mb-1 text-secondary">Nos valeurs ont été établies par l’équipe des travailleurs de la MLSG et ont été adoptées par l’ASBL.</h5>
                                     <a href="https://mlsg.be/presentation/nos-missions-notre-methode-nos-valeurs.html" class="btn btn-info text-white py-3 px-5 mt-3 animate__animated animate__fadeInRightBig animate__slow">En savoir plus </a>
@@ -138,7 +173,7 @@
                                             style="object-fit: contain;" alt="">
                                     </div>
                                 </div>
-                                <div class="col-md-6 wow slideInRight">
+                                <div data-wow-delay="0.25s" class="col-md-6 wow slideInRight">
                                     <h1 class="mb-4 text-primary ">L’équipe</h1>
                                     <h5 class="mb-1 text-secondary ">Présentation de l’équipe par pôle d’activité et fonctions principales et organigramme.</h5>
                                     <a href="https://mlsg.be/presentation/l-equipe.html" class="btn btn-info text-white py-3 px-5 mt-3 ">En savoir plus</a>
@@ -153,7 +188,7 @@
                                             style="object-fit: contain;" alt="">
                                     </div>
                                 </div>
-                                <div class="col-md-6 wow slideInRight">
+                                <div data-wow-delay="0.25s" class="col-md-6 wow slideInRight">
                                     <h1 class="mb-4 text-primary ">Le Conseil d’Administration depuis 2022</h1>
                                     <h5 class="mb-1 text-secondary ">Composition du Conseil d’Administration</h5>
                                     <a href="https://mlsg.be/presentation/le-conseil-d-administration.html" class="btn btn-info text-white py-3 px-5 mt-3">En savoir plus</a>
@@ -168,7 +203,7 @@
                                             style="object-fit: contain;" alt="">
                                     </div>
                                 </div>
-                                <div class="col-md-6 wow slideInRight">
+                                <div data-wow-delay="0.25s" class="col-md-6 wow slideInRight">
                                     <h1 class="mb-4 text-primary ">Partenaires et adhésions</h1>
                                     <h5 class="mb-1 text-secondary ">Pouvoirs subsidiant et "membership" de la MLSG</h5>
                                     <a href="https://mlsg.be/presentation/partenaires-et-adhesions.html" class="btn btn-info text-white py-3 px-5 mt-3 ">En savoir plus</a>
@@ -183,7 +218,7 @@
                                             style="object-fit: contain;" alt="">
                                     </div>
                                 </div>
-                                <div class="col-md-6 wow slideInRight">
+                                <div data-wow-delay="0.25s" class="col-md-6 wow slideInRight">
                                     <h1 class="mb-4 text-primary ">Rapports d’activité</h1>
                                     <h5 class="mb-1 text-secondary ">Les rapports moraux sont une synthèse de nos activités et projets. Ils sont approuvés chaque année par l’Assemblée Générale de l’ASBL. Les anciennes versions peuvent être envoyées sur demande</h5>
                                     <a href="https://mlsg.be/presentation/rapports-d-activite/" class="btn btn-info text-white py-3 px-5 mt-3 ">En savoir plus</a>
@@ -250,8 +285,8 @@
                 <div class="col-6 col-lg-2 col-xl-2 col-md-6 footer-links mt-3">
                   <h4 class="text-primary mb-2 wow slideInRight">Liens Interne</h4>
                   <ul>
-                    <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="#">Accueil</a></li>
-                    <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="qui-sommes-nous.html">Qui sommes nous ?</a></li>
+                    <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="index.html">Accueil</a></li>
+                    <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="#">Qui sommes nous ?</a></li>
                     <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="biotiful.html">Biotiful</a></li>
                     <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="offres-emploi.html">Offres Emploi</a></li>
                     <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" href="agenda.html">Agenda</a></li>
@@ -260,9 +295,9 @@
                   </ul>
                   <h4 class="text-primary mb-2 wow slideInRight mt-2">Liens Externe</h4>
                   <ul>
-                    <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="http://mlsg.be/mentions-legales">Mentions légales</a></li>
+                    <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="404-orientation.html">Mentions légales</a></li>
                     <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="http://mlsg.be/partenariats">Partenaires</a></li>
-                    <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="http://mlsg.be/presse">Presse</a></li>
+                    <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="404-orientation.html">Presse</a></li>
                   </ul>
                 </div>
       
@@ -325,12 +360,16 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Template Javascript -->
+    <script>
+      const dontloadquisommesnous = true;
+    </script>
     <script src="assets/js/custom.js"></script>
 
     <!-- Dépendance pour la newsletter -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="assets/js/newsletter.js"></script>
     <script src="assets/js/initwow.js"></script>
+    <script src="assets/js/qui-sommes-nous.js"></script>
 </body>
 
 </html>

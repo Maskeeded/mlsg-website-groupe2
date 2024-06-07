@@ -52,7 +52,7 @@ const optionsCalendar = {
   },
   events: eventsMonth,
   eventClick: function(info) {
-    info.el.addEventListener('mouseover', ()=>console.log('test'));
+    //info.el.addEventListener('mouseover', ()=>console.log('test'));
   },
   eventBackgroundColor: `rgb(${getComputedStyle(document.body).getPropertyValue('--bs-primary-rgb')})`,
   eventBorderColor: `rgb(${getComputedStyle(document.body).getPropertyValue('--bs-secondary-rgb')})`,

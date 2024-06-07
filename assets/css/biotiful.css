@@ -11,6 +11,12 @@
 html {
   overflow-x: hidden; }
 
+body.grabbed-butter-fly{
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
 body {
   line-height: 1.7;
   color: gray;
@@ -84,6 +90,38 @@ h1, h2, h3, h4, h5,
   bottom: 0;
   opacity: 0;
   visibility: hidden; }
+
+.services-1-wrap.services-1-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0px;
+  transform: scaleX(-1);
+  background: url('../images/biotiful/charly.png') top left no-repeat,
+              url('../images/') bottom right no-repeat;
+  width: 370px; /* Mettre le width de l'image */
+  z-index: -1;
+}
+
+.services-1-wrap.services-1-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0;
+  background: url('../images/biotiful/charly.png') top right no-repeat,
+              url('../images/biotiful/') bottom right no-repeat;
+  width: 600px; /* Mettre le width de l'image */
+  z-index: -1;
+}
+
+@media screen and (width < 720px) {
+  #biologo{
+    background-color: rgba(255,255,255,0.25);
+    border-radius: 2rem;
+  }
+}
 
 .offcanvas-menu .site-wrap {
   height: 100%;

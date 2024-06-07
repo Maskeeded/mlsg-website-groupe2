@@ -51,8 +51,32 @@
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
               <ul class="nav gap-xxl-4 justify-content-center">
-                <li><a href="#" class="active">Accueil</a></li>
-                <li><a href="qui-sommes-nous.html">Qui sommes nous ?</a></li>
+                <li class="has-sub">
+                  <a href="javascript:void(0)" class="active">Accueil</a>
+                  <ul class="sub-menu">
+                    <li><a class="scroll-to-section" href="#services">Nos services</a></li>
+                    <li><a class="scroll-to-section" href="#diaporama">Diaporama</a></li>
+                    <li><a class="scroll-to-section" href="#actualites">Nos actualités</a></li>
+                  </ul>
+                </li>
+                <li class="has-sub">
+                  <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+                  <ul class="sub-menu">
+                    <li><a href="qui-sommes-nous.html#missions">Nos missions & méthodes & valeurs</a></li>
+                    <li><a href="qui-sommes-nous.html#equipe">Notre équipe</a></li>
+                    <li><a href="qui-sommes-nous.html#conseil-administration">Le conseil d'administration</a></li>
+                    <li><a href="qui-sommes-nous.html#partenaires-et-adhesion">Partenaires et adhésion</a></li>
+                    <li><a href="qui-sommes-nous.html#rapports-activite">Rapports d'activité & status & comptes annuels</a></li>
+                  </ul>
+                </li>
+                <li class="has-sub">
+                  <a href="404-accompagnement.html" class="text-decoration-line-through">Accompagnement</a>
+                  <ul class="sub-menu">
+                    <li><a href="404-accompagnement.html#individuel">Individuel</a></li>
+                    <li><a href="404-accompagnement.html#social">Social</a></li>
+                    <li><a href="404-accompagnement.html#espace-public">Espace public numérique</a></li>
+                  </ul>
+                </li>
                 <li><a href="orientation.html">Orientation</a></li>
                 <li><a href="accompagnement.html" class="text-decoration-line-through">Accompagnement</a></li>
                 <li><a href="biotiful.html">Biotiful</a></li>
@@ -71,7 +95,7 @@
   </header>
     <!-- ***** Header Area End ***** -->
 
-  <div class="main-banner py-5" id="top">
+  <div class="main-banner py-5" id="services">
     <div class="container">
       <div class="row">
         <div class="col-lg-7">
@@ -80,7 +104,7 @@
             <div class="line-dec"></div>
             <h4 id="typed-text"></h4>
             <p class="fw-bold fs-5">La Mission Locale de Saint-Gilles est votre partenaire idéal pour trouver des solutions d'emploi adaptées. Nous offrons une variété de services, y compris des conseils personnalisés, des formations et des ateliers. Découvrez nos <a href="offres-emploi.html">Offres D'Emploi</a> et l'<a href="agenda.html">Agenda Formation</a>.</p>
-            <div class="main-button"><a href="#animatedCarousel">Découvrez plus</a></div>
+            <div class="main-button"><a href="#diaporama">Découvrez plus</a></div>
           </div>
         </div>
       </div>
@@ -111,7 +135,7 @@
                 </div>
               </a>
             </div>
-            <div class="col-lg-4 col-sm-4 wow fadeIn" data-wow-delay="1s">
+            <div class="col-lg-4 col-sm-4 wow fadeIn" data-wow-delay="0.5s">
               <a href="https://mlsg.be/education-permanente/">
                 <div class="service-item second-service">
                   <div class="icon">
@@ -140,49 +164,49 @@
 
  <!-- ***** carousel ***** -->
 <div class="carousel-container">
-  <div id="animatedCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div id="diaporama" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="assets/images/carousel/bureau_open_space_alsek_open_space_02_1450x935.jpg" class="d-block w-100" alt="First Slide">
         <div class="carousel-caption">
-          <img id="logo" class="mb-5" src="assets/images/logo.png" alt="">
-          <h1 class="display-1 mb-2 w-75 mx-auto"><strong>Mission  Locale pour l'emploi de Saint-Gilles</strong></h1><hr class="white">
-          <h2 class="mb-5 w-75 mx-auto">Bienvenue sur le site de la Mission Locale pour l’emploi de Saint-Gilles. <br>Découvrez l’ensemble de nos services via notre Prezi!</h2>
-          <a href="https://mlsg.be/presentation/" class="btn btn-info p-3 px-4 animate__animated animate__zoomIn text-white fs-5">En savoir plus</a>
+          <img id="logo" class="mb-5 wow fadeIn" src="assets/images/logo.png" alt="">
+          <h1 class="display-1 mb-2 w-75 mx-auto wow slideInLeft"><strong>Mission  Locale pour l'emploi de Saint-Gilles</strong></h1><hr class="white">
+          <h2 class="mb-5 w-75 mx-auto wow slideInRight">Bienvenue sur le site de la Mission Locale pour l’emploi de Saint-Gilles. <br>Découvrez l’ensemble de nos services via notre Prezi!</h2>
+          <a href="https://mlsg.be/presentation/" class="btn btn-info p-3 px-4 wow slideInRight text-white fs-5">En savoir plus</a>
         </div>
       </div>
       <div class="carousel-item">
         <img src="assets/images/carousel/6.png" class="d-block w-100" alt="Second Slide">
         <div class="carousel-caption">
-          <h1 class="display-1 mb-4 w-75 mx-auto animate__animated animate__fadeInBottomLeft"><strong>Découvrir et se former aux métiers de l’HoReCa</strong></h1>
-          <h2 class="mb-5 w-75 mx-auto animate__animated animate__fadeInBottomLeft">Du 10 au 21 juin 2024 : découverte des métiers de l’HoReCa (commis de cuisine,...</h2>
-          <a href="https://mlsg.be/nos-actualites/prochainement/decouvrir-et-se-former-aux-metiers-de-l-horeca-251.html" class="btn btn-info p-3 px-4 text-white fs-5">En savoir plus</a>
+          <h1 class="display-1 mb-4 w-75 mx-auto wow slideInLeft"><strong>Découvrir et se former aux métiers de l’HoReCa</strong></h1>
+          <h2 class="mb-5 w-75 mx-auto wow slideInLeft">Du 10 au 21 juin 2024 : découverte des métiers de l’HoReCa (commis de cuisine,...</h2>
+          <a href="https://mlsg.be/nos-actualites/prochainement/decouvrir-et-se-former-aux-metiers-de-l-horeca-251.html" class="btn btn-info p-3 px-4 text-white fs-5 wow slideInLeft">En savoir plus</a>
         </div>
       </div>
       <div class="carousel-item">
         <img src="assets/images/carousel/9.jpg" class="d-block w-100" alt="Third Slide">
         <div class="carousel-caption">
 
-          <h1 class="display-1 mb-4 w-75 mx-auto animate__animated animate__fadeInBottomLeft"><strong>Notre Prochain Atelier d’Orientation Professionnelle</strong></h1>
-          <h2 class="mb-5 w-75 mx-auto animate__animated animate__fadeInBottomLeft">Aide dans la construction de votre projet professionnel </h2>
-          <a href="https://mlsg.be/nos-actualites/prochainement/notre-atelier-d-orientation-professionnelle-247.html" class="btn btn-info p-3 px-4 text-white fs-5">En savoir plus</a>
+          <h1 class="display-1 mb-4 w-75 mx-auto wow slideInLeft"><strong>Notre Prochain Atelier d’Orientation Professionnelle</strong></h1>
+          <h2 class="mb-5 w-75 mx-auto wow slideInLeft">Aide dans la construction de votre projet professionnel </h2>
+          <a href="https://mlsg.be/nos-actualites/prochainement/notre-atelier-d-orientation-professionnelle-247.html" class="btn btn-info p-3 px-4 text-white fs-5 wow slideInLeft">En savoir plus</a>
         </div>
       </div>
       <div class="carousel-item">
         <img src="assets/images/carousel/4.jpg" class="d-block w-100" alt="Third Slide">
         <div class="carousel-caption">
 
-          <h1 class="display-1 mb-4 w-75 mx-auto animate__animated animate__fadeInBottomLeft"><strong>Découvrir et se former aux métiers de l’Informatique</strong></h1>
-          <h2 class="mb-5 w-75 mx-auto animate__animated animate__fadeInBottomLeft">Tes premiers pas dans l’informatique dès le 6 novembre 2024</h2>
-          <a href="https://mlsg.be/nos-actualites/prochainement/decouvrir-et-se-former-aux-metiers-de-l-informatique-246.html" class="btn btn-info p-3 px-4 text-white fs-5">En savoir plus</a>
+          <h1 class="display-1 mb-4 w-75 mx-auto wow slideInLeft"><strong>Découvrir et se former aux métiers de l’Informatique</strong></h1>
+          <h2 class="mb-5 w-75 mx-autov">Tes premiers pas dans l’informatique dès le 6 novembre 2024</h2>
+          <a href="https://mlsg.be/nos-actualites/prochainement/decouvrir-et-se-former-aux-metiers-de-l-informatique-246.html" class="btn btn-info p-3 px-4 text-white fs-5 wow slideInLeft">En savoir plus</a>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#animatedCarousel" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#diaporama" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#animatedCarousel" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#diaporama" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
@@ -194,7 +218,7 @@
 
   <!-- **** Actualites **** -->
 
-  <div class="projects" id="projects">
+  <div class="projects" id="actualites">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -208,7 +232,7 @@
       <div class="owl-carousel owl-theme">
         <div class="item">
           <div class="project-item mb-5">
-            <img src="assets/images/carousel/9.jpg" alt="">
+            <img src="assets/images/carousel/9-actualite.jpg" alt="">
             <div class="text-content">
               <h4>Atelier d'orientation professionnelle</h4>
               <p class="text-black">Le 15 juin 2024</p>
@@ -220,7 +244,7 @@
         </div>
         <div class="item">
           <div class="project-item mb-5">
-            <img src="assets/images/carousel/6.png" alt="">
+            <img src="assets/images/carousel/6-actualite.png" alt="">
             <div class="text-content">
               <h4>Formation aux métiers de l'HoReCa</h4>
               <p class="text-black">Le 10 juin 2024</p>
@@ -232,7 +256,7 @@
         </div>
         <div class="item">
           <div class="project-item mb-5">
-            <img src="assets/images/carousel/4.jpg">
+            <img src="assets/images/carousel/4-actualite.jpg">
             <div class="text-content">
               <h4 class="mb-2">Formation aux métiers de l'informatique</h4>
               <p class="text-center mb-3 fs-6 text-black">Le 6 novembre 2024</p>
@@ -315,9 +339,9 @@
               </ul>
               <h4 class="text-primary mb-2 wow slideInRight mt-2">Liens Externe</h4>
               <ul>
-                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="http://mlsg.be/mentions-legales">Mentions légales</a></li>
+                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="404-orientation.html">Mentions légales</a></li>
                 <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="http://mlsg.be/partenariats">Partenaires</a></li>
-                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="http://mlsg.be/presse">Presse</a></li>
+                <li><img src="assets/images/arrow-right.svg" class="arrow-link-img"><a class="text-primary" target="_blank" href="404-orientation.html">Presse</a></li>
               </ul>
             </div>
   
