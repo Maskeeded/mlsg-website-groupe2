@@ -65,7 +65,7 @@
             position: relative;
             overflow: hidden;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
           }
 
@@ -107,7 +107,7 @@
           .btn-square,
           .btn-sm-square,
           .btn-lg-square {
-            border-radius: 0;
+            border-radius: 50%;
           }
 
           .section-title h6::before,
@@ -125,13 +125,21 @@
           }
 
           .section-styled {
-            padding: 10px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            text-align: center;
-            background-color: #fff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0.3rem;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
             transition: all 0.3s ease;
+            color: #333;
+            text-align: center;
+            font-size: 1rem;
+            border-radius: 10px;
           }
 
           .section-styled:hover {
@@ -192,6 +200,10 @@
 
           .img-container {
             position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
           }
 
           .card-img-overlay {
@@ -222,12 +234,17 @@
 
           .card {
             height: 100%;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
           }
 
           .card-title {
             font-size: 1rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
+
           }
 
           .card-text {
@@ -237,17 +254,22 @@
 
           .card-link {
             font-size: 0.8rem;
-            font-weight: 700;
             color: #E30056;
             transition: color 0.3s ease;
           }
 
 
           .category {
-            background-color: #f8f9fa;
-            padding: 30px 0;
+            padding: 1rem;
+            margin-bottom: 1rem;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
             transition: all 0.3s ease;
           }
 
@@ -277,7 +299,7 @@
           .category .card {
             border: none;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
           }
 
@@ -297,6 +319,9 @@
           transform: scale(1.05);
       }
 
+      .category .card-img-overlay:hover {
+          opacity: 1;
+      }
 
       /*** Team ***/
       .team-item img {
@@ -364,26 +389,26 @@
     </div>
     <div>
     <!-- About Start -->
-    <div class="container-fluid py-5 mt-5 ">
+    <div class="container-xxl py-5 category">
       <div class="container py-5">
           <div class="row g-5 align-items-center">
               <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                   <div class="about-img">
-                      <img class="img-fluid" src="assets/images/accompagnement/dapdap.jpg">
+                      <img class="img-fluid" src="assets/images/accompagnement/dapdap.jpg" alt="Image description">
                   </div>
               </div>
               <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                  <div class="btn btn-sm border bg-info rounded-pill text-white px-3 mb-3 wow slideInRight">En savoir plus</div>
+                  <a href="https://mlsg.be/accompagnement-vers-l-emploi.html" class="btn btn-sm border bg-info rounded-pill text-white px-3 mb-3 wow slideInRight">En savoir plus</a>
                   <h2 class="mb-4 text-secondary wow slideInRight">Accompagnement individuel</h2>
                   <p class="mb-4 text-primary fs-4 wow slideInRight">Une aide sur mesure pour décrocher un emploi, entrer en formation, reprendre des études et déterminer votre projet professionnel. Des outils pour votre recherche d’emploi : CV, lettre de motivation, recherche d’offres et de formations, préparation aux entretiens d’embauche, etc.</p>
                   <div class="row g-3">
                       <div class="col-sm-6 wow slideInRight">
-                          <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Clair</h6>
-                          <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Personnel professionel</h6>
+                          <h6 class="mb-3 text-secondary"><i class="fa fa-check text-info me-2"></i>Clair</h6>
+                          <h6 class="mb-0 text-secondary"><i class="fa fa-check text-info me-2"></i>Personnel professionel</h6>
                       </div>
                       <div class="col-sm-6 wow slideInRight">
-                          <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>A votre ecoute</h6>
-                          <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Toujours disponible </h6>
+                          <h6 class="mb-3 text-secondary"><i class="fa fa-check text-info me-2"></i>A votre ecoute</h6>
+                          <h6 class="mb-0 text-secondary text "><i class="fa fa-check text-info me-2"></i>Toujours disponible </h6>
                       </div>
                   </div>
               </div>
@@ -437,21 +462,21 @@
     </div>
       <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 mt-lg-5 mt-sm-2">
                 <div class="section-styled">
-                    <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment pouvons-nous vous aider?</h2>
-                    <div class="section-content" style="display: none;">
-                        <p class="fw-bold fs-5" style="color: #E30056;">Notre équipe est là pour vous aider à trouver des réponses à vos questions sur l'emploi, la formation et bien plus encore.</p>
-                        <p class="fw-bold fs-5" style="color: #E30056;">Que vous soyez à la recherche d'un emploi, d'une formation ou simplement de conseils sur votre carrière, nous sommes là pour vous aider.</p>
-                    </div>
+                  <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment pouvons-nous vous aider?</h2>
+                  <div class="section-content" style="display: none;">
+                      <p class="fw-bold fs-5 text-primary">Notre équipe est là pour vous aider à trouver des réponses à vos questions sur l'emploi, la formation et bien plus encore.</p>
+                      <p class="fw-bold fs-5 text-primary">Que vous soyez à la recherche d'un emploi, d'une formation ou simplement de conseils sur votre carrière, nous sommes là pour vous aider.</p>
+                  </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mt-lg-5">
                 <div class="section-styled">
                     <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment fonctionne l'accompagnement?</h2>
                     <div class="section-content" style="display: none;">
-                        <p class="fw-bold fs-5" style="color: #E30056;">Notre équipe vous accompagnera tout au long de votre parcours professionnel, en vous aidant à trouver des solutions adaptées à vos besoins.</p>
-                        <p class="fw-bold fs-5" style="color: #E30056;">Nous vous aiderons à identifier vos objectifs professionnels, à trouver des opportunités d'emploi et de formation, et à développer les compétences dont vous avez besoin pour réussir.</p>
+                        <p class="fw-bold fs-5 text-primary">Notre équipe vous accompagnera tout au long de votre parcours professionnel, en vous aidant à trouver des solutions adaptées à vos besoins.</p>
+                        <p class="fw-bold fs-5 text-primary">Nous vous aiderons à identifier vos objectifs professionnels, à trouver des opportunités d'emploi et de formation, et à développer les compétences dont vous avez besoin pour réussir.</p>
                     </div>
                 </div>
             </div>
@@ -461,8 +486,8 @@
                 <div class="section-styled">
                     <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Quels sont les avantages de l'accompagnement?</h2>
                     <div class="section-content" style="display: none;">
-                        <p class="fw-bold fs-5" style="color: #E30056;">L'accompagnement vous permet de bénéficier de conseils personnalisés et de ressources adaptées à vos besoins.</p>
-                        <p class="fw-bold fs-5" style="color: #E30056;">Notre équipe vous aidera à identifier vos forces et vos faiblesses, à trouver des solutions à vos problèmes et à atteindre vos objectifs professionnels.</p>
+                        <p class="fw-bold fs-5 text-primary">L'accompagnement vous permet de bénéficier de conseils personnalisés et de ressources adaptées à vos besoins.</p>
+                        <p class="fw-bold fs-5 text-primary">Notre équipe vous aidera à identifier vos forces et vos faiblesses, à trouver des solutions à vos problèmes et à atteindre vos objectifs professionnels.</p>
                     </div>
                 </div>
             </div>
@@ -470,8 +495,8 @@
                 <div class="section-styled">
                     <h2 class="section-title tooltip-custom" data-toggle="tooltip" title="Cliquez pour développer/replier">Comment puis-je bénéficier de l'accompagnement?</h2>
                     <div class="section-content" style="display: none;">
-                        <p class="fw-bold fs-5" style="color: #E30056;">Il vous suffit de prendre rendez-vous avec un membre de notre équipe pour discuter de vos besoins et de vos objectifs professionnels.</p>
-                        <p class="fw-bold fs-5" style="color: #E30056;">Nous vous aiderons à trouver des solutions adaptées à vos besoins et à mettre en place un plan d'action pour atteindre vos objectifs professionnels.</p>
+                        <p class="fw-bold fs-5 text-primary">Il vous suffit de prendre rendez-vous avec un membre de notre équipe pour discuter de vos besoins et de vos objectifs professionnels.</p>
+                        <p class="fw-bold fs-5 text-primary">Nous vous aiderons à trouver des solutions adaptées à vos besoins et à mettre en place un plan d'action pour atteindre vos objectifs professionnels.</p>
                     </div>
                 </div>
             </div>
@@ -494,14 +519,14 @@
       <p class="fs-4 text-primary wow slideInRight">Mise à disposition d’un espace équipé pour votre recherche d’emploi et de formation. Sous la supervision d’un agent d’accueil, accès gratuit à 16 ordinateurs.</p>
     </div>
     <div class="row g-3">
-      <div class="col-lg-7 col-md-6">
+      <div class="col-lg-4 col-md-6">
         <div class="row g-3">
           <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
             <a class="position-relative d-block overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
-              <img class="wow zoomIn" src="assets/images/accompagnement/social1.jpg" alt="">
+              <img class="wow zoomIn" src="assets/images/accompagnement/technic.jpg" alt="">
               <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                <h5 class="m-0">Web Design</h5>
-                <small class="text-primary">Formations</small>
+                <h5 class="m-0">Technicien</h5>
+                <small class="text-primary">Devenez pro</small>
               </div>
             </a>
           </div>
@@ -525,12 +550,12 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+      <div class="col-lg-8 row-cols-8  wow zoomIn" data-wow-delay="0.7s">
         <a class="position-relative d-block h-100 overflow-hidden" href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html">
-          <img class="img-fluid position-absolute w-100 h-100" src="assets/images/accompagnement/technic.jpg" alt="" style="object-fit: cover;">
+          <img class="img-fluid position-absolute w-100 h-100" src="assets/images/accompagnement/social1.jpg" alt="" style="object-fit: cover;">
           <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-            <h5 class="m-0">CPU</h5>
-            <small class="text-primary">Soyez prêt</small>
+            <h5 class="m-0">Web Design</h5>
+            <small class="text-primary">Formations</small>
           </div>
         </a>
       </div>
