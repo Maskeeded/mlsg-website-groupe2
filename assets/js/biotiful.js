@@ -6,11 +6,14 @@ $(function(){
     let transitiontimer;
     let wingtimer;
     let nexttimer;
-    let isGrab = -1;
+    let isGrab = -1, frogged = -1;
     let timeout;
     let maxSizeButterfly = 100;
     const butterflys = initArrayOfButterFlys();
+    const freeIndexButterFlys = [];
     const $containerOfButterFlys = $('.services-1-wrap');
+    const $frog = $('#container-frog');
+    let canFrogged = true;
 
     function initArrayOfButterFlys(){
         const toReturn = [];
@@ -47,7 +50,8 @@ $(function(){
     
     function startFlutter(vartimer, butterflys){
         for(let index = 0; index < butterflys.length; index++)
-            flutter(vartimer, $(butterflys[index]), index);
+            if(butterflys[index] !== null)
+                flutter(vartimer, $(butterflys[index]), index);
     }
     
     function flutter(vartimer, $butterFly, index)
@@ -71,7 +75,7 @@ $(function(){
         rotation[index]=(rotation[index]< -20 ? 0 : rotation[index]);
         rotation[index]=(rotation[index] > 20 ? 0 :rotation[index]);
     
-        transitiontimer[index]=generaterandomno(40,60)/10;
+        transitiontimer[index] = generaterandomno(40,60) / 10;
     
         $butterFly.css({
             'left': x[index]+"px",
@@ -84,17 +88,18 @@ $(function(){
             'webkitTransition': "all "+transitiontimer[index]+"s"
         });
     
-        wingtimer[index]=generaterandomno(1,5);
-        var upperwings=document.getElementsByClassName("upperwing");
-        var lowerwings=document.getElementsByClassName("lowerwing");
+        wingtimer[index] = generaterandomno(1,5);
     
-        for (var k= index * 2;k<=index * 2 + 1;k++)
-        {
-            upperwings[k].style.animationDuration="0."+wingtimer[index]+"s";
-            upperwings[k].style.webkitAnimationDuration="0."+wingtimer[index]+"s";
-            lowerwings[k].style.animationDuration="0."+wingtimer[index]+"s";
-            lowerwings[k].style.webkitAnimationDuration="0."+wingtimer[index]+"s";
-        }
+        $butterFly.find('.upperwing').css({
+            'animationDuration': "0."+wingtimer[index]+"s",
+            'webkitAnimationDuration': "0."+wingtimer[index]+"s"
+        });
+
+        $butterFly.find('.lowerwing').css({
+            'animationDuration': "0."+wingtimer[index]+"s",
+            'webkitAnimationDuration': "0."+wingtimer[index]+"s"
+        });
+        
     
         timeout[index] = setTimeout(function(){flutter(nexttimer[index], $butterFly, index);},vartimer);
     }
@@ -130,15 +135,33 @@ $(function(){
         addEventListener('resize', initMaxSizeButterfly);
 
         function addButterFly(index, $butterfly, mousePosX, mousePosY){
-            x.push(mousePosX);
-            y.push(mousePosY);
-            size.push(size[index]);
-            rotation.push(rotation[index]);
-            transitiontimer.push(transitiontimer[index]);
-            wingtimer.push(wingtimer[index]);
-            nexttimer.push(nexttimer[index]);
-            timeout.push(-1);
-            const newIndex = x.length - 1;
+            const hasFreeIndex = freeIndexButterFlys.length !== 0;
+            console.log('OUI', hasFreeIndex)
+            if(hasFreeIndex === false){
+                x.push(mousePosX);
+                y.push(mousePosY);
+                size.push(size[index]);
+                rotation.push(rotation[index]);
+                transitiontimer.push(transitiontimer[index]);
+                wingtimer.push(wingtimer[index]);
+                nexttimer.push(nexttimer[index]);
+                timeout.push(-1);
+            }
+
+            let newIndex = hasFreeIndex ? freeIndexButterFlys.splice(0,1)[0] : x.length - 1;
+
+            if(hasFreeIndex === true){
+                x[newIndex] = mousePosX;
+                y[newIndex] = mousePosY;
+                size[newIndex] = size[index];
+                rotation[newIndex] = rotation[index];
+                transitiontimer[newIndex] = transitiontimer[index];
+                wingtimer[newIndex] = wingtimer[index];
+                nexttimer[newIndex] = nexttimer[index];
+                timeout[newIndex] = -1;
+            }
+            console.log(x)
+            console.log(butterflys, freeIndexButterFlys, newIndex)
             const $cloneButterfly = $('<div></div>');
             $cloneButterfly
                 .html($butterfly.html())
@@ -154,8 +177,10 @@ $(function(){
                 .on('dblclick', function(e){
                     (onDblClick.bind(this))(e, newIndex);
                 });
-            
-            butterflys.push($cloneButterfly.get(0));
+
+            if(hasFreeIndex) butterflys[newIndex] = $cloneButterfly.get(0)
+            else butterflys.push($cloneButterfly.get(0));
+
             $butterfly.after($cloneButterfly);
             flutter(nexttimer[index], $cloneButterfly, newIndex);
         }
@@ -168,21 +193,15 @@ $(function(){
         }
     
         function onMouseDown(e, index){
+            if(frogged === index) return;
             isGrab = index;
             $('body').addClass('grabbed-butter-fly');
-            clearTimeout(timeout[isGrab]);
-            const boundingRect = this.getBoundingClientRect();
-            const width = boundingRect.width > maxSizeButterfly ? maxSizeButterfly : boundingRect.width;
-            const height = boundingRect.height > maxSizeButterfly ? maxSizeButterfly : boundingRect.height;
-            $(this).css({
-                'width': width + "px",
-                'height': height + "px",
-                'transition': "none"
-            });
+            freezeButterFly($(this), index);
             moveButterFly(e);
         }
 
         function onDblClick(e, index){
+            if(frogged === index) return;
             const service = document.querySelector('.services-1-wrap');
             const offsetTop = service.offsetTop;
             const pageY = e.pageY;
@@ -203,9 +222,98 @@ $(function(){
         }
     }
 
+    function freezeButterFly($butterFly, index, frogged = false){
+        clearTimeout(timeout[index]);
+        const boundingRect = $butterFly.get(0).getBoundingClientRect();
+        const width = boundingRect.width > maxSizeButterfly ? maxSizeButterfly : boundingRect.width;
+        const height = boundingRect.height > maxSizeButterfly ? maxSizeButterfly : boundingRect.height;
+        $butterFly.css({
+            'width': width + "px",
+            'height': height + "px",
+            'transition': "none"
+        });
+
+    }
+
+    function initListenerFrog(){
+        $frog.on('dblclick', function(e){
+            if(canFrogged === false) return;
+            canFrogged = false;
+            if(freeIndexButterFlys.length === butterflys.length - 1) return;
+            let butterFly = null;
+            let index = 0;
+            do {
+                index = Math.floor(Math.random() * butterflys.length);
+                butterFly = butterflys[index];
+            } while (butterFly === null);
+            frogged = index;
+            const $butterFly = $(butterFly);
+            freezeButterFly($butterFly, index, true);
+            const angle = getRotationDeg($frog.get(0), butterFly);
+            $frog
+                .find('.tongue')
+                .css({
+                    'transform': `rotate(${angle}deg)`
+                })
+                .animate({
+                    'height': getHeightTongue($frog.get(0), butterFly)
+                }, 250, eatButterFly)
+            ;
+        });
+
+        function eatButterFly(){
+            const scrollHeight = +$containerOfButterFlys.prop('scrollHeight');
+            const $tongue = $(this);
+            const $butterFly = $(butterflys[frogged]);
+            console.log(($butterFly.css('left')).replace('px', ''))
+            const leftPosButterFly = +($butterFly.css('left')).replace('px', '');
+            const topPosButterFly = +($butterFly.css('top')).replace('px', '');
+            const left = window.innerWidth - leftPosButterFly - 100;
+            const top = scrollHeight - topPosButterFly - 100;
+            $butterFly.animate({
+                'left': '+='+left,
+                'top': '+='+top
+            }, 1000);
+            $tongue.animate({
+                'height': '0px'
+            }, 1000, removeButterFly);
+        }
+
+        function removeButterFly(){
+            const butterFly = butterflys[frogged];
+            butterflys[frogged] = null;
+            freeIndexButterFlys.push(frogged);
+            frogged = -1;
+            butterFly.remove();
+            canFrogged = true;
+        }
+
+        function getHeightTongue(frog, butterFly){
+            let rectButterFly = butterFly.getBoundingClientRect();
+            let rectFrog = frog.getBoundingClientRect();
+            let x1 = rectFrog.left + rectFrog.width / 2;
+            let y1 = rectFrog.top + rectFrog.height / 2;
+            let x2 = rectButterFly.left + rectButterFly.width / 2;
+            let y2 = rectButterFly.top + rectButterFly.height / 2;
+            let distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+            return distance;
+        }
+        
+
+        function getRotationDeg(frog, butterFly){
+            let rectButterFly = butterFly.getBoundingClientRect();
+            let rectFrog = frog.getBoundingClientRect();
+            let x = rectButterFly.left + rectButterFly.width / 2 - rectFrog.left - rectFrog.width / 2;
+            let y = rectButterFly.top + rectButterFly.height / 2 - rectFrog.top - rectFrog.height / 2;
+            let angleDeg = (Math.atan2(y, x) * 180 / Math.PI) + 90;
+            return angleDeg;
+        }
+    }
+
     initButterfly(butterflys);
     initMaxSizeButterfly();
     initListenerButterFly(butterflys);
+    initListenerFrog();
     startFlutter(5000, butterflys);
 })
 
