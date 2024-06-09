@@ -230,6 +230,13 @@ $(function(){
             'transition': "none"
         });
 
+        if(frogged){
+            $butterFly.css({
+                'left': (boundingRect.left + width / 2) + "px",
+                'top': (boundingRect.top + height / 2) + "px"
+            });
+        }
+
     }
 
     function initListenerFrog(){
