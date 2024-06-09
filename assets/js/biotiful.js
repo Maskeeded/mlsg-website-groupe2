@@ -136,7 +136,6 @@ $(function(){
 
         function addButterFly(index, $butterfly, mousePosX, mousePosY){
             const hasFreeIndex = freeIndexButterFlys.length !== 0;
-            console.log('OUI', hasFreeIndex)
             if(hasFreeIndex === false){
                 x.push(mousePosX);
                 y.push(mousePosY);
@@ -160,8 +159,6 @@ $(function(){
                 nexttimer[newIndex] = nexttimer[index];
                 timeout[newIndex] = -1;
             }
-            console.log(x)
-            console.log(butterflys, freeIndexButterFlys, newIndex)
             const $cloneButterfly = $('<div></div>');
             $cloneButterfly
                 .html($butterfly.html())
@@ -238,8 +235,8 @@ $(function(){
     function initListenerFrog(){
         $frog.on('dblclick', function(e){
             if(canFrogged === false) return;
-            canFrogged = false;
             if(freeIndexButterFlys.length === butterflys.length - 1) return;
+            canFrogged = false;
             let butterFly = null;
             let index = 0;
             do {
@@ -265,7 +262,6 @@ $(function(){
             const scrollHeight = +$containerOfButterFlys.prop('scrollHeight');
             const $tongue = $(this);
             const $butterFly = $(butterflys[frogged]);
-            console.log(($butterFly.css('left')).replace('px', ''))
             const leftPosButterFly = +($butterFly.css('left')).replace('px', '');
             const topPosButterFly = +($butterFly.css('top')).replace('px', '');
             const left = window.innerWidth - leftPosButterFly - 100;
