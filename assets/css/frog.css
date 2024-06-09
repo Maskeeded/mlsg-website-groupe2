@@ -1,0 +1,136 @@
+#container-frog {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: -80px;
+  right: 0;
+  z-index: 201;
+  cursor: pointer;
+}
+.face {
+  background-color: #8ebc00;
+  height: 30px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 25px;
+}
+.face:before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 30px;
+  background-color: #c1d218;
+  border-radius: 0 0 15px 15px;
+  bottom: 0;
+  left: 5px;
+}
+.face:after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #477a26;
+  border-radius: 5px;
+  left: 2.5px;
+  top: 13.75px;
+}
+.eyes,
+.eyes:before {
+  position: absolute;
+  background-color: #234106;
+  height: 6.25px;
+  width: 6.25px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2.5px #ffffff, 0 0 0 4.5px #8ebc00;
+}
+.eyes {
+  left: 8.75px;
+}
+.eyes:before {
+  content: "";
+  left: 17.5px;
+}
+.body {
+  background-color: #c1d218;
+  height: 15px;
+  width: 17.5px;
+  border-radius: 17.5px 17.5px 0 0;
+  box-shadow: 0 -5px 0 5px #8ebc00;
+  position: absolute;
+  left: 41.25px;
+  top: 57.5px;
+}
+.body:before,
+.body:after {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 6.25px;
+  background-color: #8ebc00;
+  top: 10px;
+  transform: rotate(90deg);
+}
+.body:before {
+  border-radius: 50% 0;
+  left: -3.1px;
+}
+.body:after {
+  border-radius: 0 50%;
+  right: -3.1px;
+}
+.leg-l,
+.leg-r {
+  position: absolute;
+  height: 21.25px;
+  width: 12.5px;
+  background-color: #477a26;
+  border-radius: 50%;
+  bottom: 25px;
+}
+.leg-r {
+  transform: rotate(30deg);
+  left: 57.5px;
+}
+.leg-l {
+  transform: rotate(-30deg);
+  right: 57.5px;
+}
+.leg-l:before,
+.leg-r:before {
+  content: "";
+  position: absolute;
+  height: 6.25px;
+  width: 12.5px;
+  background-color: #477a26;
+  border-radius: 7.5px 7.5px 0 0;
+  bottom: 2.5px;
+}
+.leg-l:before {
+  transform: rotate(30deg);
+  right: 3.75px;
+}
+.leg-r:before {
+  transform: rotate(-30deg);
+  left: 3.75px;
+}
+.tongue {
+  position: absolute;
+  height: 0;
+  width: 2px;
+  background-color: #f57b78;
+  border-radius: 2px;
+  transform-origin: 100% 100%;
+  bottom: 16.25px;
+  left: 17.5px;
+  z-index: 2;
+}
+
+@media screen and (width < 900px) {
+  .container-frog {
+    bottom: -20px;
+  }
+}
