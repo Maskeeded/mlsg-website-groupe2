@@ -14,7 +14,7 @@ $(function(){
     const $containerOfButterFlys = $('.services-1-wrap');
     const $frog = $('#container-frog');
     let canFrogged = true;
-    const baseScrollHeight = +$containerOfButterFlys.prop('scrollHeight');
+    let baseScrollHeight = +$containerOfButterFlys.prop('scrollHeight');
 
     function initArrayOfButterFlys(){
         const toReturn = [];
@@ -31,6 +31,7 @@ $(function(){
             maxSizeButterfly = 75;
         else
             maxSizeButterfly = 50;
+        baseScrollHeight = +$containerOfButterFlys.prop('scrollHeight');
     }
     
     function initButterfly(butterflys){
@@ -225,19 +226,16 @@ $(function(){
         const boundingRect = $butterFly.get(0).getBoundingClientRect();
         const width = boundingRect.width > maxSizeButterfly ? maxSizeButterfly : boundingRect.width;
         const height = boundingRect.height > maxSizeButterfly ? maxSizeButterfly : boundingRect.height;
-        $butterFly.css({
+        const options = {
             'width': width + "px",
             'height': height + "px",
             'transition': "none"
-        });
-
+        };
         if(frogged){
-            $butterFly.css({
-                'left': (boundingRect.left + width / 2) + "px",
-                'top': (boundingRect.top + height / 2) + "px"
-            });
+            options.left = boundingRect.left + "px";
+            options.top = boundingRect.top + "px";
         }
-
+        $butterFly.css(options);
     }
 
     function initListenerFrog(){
