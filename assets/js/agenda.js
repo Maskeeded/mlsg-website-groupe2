@@ -326,7 +326,10 @@ function fetchImageAPI(currentIndex, tries = 1){
   })
   .catch(error => {
     console.error('Erreur:', error);
-    if(tries > 3) return;
+    if(tries > 3){
+      $(`.img-formation-${currentIndex}`).attr('src', 'https://placehold.co/450x350');
+      return;
+    }
     fetchImageAPI(currentIndex, ++tries);
   });
 }
