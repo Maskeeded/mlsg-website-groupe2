@@ -362,7 +362,13 @@ $(function(){
             frogged = -1;
             $gulpSong.get(0).play();
             butterFly.remove();
-            $frog.removeClass('is-active');
+            $pupils.css({
+                'width': '+=0.1px',
+                'height': '+=0.1px',
+            })
+            $frog
+                .css('font-size', '+=0.1px')
+                .removeClass('is-active');
             canFrogged = true;
         }
 
