@@ -15,6 +15,7 @@ $(function(){
     const $scrollHeightContainerButterFlys = $('#scroll-height-services-1');
     const $frog = $('.frog');
     const $slurpSong = $('#song-slurp');
+    const $gulpSong = $('#song-gulp');
     const $eyes = $('.eye');
     const $pupils = $('.pupil');
     let canFrogged = true;
@@ -359,6 +360,7 @@ $(function(){
             butterflys[frogged] = null;
             freeIndexButterFlys.push(frogged);
             frogged = -1;
+            $gulpSong.get(0).play();
             butterFly.remove();
             $frog.removeClass('is-active');
             canFrogged = true;
