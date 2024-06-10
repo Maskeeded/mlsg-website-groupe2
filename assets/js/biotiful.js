@@ -13,8 +13,28 @@ $(function(){
     const freeIndexButterFlys = [];
     const $containerOfButterFlys = $('.services-1-wrap');
     const $scrollHeightContainerButterFlys = $('#scroll-height-services-1');
-    const $frog = $('#container-frog');
+    const $frog = $('.frog');
+    const $eyes = $('.eye');
+    const $pupils = $('.pupil');
     let canFrogged = true;
+    const clickOrTap = ((window.document.documentElement.ontouchstart!==null)?'click':'touchstart');
+    const mouseDownOrTap = ((window.document.documentElement.ontouchstart!==null)?'mousedown':'touchstart');
+    const mouseUpOrTap = ((window.document.documentElement.ontouchstart!==null)?'mouseup':'touchend');
+    const mouseMoveOrTap = ((window.document.documentElement.ontouchstart!==null)?'mousemove':'touchmove');
+
+    function getTouch(e) {
+        if (e.touches) {
+          return {
+            x: e.touches[0].clientX,
+            y: e.touches[0].clientY
+          }
+        } else {
+          return {
+            x: e.clientX,
+            y: e.clientY
+          }
+        }
+      }
 
     function initArrayOfButterFlys(){
         const toReturn = [];
@@ -110,12 +130,48 @@ $(function(){
         return Math.floor((Math.random() * (varmax-varmin+1)) + varmin);
     }
 
+    function moveEye(mouse, eye, pupil) {
+        let left = 0;
+        let top = 0;
+        const eyeRadius = eye.offsetWidth / 2;
+        const pupilRadius = pupil.offsetWidth / 2;
+      
+        const leftOffset = eye.getBoundingClientRect().left;
+        const topOffset = eye.getBoundingClientRect().top;
+      
+        const center = [eye.getBoundingClientRect().left + eyeRadius, eye.getBoundingClientRect().top + eyeRadius];
+        
+        function getDistance(dot1, dot2) {
+            const x1 = dot1[0],
+                y1 = dot1[1],
+                x2 = dot2[0],
+                y2 = dot2[1];
+              
+            return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+          }
+
+        const dist = getDistance([mouse.x, mouse.y], center);
+      
+        if (dist <= eyeRadius) {
+          left = mouse.x - leftOffset - eyeRadius;
+          top = mouse.y - topOffset - eyeRadius;
+        } else {
+          const x = mouse.x - center[0];
+          const y = mouse.y - center[1];
+          const radians = Math.atan2(y, x);
+          left = (Math.cos(radians) * (eyeRadius - pupilRadius));
+          top = (Math.sin(radians) * (eyeRadius - pupilRadius));
+        }
+      
+        pupil.style.transform = "translate(" + left + "px, " + top + "px)";
+      }
+
     function initListenerButterFly(butterflys){
         for(let index = 0; index < butterflys.length; index++){
-            butterflys[index].addEventListener('mousedown', function(e){
+            butterflys[index].addEventListener(mouseDownOrTap, function(e){
                 (onMouseDown.bind(this))(e, index);
             });
-            butterflys[index].addEventListener('mouseup', onMouseUp);
+            butterflys[index].addEventListener(mouseUpOrTap, onMouseUp);
             butterflys[index].addEventListener('dblclick', function(e){
                 (onDblClick.bind(this))(e, index);
             });
@@ -127,13 +183,22 @@ $(function(){
             flutter(nexttimer[isGrab], $(butterflys[isGrab]), isGrab);
             isGrab = -1;
         });
+        
     
-        addEventListener('mousemove', function(e){
+        addEventListener(mouseMoveOrTap, function(e){
+            if(frogged === -1)
+                eyesFollow(e);
             if(isGrab === -1) return;
             moveButterFly(e);
         });
     
         addEventListener('resize', initMaxSizeButterfly);
+
+        function eyesFollow(e) {
+            const touch = getTouch(e);
+            moveEye({x: touch.x, y: touch.y}, $eyes.get(0), $pupils.get(0));
+            moveEye({x: touch.x + 200, y: touch.y + 200}, $eyes.get(1), $pupils.get(1));
+        }
 
         function addButterFly(index, $butterfly, mousePosX, mousePosY){
             const hasFreeIndex = freeIndexButterFlys.length !== 0;
@@ -238,7 +303,7 @@ $(function(){
     }
 
     function initListenerFrog(){
-        $frog.on('click', function(e){
+        $frog.on(clickOrTap, function(e){
             if(canFrogged === false) return;
             if(freeIndexButterFlys.length === butterflys.length - 1) return;
             canFrogged = false;
@@ -252,31 +317,39 @@ $(function(){
             const $butterFly = $(butterFly);
             freezeButterFly($butterFly, index, true);
             const angle = getRotationDeg($frog.get(0), butterFly);
-            const heightTongue = getHeightTongue($frog.get(0), butterFly);
+            const heightTongue = getHeightTongue($frog.get(0), butterFly) + parseInt($butterFly.css('width')) / 3;
+            lookAtYourPrey($butterFly);
             $frog
+                .addClass(angle > 90 ? 'is-shooting-down' : '')
+                .removeClass(angle > 90 ? '' : 'is-shooting-down')
+                .addClass('is-active')
                 .find('.tongue')
                 .css({
                     'transform': `rotate(${angle}deg)`
                 })
                 .animate({
                     'height': heightTongue
-                }, heightTongue < 500 ? 100 : 250, eatButterFly)
+                }, 250, eatButterFly)
             ;
         });
 
+        function lookAtYourPrey($butterFly){
+            moveEye({x: $butterFly.get(0).offsetLeft, y: $butterFly.get(0).offsetTop}, $eyes.get(0), $pupils.get(0));
+            moveEye({x: $butterFly.get(0).offsetLeft, y: $butterFly.get(0).offsetTop}, $eyes.get(1), $pupils.get(1));
+        }
+
         function eatButterFly(){
             const $tongue = $(this);
-            const heightTongue = parseInt($(this).css('height'));
             const $butterFly = $(butterflys[frogged]);
-            const left = window.innerWidth - 50 - parseInt($butterFly.css('width'));
+            const left = $frog.get(0).offsetLeft + parseInt($frog.css('width')) / 2 - parseInt($butterFly.css('width'));
             const top = $scrollHeightContainerButterFlys.prop('scrollHeight') - parseInt($butterFly.css('height')) / 2;
             $butterFly.animate({
                 'left': left+'px',
                 'top': top+'px'
-            }, heightTongue < 500 ? 250 : 1000);
+            }, 250);
             $tongue.animate({
                 'height': '0px'
-            }, heightTongue < 500 ? 250 : 1000, removeButterFly);
+            }, 250, removeButterFly);
         }
 
         function removeButterFly(){
@@ -285,6 +358,7 @@ $(function(){
             freeIndexButterFlys.push(frogged);
             frogged = -1;
             butterFly.remove();
+            $frog.removeClass('is-active');
             canFrogged = true;
         }
 
@@ -303,8 +377,8 @@ $(function(){
         function getRotationDeg(frog, butterFly){
             let rectButterFly = butterFly.getBoundingClientRect();
             let rectFrog = frog.getBoundingClientRect();
-            let x = rectButterFly.left + rectButterFly.width / 2 - rectFrog.left - rectFrog.width / 2;
-            let y = rectButterFly.top + rectButterFly.height / 2 - rectFrog.top - rectFrog.height / 2;
+            let x = butterFly.offsetLeft + rectButterFly.width / 2 - frog.offsetLeft - rectFrog.width / 2;
+            let y = butterFly.offsetTop + rectButterFly.height / 2 - frog.offsetTop - rectFrog.height / 2;
             let angleDeg = (Math.atan2(y, x) * 180 / Math.PI) + 90;
             return angleDeg;
         }
