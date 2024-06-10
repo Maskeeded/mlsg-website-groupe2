@@ -252,29 +252,31 @@ $(function(){
             const $butterFly = $(butterFly);
             freezeButterFly($butterFly, index, true);
             const angle = getRotationDeg($frog.get(0), butterFly);
+            const heightTongue = getHeightTongue($frog.get(0), butterFly);
             $frog
                 .find('.tongue')
                 .css({
                     'transform': `rotate(${angle}deg)`
                 })
                 .animate({
-                    'height': getHeightTongue($frog.get(0), butterFly)
-                }, 250, eatButterFly)
+                    'height': heightTongue
+                }, heightTongue < 500 ? 100 : 250, eatButterFly)
             ;
         });
 
         function eatButterFly(){
             const $tongue = $(this);
+            const heightTongue = parseInt($(this).css('height'));
             const $butterFly = $(butterflys[frogged]);
             const left = window.innerWidth - 50 - parseInt($butterFly.css('width'));
             const top = $scrollHeightContainerButterFlys.prop('scrollHeight') - parseInt($butterFly.css('height')) / 2;
             $butterFly.animate({
                 'left': left+'px',
                 'top': top+'px'
-            }, 1000);
+            }, heightTongue < 500 ? 250 : 1000);
             $tongue.animate({
                 'height': '0px'
-            }, 1000, removeButterFly);
+            }, heightTongue < 500 ? 250 : 1000, removeButterFly);
         }
 
         function removeButterFly(){
