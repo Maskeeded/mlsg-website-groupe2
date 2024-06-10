@@ -1,136 +1,555 @@
-#container-frog {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  bottom: -80px;
-  right: 0;
+
+.frog .body, .frog .belly, .frog .arms .arm, .frog .legs .leg, .frog .eyes .eye, .frog .tongue-inner {
+  box-shadow: none;
+}
+.frog {
   z-index: 201;
+  position: absolute;
+  left: 50%;
+  bottom: -78px;
+  display: inline-block;
+  font-size: .6rem;
+  transform: translateX(-50%);
   cursor: pointer;
 }
-.face {
-  background-color: #8ebc00;
-  height: 30px;
-  width: 40px;
-  border-radius: 50%;
+.frog .body {
+  position: relative;
+  width: 6.5em;
+  height: 9.75em;
+  transform: translateY(0);
+  transition: all 0.2s;
+  background: #9fb761;
+  border-radius: 4em 4em 4em 4em / 3em 3em 2em 2em;
+  border: 1px solid rgba(0, 0, 0, 1);
+  will-change: transform;
+}
+.outlines .frog .body {
+  background: red;
+}
+.light .frog .body {
+  background: #9fb761;
+}
+.dark .frog .body {
+  background: #7f9761;
+}
+.frog.is-active .body {
+  animation: body .75s;
+}
+.frog .belly {
   position: absolute;
-  margin: auto;
+  z-index: 1;
+  left: 50%;
+  height: 50%;
+  bottom: -0.5em;
+  left: 0.25em;
+  right: 0.25em;
+  background: #f8efdf;
+  border-bottom: 1px solid #000;
+  border-radius: 0 0 50% 50Array/0Array 0 1em 1em;
+}
+.outlines .frog .belly {
+  background: red;
+}
+.light .frog .belly {
+  background: #f8efdf;
+}
+.dark .frog .belly {
+  background: #f8efdf;
+}
+.frog .crown {
+  display: none;
+  z-index: -10;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 1px;
+  border-width: 2em 1.5em 0;
+  border-style: solid;
+  border-color: transparent gold gold;
+  transform: translateX(-50%);
+}
+.frog .crown:before {
+  position: absolute;
+  bottom: 0;
+  left: -1em;
+  border-width: 0 1em 2em;
+  border-style: solid;
+  border-color: gold transparent;
+  content: '';
+}
+.frog .arms {
+  position: absolute;
+  z-index: 2;
   left: 0;
   right: 0;
-  top: 25px;
+  bottom: -0.5em;
+  will-change: transform;
 }
-.face:before {
-  content: "";
+.frog .arms .arm {
   position: absolute;
-  height: 15px;
-  width: 30px;
-  background-color: #c1d218;
-  border-radius: 0 0 15px 15px;
-  bottom: 0;
-  left: 5px;
+  bottom: 0em;
+  width: 2.5em;
+  height: 4em;
+  background: #9fb761;
+  border: 1px solid rgba(0, 0, 0, 1);
 }
-.face:after {
-  content: "";
-  position: absolute;
-  width: 35px;
-  height: 2px;
-  background-color: #477a26;
-  border-radius: 5px;
-  left: 2.5px;
-  top: 13.75px;
+.outlines .frog .arms .arm {
+  background: red;
 }
-.eyes,
-.eyes:before {
+.light .frog .arms .arm {
+  background: #9fb761;
+}
+.dark .frog .arms .arm {
+  background: #7f9761;
+}
+.frog .arms .arm:before {
   position: absolute;
-  background-color: #234106;
-  height: 6.25px;
-  width: 6.25px;
+  top: -2.5em;
+  width: 1em;
+  height: 2.75em;
+  background: #9fb761;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-bottom: none;
+  content: '';
+}
+.outlines .frog .arms .arm:before {
+  background: red;
+}
+.light .frog .arms .arm:before {
+  background: #9fb761;
+}
+.dark .frog .arms .arm:before {
+  background: #7f9761;
+}
+.frog .arms .arm .hand {
+  position: absolute;
+  bottom: -0.25em;
+  width: 2em;
+  height: 0.5em;
+  font-size: 1.25em;
+  background: #9fb761;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0 !important;
+}
+.outlines .frog .arms .arm .hand {
+  background: red;
+}
+.light .frog .arms .arm .hand {
+  background: #9fb761;
+}
+.dark .frog .arms .arm .hand {
+  background: #7f9761;
+}
+.frog .arms .arm .hand .toe {
+  position: absolute;
+  bottom: -0.25em;
+  width: 0.5em;
+  height: 0.5em;
+  background: #9fb761;
+  border: 1px solid rgba(0, 0, 0, 1);
   border-radius: 50%;
-  box-shadow: 0 0 0 2.5px #ffffff, 0 0 0 4.5px #8ebc00;
 }
-.eyes {
-  left: 8.75px;
+.outlines .frog .arms .arm .hand .toe {
+  background: red;
 }
-.eyes:before {
-  content: "";
-  left: 17.5px;
+.light .frog .arms .arm .hand .toe {
+  background: #9fb761;
 }
-.body {
-  background-color: #c1d218;
-  height: 15px;
-  width: 17.5px;
-  border-radius: 17.5px 17.5px 0 0;
-  box-shadow: 0 -5px 0 5px #8ebc00;
-  position: absolute;
-  left: 41.25px;
-  top: 57.5px;
+.dark .frog .arms .arm .hand .toe {
+  background: #7f9761;
 }
-.body:before,
-.body:after {
-  position: absolute;
-  content: "";
-  height: 10px;
-  width: 6.25px;
-  background-color: #8ebc00;
-  top: 10px;
-  transform: rotate(90deg);
+.frog .arms .arm .hand .toe:first-child {
+  left: -0.25em;
 }
-.body:before {
-  border-radius: 50% 0;
-  left: -3.1px;
-}
-.body:after {
-  border-radius: 0 50%;
-  right: -3.1px;
-}
-.leg-l,
-.leg-r {
-  position: absolute;
-  height: 21.25px;
-  width: 12.5px;
-  background-color: #477a26;
-  border-radius: 50%;
-  bottom: 25px;
-}
-.leg-r {
-  transform: rotate(30deg);
-  left: 57.5px;
-}
-.leg-l {
-  transform: rotate(-30deg);
-  right: 57.5px;
-}
-.leg-l:before,
-.leg-r:before {
-  content: "";
-  position: absolute;
-  height: 6.25px;
-  width: 12.5px;
-  background-color: #477a26;
-  border-radius: 7.5px 7.5px 0 0;
-  bottom: 2.5px;
-}
-.leg-l:before {
-  transform: rotate(30deg);
-  right: 3.75px;
-}
-.leg-r:before {
-  transform: rotate(-30deg);
-  left: 3.75px;
-}
-.tongue {
-  position: absolute;
-  height: 0;
-  width: 5px;
-  background-color: #f57b78;
-  border-radius: 2px;
-  transform-origin: 100% 100%;
-  bottom: 16.25px;
-  left: 17.5px;
+.frog .arms .arm .hand .toe:nth-child(2n) {
   z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-@media screen and (width < 900px) {
-  .container-frog {
-    bottom: -20px;
-  }
+.frog .arms .arm .hand .toe:last-child {
+  right: -0.25em;
+}
+.frog .arms .arm--left {
+  left: -0.9em;
+  margin-left: -2px;
+  border-radius: 0 100% 0 70%;
+}
+.frog .arms .arm--left:before {
+  left: -1px;
+  border-right: none;
+  border-radius: 100% 0 0 0;
+}
+.frog .arms .arm--left .hand {
+  left: 0.5em;
+  border-left: 0;
+  border-radius: 0 100% 0 0;
+}
+.frog .arms .arm--right {
+  right: -0.9em;
+  margin-right: -2px;
+  border-radius: 100% 0 70% 0;
+}
+.frog .arms .arm--right:before {
+  right: -1px;
+  border-left: none;
+  border-radius: 0 100% 0 0;
+}
+.frog .arms .arm--right .hand {
+  right: 0.5em;
+  border-right: 0;
+  border-radius: 100% 0 0 0;
+}
+.frog.is-active .arms {
+  animation: arms .75s;
+}
+.frog .legs {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.5em;
+}
+.frog .legs .leg {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  width: 6em;
+  height: 5em;
+  transform: rotate(0);
+  transform-origin: 50% 100%;
+  transition: all 0.2s;
+  background: #718644;
+  border: 1px solid rgba(0, 0, 0, 1);
+  will-change: transform;
+}
+.outlines .frog .legs .leg {
+  background: red;
+}
+.light .frog .legs .leg {
+  background: #718644;
+}
+.dark .frog .legs .leg {
+  background: #516644;
+}
+.frog .legs .leg--left {
+  left: -2.5em;
+  border-radius: 25% 75% 25% 75%;
+}
+.frog .legs .leg--right {
+  right: -2.5em;
+  border-radius: 75% 25% 75% 25%;
+}
+.frog.is-active .leg--left {
+  animation: leftLeg .75s;
+}
+.frog.is-active .leg--right {
+  animation: rightLeg .75s;
+}
+.frog .eyes {
+  position: absolute;
+  z-index: -5;
+  top: 0em;
+  left: 0em;
+  right: 0em;
+}
+.frog .eyes .eye {
+  position: absolute;
+  top: 0em;
+  display: inline-block;
+  width: 2.3em;
+  height: 2.3em;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.frog .eyes .eye--left {
+  left: 0em;
+}
+.frog .eyes .eye--right {
+  right: 0em;
+}
+.frog .eyes .eye:before, .frog .eyes .eye:after {
+  position: absolute;
+  z-index: 6;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  transform: translateY(1px);
+  transition: all 0.2s;
+  background: #718644;
+  border-top: 1px solid #000;
+  content: '';
+  will-change: transform;
+}
+.outlines .frog .eyes .eye:before, .outlines .frog .eyes .eye:after {
+  background: red;
+}
+.light .frog .eyes .eye:before, .light .frog .eyes .eye:after {
+  background: #718644;
+}
+.dark .frog .eyes .eye:before, .dark .frog .eyes .eye:after {
+  background: #516644;
+}
+.frog .eyes .eye:before {
+  bottom: 100%;
+  margin-bottom: 1px;
+}
+.frog .eyes .eye:after {
+  top: 100%;
+}
+.frog .eyes .eye:hover:after {
+  transform: translateY(-98%);
+}
+.frog .eyes .pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.4rem;
+  height: 0.4rem;
+  margin: -0.2em 0 0 -0.2em;
+  transform: translate(0, 0);
+  transition: all 0.2s;
+  background: #000;
+  border-radius: 4em;
+  will-change: transform;
+  overflow: hidden;
+}
+.frog .mouth {
+  position: absolute;
+  z-index: 6;
+  top: 3.25em;
+  left: 0.5em;
+  right: 0.5em;
+  height: 2.25em;
+  background: #000;
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-top: 0;
+  border-bottom: 0;
+}
+.frog .mouth:before {
+  position: absolute;
+  top: 1em;
+  left: 0.5em;
+  right: 0.5em;
+  bottom: 0;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: #c8725b;
+  content: '';
+}
+.outlines .frog .mouth:before {
+  background: red;
+}
+.light .frog .mouth:before {
+  background: #c8725b;
+}
+.dark .frog .mouth:before {
+  background: #a8525b;
+}
+.frog .mouth .top-lip {
+  position: absolute;
+  left: -0.25em;
+  right: -0.25em;
+  bottom: 100%;
+  height: 0;
+  background: #9fb761;
+  border-bottom: 1px solid #000;
+}
+.outlines .frog .mouth .top-lip {
+  background: red;
+}
+.light .frog .mouth .top-lip {
+  background: #9fb761;
+}
+.dark .frog .mouth .top-lip {
+  background: #7f9761;
+}
+.frog .mouth .bottom-lip {
+  position: absolute;
+  z-index: 10;
+  top: -1px;
+  left: -0.25em;
+  right: -0.25em;
+  height: 2.5em;
+  margin-left: -1px;
+  margin-right: -1px;
+  transform: translateY(0);
+  transition: all .75s;
+  background: #f8efdf;
+  border-top: 1px solid #000;
+  will-change: transform;
+  border-radius: 0;
+  content: '';
+}
+.outlines .frog .mouth .bottom-lip {
+  background: red;
+}
+.light .frog .mouth .bottom-lip {
+  background: #f8efdf;
+}
+.dark .frog .mouth .bottom-lip {
+  background: #f8efdf;
+}
+.frog .mouth .bottom-lip:after {
+  display: none;
+  position: absolute;
+  top: 0.5em;
+  left: 1.5em;
+  right: 1.5em;
+  height: 0.25em;
+  border-bottom: 1px solid #000;
+  opacity: 0.1;
+  content: '';
+}
+.frog .tongue {
+  pointer-events: none;
+  position: absolute;
+  z-index: 8;
+  bottom: 0.5em;
+  left: 50%;
+  width: 4em;
+  height: 200px;
+  margin-left: -2em;
+  overflow: hidden;
+  transform: rotate(0);
+  transform-origin: 50% 100%;
+  will-change: transform;
+  border-radius: 4em 4em 4em 4em;
+}
+.frog .tongue-inner {
+  position: absolute;
+  left: 1.25em;
+  right: 1.25em;
+  top: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: all 0.1s ease-in-out;
+  background: #c8725b;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-bottom: 0;
+  border-radius: 4em 4em 4em 4em;
+  box-sizing: border-box;
+  text-align: center;
+  content: '';
+  will-change: transform;
+}
+.outlines .frog .tongue-inner {
+  background: red;
+}
+.light .frog .tongue-inner {
+  background: #c8725b;
+}
+.dark .frog .tongue-inner {
+  background: #a8525b;
+}
+.frog .tongue-inner:before {
+  position: absolute;
+  top: -0.5em;
+  left: -0.5em;
+  right: -0.5em;
+  min-height: 3em;
+  max-height: 6em;
+  height: 50%;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-bottom: none;
+}
+.outlines .frog .tongue-inner:before {
+  background: red;
+}
+.light .frog .tongue-inner:before {
+  background: #c8725b;
+}
+.dark .frog .tongue-inner:before {
+  background: #a8525b;
+}
+.frog.is-shooting-down .eyes {
+  z-index: 8;
+}
+.frog.is-shooting-down .mouth {
+  z-index: 6;
+}
+.frog.is-shooting-down .tongue {
+  z-index: 6;
+  bottom: 1.5em;
+}
+.frog.is-shooting-down .top-lip {
+  z-index: 8;
+  height: 1em;
+}
+.frog.is-shooting-down .bottom-lip {
+  z-index: 4;
+}
+.frog.is-active .tongue-inner {
+  animation: shoot .75s;
+}
+.frog.is-active .mouth .bottom-lip {
+  animation: mouth .75s;
+}
+@keyframes shoot {
+  0% {
+      transform: translateY(105%);
+ }
+  50% {
+      transform: translateY(0);
+ }
+  100% {
+      transform: translateY(105%);
+ }
+}
+@keyframes body {
+  0% {
+      transform: translateY(0);
+ }
+  50% {
+      transform: translateY(-1em);
+ }
+  100% {
+      transform: translateY(0);
+ }
+}
+@keyframes leftLeg {
+  0% {
+      transform: rotate(0);
+ }
+  50% {
+      transform: rotate(-10deg);
+ }
+  100% {
+      transform: rotate(0);
+ }
+}
+@keyframes rightLeg {
+  0% {
+      transform: rotate(0);
+ }
+  50% {
+      transform: rotate(10deg);
+ }
+  100% {
+      transform: rotate(0);
+ }
+}
+@keyframes arms {
+  0% {
+      transform: translateY(0);
+ }
+  50% {
+      transform: translateY(1em);
+ }
+  100% {
+      transform: translateY(0);
+ }
+}
+@keyframes mouth {
+  0% {
+      transform: translateY(0);
+ }
+  50% {
+      transform: translateY(1.9em);
+ }
+  100% {
+      transform: translateY(0);
+ }
 }
