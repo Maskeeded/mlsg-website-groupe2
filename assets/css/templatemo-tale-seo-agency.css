@@ -742,6 +742,15 @@ Header Style
   #nav-separator{
     height: 100px;
   }
+  .header-area .main-nav .nav li.has-sub:nth-child(1) ul.sub-menu{
+    width: 100%;
+  }
+  .header-area .main-nav .nav li.has-sub:nth-child(2) ul.sub-menu{
+    width: 100%;
+  }
+  .header-area .main-nav .nav li.has-sub:nth-child(3) ul.sub-menu{
+    width: 100%;
+  }
   .header-area .main-nav .nav {
     height: auto;
     flex-basis: 100%;

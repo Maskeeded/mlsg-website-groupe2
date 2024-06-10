@@ -17,6 +17,32 @@ body.grabbed-butter-fly{
   user-select: none; /* Standard syntax */
 }
 
+#carotte1{
+  bottom: -80px;
+  left: 20px;
+}
+#carotte2{
+  bottom: -80px;
+  left: 125px;
+}
+#carotte3{
+  bottom: -80px;
+  right: 125px;
+}
+
+#carotte1 img{
+  width: 120px;
+}
+
+#carotte2 img{
+  width: 80px;
+}
+
+#carotte3 img{
+  width: 120px;
+}
+
+
   body:before {
     content: "";
     position: fixed;
@@ -1204,6 +1230,10 @@ h1, h2, h3, h4, h5,
 
 /*engineers*/
 .services-1-wrap .service-1 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: stretch;
   padding: 20px 30px;
   border: 1px solid #efefef;
   border-right: none;
