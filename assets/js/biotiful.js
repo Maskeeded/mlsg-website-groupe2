@@ -14,6 +14,7 @@ $(function(){
     const $containerOfButterFlys = $('.services-1-wrap');
     const $frog = $('#container-frog');
     let canFrogged = true;
+    const baseScrollHeight = +$containerOfButterFlys.prop('scrollHeight');
 
     function initArrayOfButterFlys(){
         const toReturn = [];
@@ -266,16 +267,13 @@ $(function(){
         });
 
         function eatButterFly(){
-            const scrollHeight = +$containerOfButterFlys.prop('scrollHeight');
             const $tongue = $(this);
             const $butterFly = $(butterflys[frogged]);
-            const leftPosButterFly = +($butterFly.css('left')).replace('px', '');
-            const topPosButterFly = +($butterFly.css('top')).replace('px', '');
-            const left = window.innerWidth - leftPosButterFly - 100;
-            const top = scrollHeight - topPosButterFly - 100;
+            const left = window.innerWidth - 50 - parseInt($butterFly.css('width'));
+            const top = baseScrollHeight - 50 - parseInt($butterFly.css('height'));
             $butterFly.animate({
-                'left': '+='+left,
-                'top': '+='+top
+                'left': left+'px',
+                'top': top+'px'
             }, 1000);
             $tongue.animate({
                 'height': '0px'
@@ -299,7 +297,7 @@ $(function(){
             let x2 = rectButterFly.left + rectButterFly.width / 2;
             let y2 = rectButterFly.top + rectButterFly.height / 2;
             let distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-            return distance;
+            return Math.abs(distance);
         }
         
 
