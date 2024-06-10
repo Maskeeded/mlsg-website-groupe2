@@ -11,7 +11,8 @@ $(function(){
     let maxSizeButterfly = 100;
     const butterflys = initArrayOfButterFlys();
     const freeIndexButterFlys = [];
-    const $containerOfButterFlys = $('#scroll-height-services-1');
+    const $containerOfButterFlys = $('.services-1-wrap');
+    const $scrollHeightContainerButterFlys = $('#scroll-height-services-1');
     const $frog = $('#container-frog');
     let canFrogged = true;
 
@@ -266,7 +267,7 @@ $(function(){
             const $tongue = $(this);
             const $butterFly = $(butterflys[frogged]);
             const left = window.innerWidth - 50 - parseInt($butterFly.css('width'));
-            const top = $containerOfButterFlys.prop('scrollHeight') - parseInt($butterFly.css('height')) / 2;
+            const top = $scrollHeightContainerButterFlys.prop('scrollHeight') - parseInt($butterFly.css('height')) / 2;
             $butterFly.animate({
                 'left': left+'px',
                 'top': top+'px'
