@@ -120,7 +120,7 @@
 .tongue {
   position: absolute;
   height: 0;
-  width: 2px;
+  width: 5px;
   background-color: #f57b78;
   border-radius: 2px;
   transform-origin: 100% 100%;
