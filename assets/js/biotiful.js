@@ -14,6 +14,7 @@ $(function(){
     const $containerOfButterFlys = $('.services-1-wrap');
     const $scrollHeightContainerButterFlys = $('#scroll-height-services-1');
     const $frog = $('.frog');
+    const $slurpSong = $('#song-slurp');
     const $eyes = $('.eye');
     const $pupils = $('.pupil');
     let canFrogged = true;
@@ -331,6 +332,7 @@ $(function(){
                     'height': heightTongue
                 }, 250, eatButterFly)
             ;
+            $slurpSong.get(0).play();
         });
 
         function lookAtYourPrey($butterFly){
