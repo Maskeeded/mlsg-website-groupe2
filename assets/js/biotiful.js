@@ -320,10 +320,10 @@ $(function(){
             freezeButterFly($butterFly, index, true);
             const angle = getRotationDeg($frog.get(0), butterFly);
             const heightTongue = getHeightTongue($frog.get(0), butterFly) + parseInt($butterFly.css('width')) / 3;
+            if(angle > 90) $frog.addClass('is-shooting-down');
+            else $frog.removeClass('is-shooting-down');
             lookAtYourPrey($butterFly);
             $frog
-                .addClass(angle > 90 ? 'is-shooting-down' : '')
-                .removeClass(angle > 90 ? '' : 'is-shooting-down')
                 .addClass('is-active')
                 .find('.tongue')
                 .css({
